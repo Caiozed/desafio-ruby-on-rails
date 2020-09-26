@@ -1,0 +1,18 @@
+{
+    "version": "2.0.0",
+    "command": "myCommand",
+    "type": "shell",
+    "args": [],
+    "reveal": "always",
+    "tasks": [
+        {
+            "label": "start_node_compose",
+            "group": "build",
+            "command": "/bin/bash",
+            "args": [
+                "-c",
+                "sudo docker-compose -f docker-compose.yml -f docker-compose.debug.yml up -d && sleep 10"
+            ]
+        }
+    ]
+}
