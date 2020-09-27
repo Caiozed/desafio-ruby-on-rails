@@ -516,3 +516,2073 @@ Processing by Rails::WelcomeController#index as HTML
 Completed 200 OK in 4ms (Views: 1.9ms | ActiveRecord: 0.0ms | Allocations: 456)
 
 
+  [1m[35m (97.4ms)[0m  [1m[35mCREATE DATABASE "app_development" ENCODING = 'unicode'[0m
+  [1m[35m (59.2ms)[0m  [1m[35mCREATE DATABASE "app_test" ENCODING = 'unicode'[0m
+  [1m[35m (9.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (8.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5277929974492897470)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-09-26 22:13:16.213973"], ["updated_at", "2020-09-26 22:13:16.213973"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(5277929974492897470)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 172.18.0.1 at 2020-09-26 22:15:20 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/local/bundle/gems/railties-6.0.3.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/local/bundle/gems/railties-6.0.3.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 4.7ms | Allocations: 407)
+Completed 200 OK in 11ms (Views: 7.0ms | ActiveRecord: 0.0ms | Allocations: 2342)
+
+
+  [1m[35m (69.2ms)[0m  [1m[35mCREATE DATABASE "app_development" ENCODING = 'unicode'[0m
+  [1m[35m (66.2ms)[0m  [1m[35mCREATE DATABASE "app_test" ENCODING = 'unicode'[0m
+  [1m[35m (10.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (8.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5277929974492897470)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateTransactions (20200926224027)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (6.8ms)[0m  [1m[35mCREATE TABLE "transactions" ("id" bigserial primary key, "tipo" character varying, "data" timestamp, "valor" decimal, "cpf" character varying, "cartao" character varying, "dono" character varying, "loja" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200926224027"]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-09-26 22:50:19.258918"], ["updated_at", "2020-09-26 22:50:19.258918"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(5277929974492897470)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 172.18.0.1 at 2020-09-26 22:51:36 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+Completed 500 Internal Server Error in 90ms (ActiveRecord: 0.0ms | Allocations: 80823)
+
+
+  
+NameError (undefined local variable or method `trasaction' for #<HomeController:0x0000557f6c770d30>):
+  
+app/controllers/home_controller.rb:3:in `index'
+Started GET "/" for 172.18.0.1 at 2020-09-26 22:51:51 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 74)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+/usr/local/bin/ruby: No such file or directory -- ./bin/webpack (LoadError)
+
+Completed 500 Internal Server Error in 123ms (ActiveRecord: 0.0ms | Allocations: 15908)
+
+
+  
+ActionView::Template::Error (Webpacker can't find application in /app/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+}
+):
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:   </head>
+    11: 
+    12:   <body>
+  
+app/views/layouts/application.html.erb:9
+Started GET "/" for 172.18.0.1 at 2020-09-26 22:53:25 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 72)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+/usr/local/bin/ruby: No such file or directory -- ./bin/webpack (LoadError)
+
+Completed 500 Internal Server Error in 88ms (ActiveRecord: 0.0ms | Allocations: 4113)
+
+
+  
+ActionView::Template::Error (Webpacker can't find application in /app/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+}
+):
+    10:  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %> 
+    11: <%
+    12: =end%>
+    13:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    14:   </head>
+    15: 
+    16:   <body>
+  
+app/views/layouts/application.html.erb:13
+Started GET "/" for 172.18.0.1 at 2020-09-26 22:53:28 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+/usr/local/bin/ruby: No such file or directory -- ./bin/webpack (LoadError)
+
+Completed 500 Internal Server Error in 86ms (ActiveRecord: 0.0ms | Allocations: 3112)
+
+
+  
+ActionView::Template::Error (Webpacker can't find application in /app/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+}
+):
+    10:  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %> 
+    11: <%
+    12: =end%>
+    13:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    14:   </head>
+    15: 
+    16:   <body>
+  
+app/views/layouts/application.html.erb:13
+Started GET "/" for 172.18.0.1 at 2020-09-26 22:53:29 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 4)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+/usr/local/bin/ruby: No such file or directory -- ./bin/webpack (LoadError)
+
+Completed 500 Internal Server Error in 85ms (ActiveRecord: 0.0ms | Allocations: 3112)
+
+
+  
+ActionView::Template::Error (Webpacker can't find application in /app/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+}
+):
+    10:  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %> 
+    11: <%
+    12: =end%>
+    13:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    14:   </head>
+    15: 
+    16:   <body>
+  
+app/views/layouts/application.html.erb:13
+Started GET "/" for 172.18.0.1 at 2020-09-26 22:53:30 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 5)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+/usr/local/bin/ruby: No such file or directory -- ./bin/webpack (LoadError)
+
+Completed 500 Internal Server Error in 88ms (ActiveRecord: 0.0ms | Allocations: 3123)
+
+
+  
+ActionView::Template::Error (Webpacker can't find application in /app/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+}
+):
+    10:  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %> 
+    11: <%
+    12: =end%>
+    13:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    14:   </head>
+    15: 
+    16:   <body>
+  
+app/views/layouts/application.html.erb:13
+Started GET "/" for 172.18.0.1 at 2020-09-26 22:53:31 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 5)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+/usr/local/bin/ruby: No such file or directory -- ./bin/webpack (LoadError)
+
+Completed 500 Internal Server Error in 5186ms (ActiveRecord: 0.0ms | Allocations: 3168)
+
+
+  
+ActionView::Template::Error (Webpacker can't find application in /app/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+}
+):
+    10:  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %> 
+    11: <%
+    12: =end%>
+    13:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    14:   </head>
+    15: 
+    16:   <body>
+  
+app/views/layouts/application.html.erb:13
+Started GET "/" for 172.18.0.1 at 2020-09-26 22:53:38 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 71)
+Completed 200 OK in 5ms (Views: 3.4ms | ActiveRecord: 0.0ms | Allocations: 1450)
+
+
+Started GET "/" for 172.18.0.1 at 2020-09-26 22:57:08 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mTransaction Load (0.4ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Transaction Load (0.0ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Transaction Load (0.0ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Transaction Load (0.0ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" LIMIT $1[0m  [["LIMIT", 11]]
+  Rendered home/index.html.erb within layouts/application (Duration: 104.9ms | Allocations: 68741)
+Completed 500 Internal Server Error in 125ms (ActiveRecord: 7.5ms | Allocations: 76047)
+
+
+  
+ActionView::Template::Error (undefined method `transactions_path' for #<#<Class:0x00007f946522b478>:0x00007f9465229ba0>):
+    1: <h1>Home</h1>
+    2: 
+    3: <%= form_for @trasaction do |f| %>
+    4:   <%= f.file_field :file %>
+    5: <% end %>
+  
+app/views/home/index.html.erb:3
+Started GET "/" for 172.18.0.1 at 2020-09-26 23:02:50 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Transaction Load (0.0ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Transaction Load (0.0ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Transaction Load (0.0ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Transaction Load (0.1ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Transaction Load (0.0ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Transaction Load (0.0ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Transaction Load (0.0ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" LIMIT $1[0m  [["LIMIT", 11]]
+  Rendered home/index.html.erb within layouts/application (Duration: 197.2ms | Allocations: 135104)
+Completed 500 Internal Server Error in 210ms (ActiveRecord: 1.1ms | Allocations: 141672)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `f' for #<#<Class:0x00007f9464eb1838>:0x00007f9464ea37d8>):
+    1: <h1>Home</h1>
+    2: <form action="/upload" method="post">
+    3:     <%= form_authenticity_token %>
+    4:       <%= f.file_field :file %>
+    5:     <input name="commit" type="submit" value="Send" />
+    6: </form>
+  
+app/views/home/index.html.erb:4
+Started GET "/" for 172.18.0.1 at 2020-09-26 23:03:52 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mTransaction Load (0.5ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Transaction Load (0.0ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Transaction Load (0.0ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Transaction Load (0.0ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Transaction Load (0.0ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Transaction Load (0.0ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Transaction Load (0.0ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Transaction Load (0.1ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" LIMIT $1[0m  [["LIMIT", 11]]
+  Rendered home/index.html.erb within layouts/application (Duration: 170.6ms | Allocations: 134908)
+Completed 500 Internal Server Error in 186ms (ActiveRecord: 5.2ms | Allocations: 141108)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `f' for #<#<Class:0x00007f94655dfe48>:0x00007f94655de4f8>):
+    1: <h1>Home</h1>
+    2: <form action="/upload" method="post">
+    3:     <%= form_authenticity_token %>
+    4:       <%= f.file_field :file %>
+    5:     <input name="commit" type="submit" value="Send" />
+    6: </form>
+  
+app/views/home/index.html.erb:4
+Started GET "/" for 172.18.0.1 at 2020-09-26 23:04:11 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.8ms | Allocations: 153)
+Completed 200 OK in 9ms (Views: 5.2ms | ActiveRecord: 0.0ms | Allocations: 1562)
+
+
+Started GET "/" for 172.18.0.1 at 2020-09-26 23:04:35 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mTransaction Load (1.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Transaction Load (0.0ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Transaction Load (0.0ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Transaction Load (0.0ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Transaction Load (0.0ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Transaction Load (0.0ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Transaction Load (0.1ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Transaction Load (0.0ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" LIMIT $1[0m  [["LIMIT", 11]]
+  Rendered home/index.html.erb within layouts/application (Duration: 179.2ms | Allocations: 135067)
+Completed 500 Internal Server Error in 186ms (ActiveRecord: 1.5ms | Allocations: 136253)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `f' for #<#<Class:0x00007f9465152ba0>:0x00007f9465150b48>):
+    1: <h1>Home</h1>
+    2: <form action="/upload" method="post">
+    3:     <%= form_authenticity_token %>
+    4:       <%= f.file_field :file %>
+    5:     <input name="commit" type="submit" value="Send" />
+    6: </form>
+  
+app/views/home/index.html.erb:4
+Started GET "/" for 172.18.0.1 at 2020-09-26 23:06:42 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 330)
+Completed 200 OK in 6ms (Views: 4.2ms | ActiveRecord: 0.0ms | Allocations: 1751)
+
+
+Started POST "/upload" for 172.18.0.1 at 2020-09-26 23:07:05 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#upload as HTML
+  Parameters: {"authenticity_token"=>"aCfrUoEK3UO0lnr6LvC56RczmgCz3cWT4GM6O7lsfPdLT2kt4J8llwKRia+JcX7IDfobZbYvYaiXrPhBdyKWjg==", "file"=>#<ActionDispatch::Http::UploadedFile:0x0000557f6be70a00 @tempfile=#<Tempfile:/tmp/RackMultipart20200926-1-123i2lb.txt>, @original_filename="CNAB.txt", @content_type="text/plain", @headers="Content-Disposition: form-data; name=\"file\"; filename=\"CNAB.txt\"\r\nContent-Type: text/plain\r\n">, "commit"=>"Save changes"}
+No template found for HomeController#upload, rendering head :no_content
+Completed 204 No Content in 6957ms (ActiveRecord: 0.0ms | Allocations: 11063)
+
+
+Started POST "/upload" for 172.18.0.1 at 2020-09-26 23:07:23 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#upload as HTML
+  Parameters: {"authenticity_token"=>"aCfrUoEK3UO0lnr6LvC56RczmgCz3cWT4GM6O7lsfPdLT2kt4J8llwKRia+JcX7IDfobZbYvYaiXrPhBdyKWjg==", "file"=>#<ActionDispatch::Http::UploadedFile:0x0000557f6c58ef30 @tempfile=#<Tempfile:/tmp/RackMultipart20200926-1-16nk7r7.txt>, @original_filename="CNAB.txt", @content_type="text/plain", @headers="Content-Disposition: form-data; name=\"file\"; filename=\"CNAB.txt\"\r\nContent-Type: text/plain\r\n">, "commit"=>"Save changes"}
+No template found for HomeController#upload, rendering head :no_content
+Completed 204 No Content in 1ms (ActiveRecord: 0.0ms | Allocations: 366)
+
+
+Started POST "/upload" for 172.18.0.1 at 2020-09-26 23:08:03 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#upload as HTML
+  Parameters: {"authenticity_token"=>"aCfrUoEK3UO0lnr6LvC56RczmgCz3cWT4GM6O7lsfPdLT2kt4J8llwKRia+JcX7IDfobZbYvYaiXrPhBdyKWjg==", "file"=>#<ActionDispatch::Http::UploadedFile:0x00007f94649dda28 @tempfile=#<Tempfile:/tmp/RackMultipart20200926-1-1h0ss3t.txt>, @original_filename="CNAB.txt", @content_type="text/plain", @headers="Content-Disposition: form-data; name=\"file\"; filename=\"CNAB.txt\"\r\nContent-Type: text/plain\r\n">, "commit"=>"Save changes"}
+No template found for HomeController#upload, rendering head :no_content
+Completed 204 No Content in 12005ms (ActiveRecord: 0.0ms | Allocations: 10349)
+
+
+Started POST "/upload" for 172.18.0.1 at 2020-09-26 23:11:51 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#upload as HTML
+  Parameters: {"authenticity_token"=>"aCfrUoEK3UO0lnr6LvC56RczmgCz3cWT4GM6O7lsfPdLT2kt4J8llwKRia+JcX7IDfobZbYvYaiXrPhBdyKWjg==", "file"=>#<ActionDispatch::Http::UploadedFile:0x00007f946505f7c0 @tempfile=#<Tempfile:/tmp/RackMultipart20200926-1-8gqpm3.txt>, @original_filename="CNAB.txt", @content_type="text/plain", @headers="Content-Disposition: form-data; name=\"file\"; filename=\"CNAB.txt\"\r\nContent-Type: text/plain\r\n">, "commit"=>"Save changes"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 1102)
+
+
+  
+NoMethodError (undefined method `+' for nil:NilClass):
+  
+app/controllers/home_controller.rb:11:in `block in upload'
+app/controllers/home_controller.rb:10:in `each_line'
+app/controllers/home_controller.rb:10:in `upload'
+Started POST "/upload" for 172.18.0.1 at 2020-09-26 23:12:04 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#upload as HTML
+  Parameters: {"authenticity_token"=>"aCfrUoEK3UO0lnr6LvC56RczmgCz3cWT4GM6O7lsfPdLT2kt4J8llwKRia+JcX7IDfobZbYvYaiXrPhBdyKWjg==", "file"=>#<ActionDispatch::Http::UploadedFile:0x00007f9464e9da68 @tempfile=#<Tempfile:/tmp/RackMultipart20200926-1-zqzbo2.txt>, @original_filename="CNAB.txt", @content_type="text/plain", @headers="Content-Disposition: form-data; name=\"file\"; filename=\"CNAB.txt\"\r\nContent-Type: text/plain\r\n">, "commit"=>"Save changes"}
+No template found for HomeController#upload, rendering head :no_content
+Completed 204 No Content in 1ms (ActiveRecord: 0.0ms | Allocations: 438)
+
+
+Started POST "/upload" for 172.18.0.1 at 2020-09-26 23:12:09 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#upload as HTML
+  Parameters: {"authenticity_token"=>"aCfrUoEK3UO0lnr6LvC56RczmgCz3cWT4GM6O7lsfPdLT2kt4J8llwKRia+JcX7IDfobZbYvYaiXrPhBdyKWjg==", "commit"=>"Save changes"}
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 1138)
+
+
+  
+NoMethodError (undefined method `read' for nil:NilClass):
+  
+app/controllers/home_controller.rb:9:in `upload'
+Started POST "/upload" for 172.18.0.1 at 2020-09-26 23:12:19 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#upload as HTML
+  Parameters: {"authenticity_token"=>"aCfrUoEK3UO0lnr6LvC56RczmgCz3cWT4GM6O7lsfPdLT2kt4J8llwKRia+JcX7IDfobZbYvYaiXrPhBdyKWjg==", "file"=>#<ActionDispatch::Http::UploadedFile:0x0000557f6c7dda48 @tempfile=#<Tempfile:/tmp/RackMultipart20200926-1-ff0pg.txt>, @original_filename="CNAB.txt", @content_type="text/plain", @headers="Content-Disposition: form-data; name=\"file\"; filename=\"CNAB.txt\"\r\nContent-Type: text/plain\r\n">, "commit"=>"Save changes"}
+No template found for HomeController#upload, rendering head :no_content
+Completed 204 No Content in 2ms (ActiveRecord: 0.0ms | Allocations: 437)
+
+
+Started POST "/upload" for 172.18.0.1 at 2020-09-26 23:20:13 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#upload as HTML
+  Parameters: {"authenticity_token"=>"aCfrUoEK3UO0lnr6LvC56RczmgCz3cWT4GM6O7lsfPdLT2kt4J8llwKRia+JcX7IDfobZbYvYaiXrPhBdyKWjg==", "file"=>#<ActionDispatch::Http::UploadedFile:0x00007f9466429328 @tempfile=#<Tempfile:/tmp/RackMultipart20200926-1-155a01w.txt>, @original_filename="CNAB.txt", @content_type="text/plain", @headers="Content-Disposition: form-data; name=\"file\"; filename=\"CNAB.txt\"\r\nContent-Type: text/plain\r\n">, "commit"=>"Save changes"}
+No template found for HomeController#upload, rendering head :no_content
+Completed 204 No Content in 41ms (ActiveRecord: 5.3ms | Allocations: 6945)
+
+
+Started POST "/upload" for 172.18.0.1 at 2020-09-26 23:20:24 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#upload as HTML
+  Parameters: {"authenticity_token"=>"aCfrUoEK3UO0lnr6LvC56RczmgCz3cWT4GM6O7lsfPdLT2kt4J8llwKRia+JcX7IDfobZbYvYaiXrPhBdyKWjg==", "file"=>#<ActionDispatch::Http::UploadedFile:0x00007f94653d7100 @tempfile=#<Tempfile:/tmp/RackMultipart20200926-1-1fh50v5.txt>, @original_filename="CNAB.txt", @content_type="text/plain", @headers="Content-Disposition: form-data; name=\"file\"; filename=\"CNAB.txt\"\r\nContent-Type: text/plain\r\n">, "commit"=>"Save changes"}
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE DATABASE "app_development" ENCODING = 'unicode'[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE DATABASE "app_test" ENCODING = 'unicode'[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5277929974492897470)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(5277929974492897470)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 172.18.0.1 at 2020-09-26 23:22:39 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 2.1ms | Allocations: 456)
+Completed 200 OK in 41ms (Views: 5.9ms | ActiveRecord: 6.6ms | Allocations: 8729)
+
+
+Started POST "/upload" for 172.18.0.1 at 2020-09-26 23:22:50 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#upload as HTML
+  Parameters: {"authenticity_token"=>"y+kBsYLiYdDxeRpzevsMPwwuTvkIDYdJuaq9Srz+Xh/ogYPO43eZBEd+6SbdesseFufPnA3/I3LOZX8wcrC0Zg==", "file"=>#<ActionDispatch::Http::UploadedFile:0x0000556bba61c620 @tempfile=#<Tempfile:/tmp/RackMultipart20200926-1-gu0bjc.txt>, @original_filename="CNAB.txt", @content_type="text/plain", @headers="Content-Disposition: form-data; name=\"file\"; filename=\"CNAB.txt\"\r\nContent-Type: text/plain\r\n">, "commit"=>"Save changes"}
+No template found for HomeController#upload, rendering head :no_content
+Completed 204 No Content in 46598ms (ActiveRecord: 0.0ms | Allocations: 103748)
+
+
+Started GET "/" for 172.18.0.1 at 2020-09-26 23:23:40 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 166)
+Completed 200 OK in 4ms (Views: 2.1ms | ActiveRecord: 0.0ms | Allocations: 716)
+
+
+Started GET "/" for 172.18.0.1 at 2020-09-26 23:32:12 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 2.0ms | Allocations: 213)
+Completed 200 OK in 31ms (Views: 6.5ms | ActiveRecord: 0.0ms | Allocations: 6409)
+
+
+Started POST "/upload" for 172.18.0.1 at 2020-09-26 23:32:16 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#upload as HTML
+  Parameters: {"authenticity_token"=>"Ni5ZyixGP2/kPxGEPeZg70XhQ+t/TMJOvviR+pgqr6cVRtu1TdPHu1I44tGaZ6fOXyjCjnq+ZnXJN1OAVmRF3g==", "file"=>#<ActionDispatch::Http::UploadedFile:0x00007f302c0ad5d0 @tempfile=#<Tempfile:/tmp/RackMultipart20200926-1-1jnbvst.txt>, @original_filename="CNAB.txt", @content_type="text/plain", @headers="Content-Disposition: form-data; name=\"file\"; filename=\"CNAB.txt\"\r\nContent-Type: text/plain\r\n">, "commit"=>"Save changes"}
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE DATABASE "app_development" ENCODING = 'unicode'[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE DATABASE "app_test" ENCODING = 'unicode'[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5277929974492897470)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(5277929974492897470)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE DATABASE "app_development" ENCODING = 'unicode'[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE DATABASE "app_test" ENCODING = 'unicode'[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5277929974492897470)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(5277929974492897470)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 172.18.0.1 at 2020-09-26 23:34:03 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 13.4ms | Allocations: 534)
+Completed 200 OK in 99ms (Views: 33.6ms | ActiveRecord: 11.6ms | Allocations: 8995)
+
+
+Started POST "/upload" for 172.18.0.1 at 2020-09-26 23:34:08 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#upload as HTML
+  Parameters: {"authenticity_token"=>"O7yL5rqV6kLbuvhoonHJvFdOXzQFJXX7vJgda4yfOtIY1AmZ2wASlm29Cz0F8A6dTYfeUQDX0cDLV98RQtHQqw==", "file"=>#<ActionDispatch::Http::UploadedFile:0x00007f13bc07ac48 @tempfile=#<Tempfile:/tmp/RackMultipart20200926-1-a0lkmq.txt>, @original_filename="CNAB.txt", @content_type="text/plain", @headers="Content-Disposition: form-data; name=\"file\"; filename=\"CNAB.txt\"\r\nContent-Type: text/plain\r\n">, "commit"=>"Save changes"}
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE DATABASE "app_development" ENCODING = 'unicode'[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE DATABASE "app_test" ENCODING = 'unicode'[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5277929974492897470)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(5277929974492897470)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 172.18.0.1 at 2020-09-26 23:44:57 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.7ms | Allocations: 534)
+Completed 200 OK in 34ms (Views: 6.2ms | ActiveRecord: 3.4ms | Allocations: 8999)
+
+
+Started POST "/upload" for 172.18.0.1 at 2020-09-26 23:45:07 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#upload as HTML
+  Parameters: {"authenticity_token"=>"TzlZ2aJihVFlRoduyGAfOGOpTFlRHlqcM0qSY7H8q8NsUdumw/d9hdNBdDtv4dgZeWDNPFTs/qdEhVAZf7JBug==", "file"=>#<ActionDispatch::Http::UploadedFile:0x00007f8094071ea0 @tempfile=#<Tempfile:/tmp/RackMultipart20200926-1-1ppt1gh.txt>, @original_filename="CNAB.txt", @content_type="text/plain", @headers="Content-Disposition: form-data; name=\"file\"; filename=\"CNAB.txt\"\r\nContent-Type: text/plain\r\n">, "commit"=>"Save changes"}
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE DATABASE "app_development" ENCODING = 'unicode'[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE DATABASE "app_test" ENCODING = 'unicode'[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5277929974492897470)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(5277929974492897470)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started POST "/upload" for 172.18.0.1 at 2020-09-26 23:46:41 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#upload as HTML
+  Parameters: {"authenticity_token"=>"TzlZ2aJihVFlRoduyGAfOGOpTFlRHlqcM0qSY7H8q8NsUdumw/d9hdNBdDtv4dgZeWDNPFTs/qdEhVAZf7JBug==", "file"=>#<ActionDispatch::Http::UploadedFile:0x00007fa3e086c820 @tempfile=#<Tempfile:/tmp/RackMultipart20200926-1-1frf1rf.txt>, @original_filename="CNAB.txt", @content_type="text/plain", @headers="Content-Disposition: form-data; name=\"file\"; filename=\"CNAB.txt\"\r\nContent-Type: text/plain\r\n">, "commit"=>"Save changes"}
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE DATABASE "app_development" ENCODING = 'unicode'[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE DATABASE "app_test" ENCODING = 'unicode'[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5277929974492897470)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(5277929974492897470)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 172.18.0.1 at 2020-09-26 23:49:18 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.7ms | Allocations: 534)
+Completed 200 OK in 38ms (Views: 6.5ms | ActiveRecord: 5.1ms | Allocations: 9001)
+
+
+Started POST "/upload" for 172.18.0.1 at 2020-09-26 23:49:25 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#upload as HTML
+  Parameters: {"authenticity_token"=>"SewK99sVZ3cE9th9QFwiQNYP6iWPvReBvT9Lz4eXvklqhIiIuoCfo7LxKyjn3eVhzMZrQIpPs7rK8Im1SdlUMA==", "file"=>#<ActionDispatch::Http::UploadedFile:0x00007f2b7c06cf80 @tempfile=#<Tempfile:/tmp/RackMultipart20200926-1-c2vqcg.txt>, @original_filename="CNAB.txt", @content_type="text/plain", @headers="Content-Disposition: form-data; name=\"file\"; filename=\"CNAB.txt\"\r\nContent-Type: text/plain\r\n">, "commit"=>"Save changes"}
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE DATABASE "app_development" ENCODING = 'unicode'[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE DATABASE "app_test" ENCODING = 'unicode'[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5277929974492897470)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(5277929974492897470)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 172.18.0.1 at 2020-09-26 23:50:31 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 456)
+Completed 200 OK in 32ms (Views: 3.3ms | ActiveRecord: 3.8ms | Allocations: 8699)
+
+
+Started POST "/upload" for 172.18.0.1 at 2020-09-26 23:50:35 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#upload as HTML
+  Parameters: {"authenticity_token"=>"s8x1LHuxP9GM8Wtfj6LKYQSlxP5DoMvbpsnLx5G6dtWQpPdTGiTHBTr2mAooIw1AHmxFm0ZSb+DRBgm9X/ScrA==", "file"=>#<ActionDispatch::Http::UploadedFile:0x00007f851005a3d8 @tempfile=#<Tempfile:/tmp/RackMultipart20200926-1-qbku8e.txt>, @original_filename="CNAB.txt", @content_type="text/plain", @headers="Content-Disposition: form-data; name=\"file\"; filename=\"CNAB.txt\"\r\nContent-Type: text/plain\r\n">, "commit"=>"Save changes"}
+Redirected to 
+Completed 500 Internal Server Error in 108ms (ActiveRecord: 0.0ms | Allocations: 85163)
+
+
+  
+NoMethodError (undefined method `index_url' for #<HomeController:0x00007f851005a950>
+Did you mean?  index):
+  
+app/controllers/home_controller.rb:28:in `upload'
+Started POST "/upload" for 172.18.0.1 at 2020-09-26 23:57:37 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#upload as HTML
+  Parameters: {"authenticity_token"=>"s8x1LHuxP9GM8Wtfj6LKYQSlxP5DoMvbpsnLx5G6dtWQpPdTGiTHBTr2mAooIw1AHmxFm0ZSb+DRBgm9X/ScrA==", "file"=>#<ActionDispatch::Http::UploadedFile:0x000055cbd59885b8 @tempfile=#<Tempfile:/tmp/RackMultipart20200926-1-1l3ubfr.txt>, @original_filename="CNAB.txt", @content_type="text/plain", @headers="Content-Disposition: form-data; name=\"file\"; filename=\"CNAB.txt\"\r\nContent-Type: text/plain\r\n">, "commit"=>"Save changes"}
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE DATABASE "app_development" ENCODING = 'unicode'[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE DATABASE "app_test" ENCODING = 'unicode'[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5277929974492897470)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(5277929974492897470)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 172.18.0.1 at 2020-09-27 00:15:14 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 2.1ms | Allocations: 456)
+Completed 200 OK in 42ms (Views: 6.2ms | ActiveRecord: 7.2ms | Allocations: 8705)
+
+
+Started POST "/upload" for 172.18.0.1 at 2020-09-27 00:15:18 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#upload as HTML
+  Parameters: {"authenticity_token"=>"LCTv52LVkyZLr4ohEsk5h+/Y2zep4qIVuxlxCShVpXIPTG2YA0Br8v2oeXS1SP6m9RFaUqwQBi7M1rNz5htPCw==", "file"=>#<ActionDispatch::Http::UploadedFile:0x00007f771c05f970 @tempfile=#<Tempfile:/tmp/RackMultipart20200927-1-1jdb98x.txt>, @original_filename="CNAB.txt", @content_type="text/plain", @headers="Content-Disposition: form-data; name=\"file\"; filename=\"CNAB.txt\"\r\nContent-Type: text/plain\r\n">, "commit"=>"Save changes"}
+No template found for HomeController#upload, rendering head :no_content
+Completed 204 No Content in 23ms (ActiveRecord: 0.0ms | Allocations: 12276)
+
+
+Started POST "/upload" for 172.18.0.1 at 2020-09-27 00:15:40 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#upload as HTML
+  Parameters: {"authenticity_token"=>"LCTv52LVkyZLr4ohEsk5h+/Y2zep4qIVuxlxCShVpXIPTG2YA0Br8v2oeXS1SP6m9RFaUqwQBi7M1rNz5htPCw==", "commit"=>"Save changes"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 1109)
+
+
+  
+NoMethodError (undefined method `read' for nil:NilClass):
+  
+app/controllers/home_controller.rb:11:in `upload'
+Started POST "/upload" for 172.18.0.1 at 2020-09-27 00:15:46 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#upload as HTML
+  Parameters: {"authenticity_token"=>"LCTv52LVkyZLr4ohEsk5h+/Y2zep4qIVuxlxCShVpXIPTG2YA0Br8v2oeXS1SP6m9RFaUqwQBi7M1rNz5htPCw==", "file"=>#<ActionDispatch::Http::UploadedFile:0x00007f7720273230 @tempfile=#<Tempfile:/tmp/RackMultipart20200927-1-1hklhi7.txt>, @original_filename="CNAB.txt", @content_type="text/plain", @headers="Content-Disposition: form-data; name=\"file\"; filename=\"CNAB.txt\"\r\nContent-Type: text/plain\r\n">, "commit"=>"Save changes"}
+No template found for HomeController#upload, rendering head :no_content
+Completed 204 No Content in 54ms (ActiveRecord: 6.6ms | Allocations: 16389)
+
+
+Started POST "/upload" for 172.18.0.1 at 2020-09-27 00:17:32 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#upload as HTML
+  Parameters: {"authenticity_token"=>"LCTv52LVkyZLr4ohEsk5h+/Y2zep4qIVuxlxCShVpXIPTG2YA0Br8v2oeXS1SP6m9RFaUqwQBi7M1rNz5htPCw==", "file"=>#<ActionDispatch::Http::UploadedFile:0x00007f77188ebf48 @tempfile=#<Tempfile:/tmp/RackMultipart20200927-1-j46njk.txt>, @original_filename="CNAB.txt", @content_type="text/plain", @headers="Content-Disposition: form-data; name=\"file\"; filename=\"CNAB.txt\"\r\nContent-Type: text/plain\r\n">, "commit"=>"Save changes"}
+No template found for HomeController#upload, rendering head :no_content
+Completed 204 No Content in 30ms (ActiveRecord: 2.4ms | Allocations: 16369)
+
+
+Started POST "/upload" for 172.18.0.1 at 2020-09-27 00:18:03 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#upload as HTML
+  Parameters: {"authenticity_token"=>"LCTv52LVkyZLr4ohEsk5h+/Y2zep4qIVuxlxCShVpXIPTG2YA0Br8v2oeXS1SP6m9RFaUqwQBi7M1rNz5htPCw==", "file"=>#<ActionDispatch::Http::UploadedFile:0x00007f77206e8f90 @tempfile=#<Tempfile:/tmp/RackMultipart20200927-1-13vlzd4.txt>, @original_filename="CNAB.txt", @content_type="text/plain", @headers="Content-Disposition: form-data; name=\"file\"; filename=\"CNAB.txt\"\r\nContent-Type: text/plain\r\n">, "commit"=>"Save changes"}
+No template found for HomeController#upload, rendering head :no_content
+Completed 204 No Content in 27ms (ActiveRecord: 2.3ms | Allocations: 16382)
+
+
+Started POST "/upload" for 172.18.0.1 at 2020-09-27 00:18:13 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#upload as HTML
+  Parameters: {"authenticity_token"=>"LCTv52LVkyZLr4ohEsk5h+/Y2zep4qIVuxlxCShVpXIPTG2YA0Br8v2oeXS1SP6m9RFaUqwQBi7M1rNz5htPCw==", "file"=>#<ActionDispatch::Http::UploadedFile:0x00007f7720581990 @tempfile=#<Tempfile:/tmp/RackMultipart20200927-1-rhk2ce.txt>, @original_filename="CNAB.txt", @content_type="text/plain", @headers="Content-Disposition: form-data; name=\"file\"; filename=\"CNAB.txt\"\r\nContent-Type: text/plain\r\n">, "commit"=>"Save changes"}
+No template found for HomeController#upload, rendering head :no_content
+Completed 204 No Content in 38ms (ActiveRecord: 0.0ms | Allocations: 10856)
+
+
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE DATABASE "app_development" ENCODING = 'unicode'[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE DATABASE "app_test" ENCODING = 'unicode'[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5277929974492897470)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(5277929974492897470)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 172.18.0.1 at 2020-09-27 00:25:11 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 485)
+Completed 200 OK in 23ms (Views: 4.0ms | ActiveRecord: 0.0ms | Allocations: 2923)
+
+
+Started POST "/upload" for 172.18.0.1 at 2020-09-27 00:25:22 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#upload as HTML
+  Parameters: {"authenticity_token"=>"DKRACo9JukdAxfhshhCnaqnhtCqGjzcIm0RnAzfLWjgvzMJ17txCk/bCCzkhkWBLsyg1T4N9kzPsi6V5+YWwQQ==", "file"=>#<ActionDispatch::Http::UploadedFile:0x00007fbc18059b38 @tempfile=#<Tempfile:/tmp/RackMultipart20200927-1-1r5nnug.txt>, @original_filename="CNAB.txt", @content_type="text/plain", @headers="Content-Disposition: form-data; name=\"file\"; filename=\"CNAB.txt\"\r\nContent-Type: text/plain\r\n">, "commit"=>"Save changes"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 70ms (ActiveRecord: 12.4ms | Allocations: 17092)
+
+
+Started GET "/" for 172.18.0.1 at 2020-09-27 00:25:22 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 169)
+Completed 200 OK in 1ms (Views: 0.7ms | ActiveRecord: 0.0ms | Allocations: 695)
+
+
+Started POST "/upload" for 172.18.0.1 at 2020-09-27 00:25:28 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#upload as HTML
+  Parameters: {"authenticity_token"=>"JAm2lmS5cKhVRLUKejNeAUdLt7iIvQSm+bxT4RWEoBMHYTTpBSyIfONDRl/dspkgXYI23Y1PoJ2Oc5Gb28pKag==", "file"=>#<ActionDispatch::Http::UploadedFile:0x00007fbc20018f90 @tempfile=#<Tempfile:/tmp/RackMultipart20200927-1-1s5xwg6.txt>, @original_filename="CNAB.txt", @content_type="text/plain", @headers="Content-Disposition: form-data; name=\"file\"; filename=\"CNAB.txt\"\r\nContent-Type: text/plain\r\n">, "commit"=>"Save changes"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 29ms (ActiveRecord: 0.0ms | Allocations: 10888)
+
+
+Started GET "/" for 172.18.0.1 at 2020-09-27 00:25:28 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 168)
+Completed 200 OK in 1ms (Views: 0.6ms | ActiveRecord: 0.0ms | Allocations: 689)
+
+
+  [1m[35m (73.8ms)[0m  [1m[35mCREATE DATABASE "app_development" ENCODING = 'unicode'[0m
+  [1m[35m (65.2ms)[0m  [1m[35mCREATE DATABASE "app_test" ENCODING = 'unicode'[0m
+  [1m[35m (8.4ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (6.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5277929974492897470)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateTransactions (20200926224027)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (6.8ms)[0m  [1m[35mCREATE TABLE "transactions" ("id" bigserial primary key, "tipo" character varying, "data" timestamp, "valor" float, "cpf" character varying, "cartao" character varying, "dono" character varying, "loja" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200926224027"]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-09-27 19:16:14.350419"], ["updated_at", "2020-09-27 19:16:14.350419"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(5277929974492897470)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 172.18.0.1 at 2020-09-27 19:22:02 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 5.5ms | Allocations: 611)
+Completed 200 OK in 28ms (Views: 15.2ms | ActiveRecord: 0.0ms | Allocations: 6091)
+
+
+Started POST "/upload" for 172.18.0.1 at 2020-09-27 19:22:08 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#upload as HTML
+  Parameters: {"authenticity_token"=>"ibAe8ueB+5KfiOPul6A/SHidPY7UxAGIlOizpf1+0dZnCno/E2zPJM+c45skaelwNxgEbiUD4hnho+Jax5QuMw==", "file"=>#<ActionDispatch::Http::UploadedFile:0x00005650ddea7020 @tempfile=#<Tempfile:/tmp/RackMultipart20200927-1-vcy7mr.txt>, @original_filename="CNAB.txt", @content_type="text/plain", @headers="Content-Disposition: form-data; name=\"file\"; filename=\"CNAB.txt\"\r\nContent-Type: text/plain\r\n">, "commit"=>"Save changes"}
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 4.3ms | Allocations: 8590)
+
+
+  
+NameError (uninitialized constant HomeController::TaxRate):
+  
+app/controllers/home_controller.rb:26:in `block in upload'
+app/controllers/home_controller.rb:11:in `each_line'
+app/controllers/home_controller.rb:11:in `upload'
+Started GET "/" for 172.18.0.1 at 2020-09-27 19:22:52 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 171)
+Completed 200 OK in 4ms (Views: 1.8ms | ActiveRecord: 0.0ms | Allocations: 1173)
+
+
+Started POST "/upload" for 172.18.0.1 at 2020-09-27 19:22:55 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#upload as HTML
+  Parameters: {"authenticity_token"=>"Xj5HkHUcOTNxzBn6OpmKE4B/Oq7PB1hhIhEb74V/sdOwhCNdgfENhSHYGY+JUFwrz/oDTj7Au/BXWkoQv5VONg==", "file"=>#<ActionDispatch::Http::UploadedFile:0x00005650dcef3ef8 @tempfile=#<Tempfile:/tmp/RackMultipart20200927-1-1ydco66.txt>, @original_filename="CNAB.txt", @content_type="text/plain", @headers="Content-Disposition: form-data; name=\"file\"; filename=\"CNAB.txt\"\r\nContent-Type: text/plain\r\n">, "commit"=>"Save changes"}
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 2.4ms | Allocations: 9006)
+
+
+  
+NoMethodError (undefined method `import' for #<Class:0x00005650dd9fa220>):
+  
+app/controllers/home_controller.rb:26:in `block in upload'
+app/controllers/home_controller.rb:11:in `each_line'
+app/controllers/home_controller.rb:11:in `upload'
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE DATABASE "app_development" ENCODING = 'unicode'[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE DATABASE "app_test" ENCODING = 'unicode'[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5277929974492897470)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(5277929974492897470)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 172.18.0.1 at 2020-09-27 19:32:52 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 597)
+Completed 200 OK in 8ms (Views: 3.8ms | ActiveRecord: 0.0ms | Allocations: 3652)
+
+
+Started POST "/upload" for 172.18.0.1 at 2020-09-27 19:32:58 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#upload as HTML
+  Parameters: {"authenticity_token"=>"E1fp/dnlrcswu5Fpmc5LwLqXxYQuJRpgndV3n0EoLOf97Y0wLQiZfWCvkRwqB5349RL8ZN/i+fHoniZge8LTAg==", "file"=>#<ActionDispatch::Http::UploadedFile:0x00007f1d380940a0 @tempfile=#<Tempfile:/tmp/RackMultipart20200927-1-1vtw6oi.txt>, @original_filename="CNAB.txt", @content_type="text/plain", @headers="Content-Disposition: form-data; name=\"file\"; filename=\"CNAB.txt\"\r\nContent-Type: text/plain\r\n">, "commit"=>"Save changes"}
+  [1m[36mTransaction Create Many Without Validations Or Callbacks (2.8ms)[0m  [1m[32mINSERT INTO "transactions" ("tipo","data","valor","cpf","cartao","dono","loja","created_at","updated_at") VALUES ('3','2019-03-01 15:34:53',142.0,'09620676017','4753****3153','JOÃO MACEDO  ',' BAR DO JOÃO      ','2020-09-27 19:32:58.892606','2020-09-27 19:32:58.892606') RETURNING "id"[0m
+  ↳ app/controllers/home_controller.rb:26:in `block in upload'
+  [1m[36mTransaction Create Many Without Validations Or Callbacks (1.4ms)[0m  [1m[32mINSERT INTO "transactions" ("tipo","data","valor","cpf","cartao","dono","loja","created_at","updated_at") VALUES ('3','2019-03-01 15:34:53',142.0,'09620676017','4753****3153','JOÃO MACEDO  ',' BAR DO JOÃO      ','2020-09-27 19:32:58.901496','2020-09-27 19:32:58.901496'),('5','2019-03-01 14:56:07',132.0,'55641815063','3123****7687','MARIA JOSEFINA','LOJA DO Ó - MATRIZ','2020-09-27 19:32:58.901496','2020-09-27 19:32:58.901496') RETURNING "id"[0m
+  ↳ app/controllers/home_controller.rb:26:in `block in upload'
+  [1m[36mTransaction Create Many Without Validations Or Callbacks (1.2ms)[0m  [1m[32mINSERT INTO "transactions" ("tipo","data","valor","cpf","cartao","dono","loja","created_at","updated_at") VALUES ('3','2019-03-01 15:34:53',142.0,'09620676017','4753****3153','JOÃO MACEDO  ',' BAR DO JOÃO      ','2020-09-27 19:32:58.905512','2020-09-27 19:32:58.905512'),('5','2019-03-01 14:56:07',132.0,'55641815063','3123****7687','MARIA JOSEFINA','LOJA DO Ó - MATRIZ','2020-09-27 19:32:58.905512','2020-09-27 19:32:58.905512'),('3','2019-03-01 17:27:12',122.0,'84515254073','6777****1313','MARCOS PEREIRA','MERCADO DA AVENIDA
+','2020-09-27 19:32:58.905512','2020-09-27 19:32:58.905512') RETURNING "id"[0m
+  ↳ app/controllers/home_controller.rb:26:in `block in upload'
+  [1m[36mTransaction Create Many Without Validations Or Callbacks (1.3ms)[0m  [1m[32mINSERT INTO "transactions" ("tipo","data","valor","cpf","cartao","dono","loja","created_at","updated_at") VALUES ('3','2019-03-01 15:34:53',142.0,'09620676017','4753****3153','JOÃO MACEDO  ',' BAR DO JOÃO      ','2020-09-27 19:32:58.909599','2020-09-27 19:32:58.909599'),('5','2019-03-01 14:56:07',132.0,'55641815063','3123****7687','MARIA JOSEFINA','LOJA DO Ó - MATRIZ','2020-09-27 19:32:58.909599','2020-09-27 19:32:58.909599'),('3','2019-03-01 17:27:12',122.0,'84515254073','6777****1313','MARCOS PEREIRA','MERCADO DA AVENIDA
+','2020-09-27 19:32:58.909599','2020-09-27 19:32:58.909599'),('2','2019-03-01 23:42:34',112.0,'09620676017','3648****0099','JOÃO MACEDO  ',' BAR DO JOÃO      ','2020-09-27 19:32:58.909599','2020-09-27 19:32:58.909599') RETURNING "id"[0m
+  ↳ app/controllers/home_controller.rb:26:in `block in upload'
+  [1m[36mTransaction Create Many Without Validations Or Callbacks (1.3ms)[0m  [1m[32mINSERT INTO "transactions" ("tipo","data","valor","cpf","cartao","dono","loja","created_at","updated_at") VALUES ('3','2019-03-01 15:34:53',142.0,'09620676017','4753****3153','JOÃO MACEDO  ',' BAR DO JOÃO      ','2020-09-27 19:32:58.914107','2020-09-27 19:32:58.914107'),('5','2019-03-01 14:56:07',132.0,'55641815063','3123****7687','MARIA JOSEFINA','LOJA DO Ó - MATRIZ','2020-09-27 19:32:58.914107','2020-09-27 19:32:58.914107'),('3','2019-03-01 17:27:12',122.0,'84515254073','6777****1313','MARCOS PEREIRA','MERCADO DA AVENIDA
+','2020-09-27 19:32:58.914107','2020-09-27 19:32:58.914107'),('2','2019-03-01 23:42:34',112.0,'09620676017','3648****0099','JOÃO MACEDO  ',' BAR DO JOÃO      ','2020-09-27 19:32:58.914107','2020-09-27 19:32:58.914107'),('1','2019-03-01 23:30:00',152.0,'09620676017','1234****7890','JOÃO MACEDO  ',' BAR DO JOÃO      ','2020-09-27 19:32:58.914107','2020-09-27 19:32:58.914107') RETURNING "id"[0m
+  ↳ app/controllers/home_controller.rb:26:in `block in upload'
+  [1m[36mTransaction Create Many Without Validations Or Callbacks (1.3ms)[0m  [1m[32mINSERT INTO "transactions" ("tipo","data","valor","cpf","cartao","dono","loja","created_at","updated_at") VALUES ('3','2019-03-01 15:34:53',142.0,'09620676017','4753****3153','JOÃO MACEDO  ',' BAR DO JOÃO      ','2020-09-27 19:32:58.918811','2020-09-27 19:32:58.918811'),('5','2019-03-01 14:56:07',132.0,'55641815063','3123****7687','MARIA JOSEFINA','LOJA DO Ó - MATRIZ','2020-09-27 19:32:58.918811','2020-09-27 19:32:58.918811'),('3','2019-03-01 17:27:12',122.0,'84515254073','6777****1313','MARCOS PEREIRA','MERCADO DA AVENIDA
+','2020-09-27 19:32:58.918811','2020-09-27 19:32:58.918811'),('2','2019-03-01 23:42:34',112.0,'09620676017','3648****0099','JOÃO MACEDO  ',' BAR DO JOÃO      ','2020-09-27 19:32:58.918811','2020-09-27 19:32:58.918811'),('1','2019-03-01 23:30:00',152.0,'09620676017','1234****7890','JOÃO MACEDO  ',' BAR DO JOÃO      ','2020-09-27 19:32:58.918811','2020-09-27 19:32:58.918811'),('2','2019-03-01 12:33:33',107.0,'84515254073','8723****9987','MARCOS PEREIRA','MERCADO DA AVENIDA
+','2020-09-27 19:32:58.918811','2020-09-27 19:32:58.918811') RETURNING "id"[0m
+  ↳ app/controllers/home_controller.rb:26:in `block in upload'
+  [1m[36mTransaction Create Many Without Validations Or Callbacks (1.4ms)[0m  [1m[32mINSERT INTO "transactions" ("tipo","data","valor","cpf","cartao","dono","loja","created_at","updated_at") VALUES ('3','2019-03-01 15:34:53',142.0,'09620676017','4753****3153','JOÃO MACEDO  ',' BAR DO JOÃO      ','2020-09-27 19:32:58.923598','2020-09-27 19:32:58.923598'),('5','2019-03-01 14:56:07',132.0,'55641815063','3123****7687','MARIA JOSEFINA','LOJA DO Ó - MATRIZ','2020-09-27 19:32:58.923598','2020-09-27 19:32:58.923598'),('3','2019-03-01 17:27:12',122.0,'84515254073','6777****1313','MARCOS PEREIRA','MERCADO DA AVENIDA
+','2020-09-27 19:32:58.923598','2020-09-27 19:32:58.923598'),('2','2019-03-01 23:42:34',112.0,'09620676017','3648****0099','JOÃO MACEDO  ',' BAR DO JOÃO      ','2020-09-27 19:32:58.923598','2020-09-27 19:32:58.923598'),('1','2019-03-01 23:30:00',152.0,'09620676017','1234****7890','JOÃO MACEDO  ',' BAR DO JOÃO      ','2020-09-27 19:32:58.923598','2020-09-27 19:32:58.923598'),('2','2019-03-01 12:33:33',107.0,'84515254073','8723****9987','MARCOS PEREIRA','MERCADO DA AVENIDA
+','2020-09-27 19:32:58.923598','2020-09-27 19:32:58.923598'),('2','2019-03-01 23:12:33',502.0,'84515254073','8473****1231','MARCOS PEREIRA','MERCADO DA AVENIDA
+','2020-09-27 19:32:58.923598','2020-09-27 19:32:58.923598') RETURNING "id"[0m
+  ↳ app/controllers/home_controller.rb:26:in `block in upload'
+  [1m[36mTransaction Create Many Without Validations Or Callbacks (2.4ms)[0m  [1m[32mINSERT INTO "transactions" ("tipo","data","valor","cpf","cartao","dono","loja","created_at","updated_at") VALUES ('3','2019-03-01 15:34:53',142.0,'09620676017','4753****3153','JOÃO MACEDO  ',' BAR DO JOÃO      ','2020-09-27 19:32:58.929538','2020-09-27 19:32:58.929538'),('5','2019-03-01 14:56:07',132.0,'55641815063','3123****7687','MARIA JOSEFINA','LOJA DO Ó - MATRIZ','2020-09-27 19:32:58.929538','2020-09-27 19:32:58.929538'),('3','2019-03-01 17:27:12',122.0,'84515254073','6777****1313','MARCOS PEREIRA','MERCADO DA AVENIDA
+','2020-09-27 19:32:58.929538','2020-09-27 19:32:58.929538'),('2','2019-03-01 23:42:34',112.0,'09620676017','3648****0099','JOÃO MACEDO  ',' BAR DO JOÃO      ','2020-09-27 19:32:58.929538','2020-09-27 19:32:58.929538'),('1','2019-03-01 23:30:00',152.0,'09620676017','1234****7890','JOÃO MACEDO  ',' BAR DO JOÃO      ','2020-09-27 19:32:58.929538','2020-09-27 19:32:58.929538'),('2','2019-03-01 12:33:33',107.0,'84515254073','8723****9987','MARCOS PEREIRA','MERCADO DA AVENIDA
+','2020-09-27 19:32:58.929538','2020-09-27 19:32:58.929538'),('2','2019-03-01 23:12:33',502.0,'84515254073','8473****1231','MARCOS PEREIRA','MERCADO DA AVENIDA
+','2020-09-27 19:32:58.929538','2020-09-27 19:32:58.929538'),('3','2019-03-01 17:27:12',602.0,'23270298056','6777****1313','JOSÉ COSTA   ',' MERCEARIA 3 IRMÃO','2020-09-27 19:32:58.929538','2020-09-27 19:32:58.929538') RETURNING "id"[0m
+  ↳ app/controllers/home_controller.rb:26:in `block in upload'
+  [1m[36mTransaction Create Many Without Validations Or Callbacks (1.5ms)[0m  [1m[32mINSERT INTO "transactions" ("tipo","data","valor","cpf","cartao","dono","loja","created_at","updated_at") VALUES ('3','2019-03-01 15:34:53',142.0,'09620676017','4753****3153','JOÃO MACEDO  ',' BAR DO JOÃO      ','2020-09-27 19:32:58.937368','2020-09-27 19:32:58.937368'),('5','2019-03-01 14:56:07',132.0,'55641815063','3123****7687','MARIA JOSEFINA','LOJA DO Ó - MATRIZ','2020-09-27 19:32:58.937368','2020-09-27 19:32:58.937368'),('3','2019-03-01 17:27:12',122.0,'84515254073','6777****1313','MARCOS PEREIRA','MERCADO DA AVENIDA
+','2020-09-27 19:32:58.937368','2020-09-27 19:32:58.937368'),('2','2019-03-01 23:42:34',112.0,'09620676017','3648****0099','JOÃO MACEDO  ',' BAR DO JOÃO      ','2020-09-27 19:32:58.937368','2020-09-27 19:32:58.937368'),('1','2019-03-01 23:30:00',152.0,'09620676017','1234****7890','JOÃO MACEDO  ',' BAR DO JOÃO      ','2020-09-27 19:32:58.937368','2020-09-27 19:32:58.937368'),('2','2019-03-01 12:33:33',107.0,'84515254073','8723****9987','MARCOS PEREIRA','MERCADO DA AVENIDA
+','2020-09-27 19:32:58.937368','2020-09-27 19:32:58.937368'),('2','2019-03-01 23:12:33',502.0,'84515254073','8473****1231','MARCOS PEREIRA','MERCADO DA AVENIDA
+','2020-09-27 19:32:58.937368','2020-09-27 19:32:58.937368'),('3','2019-03-01 17:27:12',602.0,'23270298056','6777****1313','JOSÉ COSTA   ',' MERCEARIA 3 IRMÃO','2020-09-27 19:32:58.937368','2020-09-27 19:32:58.937368'),('1','2019-03-01 09:00:02',200.0,'55641815063','1234****3324','MARIA JOSEFINA','LOJA DO Ó - MATRIZ','2020-09-27 19:32:58.937368','2020-09-27 19:32:58.937368') RETURNING "id"[0m
+  ↳ app/controllers/home_controller.rb:26:in `block in upload'
+  [1m[36mTransaction Create Many Without Validations Or Callbacks (1.4ms)[0m  [1m[32mINSERT INTO "transactions" ("tipo","data","valor","cpf","cartao","dono","loja","created_at","updated_at") VALUES ('3','2019-03-01 15:34:53',142.0,'09620676017','4753****3153','JOÃO MACEDO  ',' BAR DO JOÃO      ','2020-09-27 19:32:58.942881','2020-09-27 19:32:58.942881'),('5','2019-03-01 14:56:07',132.0,'55641815063','3123****7687','MARIA JOSEFINA','LOJA DO Ó - MATRIZ','2020-09-27 19:32:58.942881','2020-09-27 19:32:58.942881'),('3','2019-03-01 17:27:12',122.0,'84515254073','6777****1313','MARCOS PEREIRA','MERCADO DA AVENIDA
+','2020-09-27 19:32:58.942881','2020-09-27 19:32:58.942881'),('2','2019-03-01 23:42:34',112.0,'09620676017','3648****0099','JOÃO MACEDO  ',' BAR DO JOÃO      ','2020-09-27 19:32:58.942881','2020-09-27 19:32:58.942881'),('1','2019-03-01 23:30:00',152.0,'09620676017','1234****7890','JOÃO MACEDO  ',' BAR DO JOÃO      ','2020-09-27 19:32:58.942881','2020-09-27 19:32:58.942881'),('2','2019-03-01 12:33:33',107.0,'84515254073','8723****9987','MARCOS PEREIRA','MERCADO DA AVENIDA
+','2020-09-27 19:32:58.942881','2020-09-27 19:32:58.942881'),('2','2019-03-01 23:12:33',502.0,'84515254073','8473****1231','MARCOS PEREIRA','MERCADO DA AVENIDA
+','2020-09-27 19:32:58.942881','2020-09-27 19:32:58.942881'),('3','2019-03-01 17:27:12',602.0,'23270298056','6777****1313','JOSÉ COSTA   ',' MERCEARIA 3 IRMÃO','2020-09-27 19:32:58.942881','2020-09-27 19:32:58.942881'),('1','2019-03-01 09:00:02',200.0,'55641815063','1234****3324','MARIA JOSEFINA','LOJA DO Ó - MATRIZ','2020-09-27 19:32:58.942881','2020-09-27 19:32:58.942881'),('5','2019-03-01 14:56:07',802.0,'84515254073','3123****7687','MARCOS PEREIRA','MERCADO DA AVENIDA
+','2020-09-27 19:32:58.942881','2020-09-27 19:32:58.942881') RETURNING "id"[0m
+  ↳ app/controllers/home_controller.rb:26:in `block in upload'
+  [1m[36mTransaction Create Many Without Validations Or Callbacks (1.5ms)[0m  [1m[32mINSERT INTO "transactions" ("tipo","data","valor","cpf","cartao","dono","loja","created_at","updated_at") VALUES ('3','2019-03-01 15:34:53',142.0,'09620676017','4753****3153','JOÃO MACEDO  ',' BAR DO JOÃO      ','2020-09-27 19:32:58.948474','2020-09-27 19:32:58.948474'),('5','2019-03-01 14:56:07',132.0,'55641815063','3123****7687','MARIA JOSEFINA','LOJA DO Ó - MATRIZ','2020-09-27 19:32:58.948474','2020-09-27 19:32:58.948474'),('3','2019-03-01 17:27:12',122.0,'84515254073','6777****1313','MARCOS PEREIRA','MERCADO DA AVENIDA
+','2020-09-27 19:32:58.948474','2020-09-27 19:32:58.948474'),('2','2019-03-01 23:42:34',112.0,'09620676017','3648****0099','JOÃO MACEDO  ',' BAR DO JOÃO      ','2020-09-27 19:32:58.948474','2020-09-27 19:32:58.948474'),('1','2019-03-01 23:30:00',152.0,'09620676017','1234****7890','JOÃO MACEDO  ',' BAR DO JOÃO      ','2020-09-27 19:32:58.948474','2020-09-27 19:32:58.948474'),('2','2019-03-01 12:33:33',107.0,'84515254073','8723****9987','MARCOS PEREIRA','MERCADO DA AVENIDA
+','2020-09-27 19:32:58.948474','2020-09-27 19:32:58.948474'),('2','2019-03-01 23:12:33',502.0,'84515254073','8473****1231','MARCOS PEREIRA','MERCADO DA AVENIDA
+','2020-09-27 19:32:58.948474','2020-09-27 19:32:58.948474'),('3','2019-03-01 17:27:12',602.0,'23270298056','6777****1313','JOSÉ COSTA   ',' MERCEARIA 3 IRMÃO','2020-09-27 19:32:58.948474','2020-09-27 19:32:58.948474'),('1','2019-03-01 09:00:02',200.0,'55641815063','1234****3324','MARIA JOSEFINA','LOJA DO Ó - MATRIZ','2020-09-27 19:32:58.948474','2020-09-27 19:32:58.948474'),('5','2019-03-01 14:56:07',802.0,'84515254073','3123****7687','MARCOS PEREIRA','MERCADO DA AVENIDA
+','2020-09-27 19:32:58.948474','2020-09-27 19:32:58.948474'),('2','2019-03-01 23:12:33',102.0,'23270298056','8473****1231','JOSÉ COSTA   ',' MERCEARIA 3 IRMÃO','2020-09-27 19:32:58.948474','2020-09-27 19:32:58.948474') RETURNING "id"[0m
+  ↳ app/controllers/home_controller.rb:26:in `block in upload'
+  [1m[36mTransaction Create Many Without Validations Or Callbacks (1.2ms)[0m  [1m[32mINSERT INTO "transactions" ("tipo","data","valor","cpf","cartao","dono","loja","created_at","updated_at") VALUES ('3','2019-03-01 15:34:53',142.0,'09620676017','4753****3153','JOÃO MACEDO  ',' BAR DO JOÃO      ','2020-09-27 19:32:58.954421','2020-09-27 19:32:58.954421'),('5','2019-03-01 14:56:07',132.0,'55641815063','3123****7687','MARIA JOSEFINA','LOJA DO Ó - MATRIZ','2020-09-27 19:32:58.954421','2020-09-27 19:32:58.954421'),('3','2019-03-01 17:27:12',122.0,'84515254073','6777****1313','MARCOS PEREIRA','MERCADO DA AVENIDA
+','2020-09-27 19:32:58.954421','2020-09-27 19:32:58.954421'),('2','2019-03-01 23:42:34',112.0,'09620676017','3648****0099','JOÃO MACEDO  ',' BAR DO JOÃO      ','2020-09-27 19:32:58.954421','2020-09-27 19:32:58.954421'),('1','2019-03-01 23:30:00',152.0,'09620676017','1234****7890','JOÃO MACEDO  ',' BAR DO JOÃO      ','2020-09-27 19:32:58.954421','2020-09-27 19:32:58.954421'),('2','2019-03-01 12:33:33',107.0,'84515254073','8723****9987','MARCOS PEREIRA','MERCADO DA AVENIDA
+','2020-09-27 19:32:58.954421','2020-09-27 19:32:58.954421'),('2','2019-03-01 23:12:33',502.0,'84515254073','8473****1231','MARCOS PEREIRA','MERCADO DA AVENIDA
+','2020-09-27 19:32:58.954421','2020-09-27 19:32:58.954421'),('3','2019-03-01 17:27:12',602.0,'23270298056','6777****1313','JOSÉ COSTA   ',' MERCEARIA 3 IRMÃO','2020-09-27 19:32:58.954421','2020-09-27 19:32:58.954421'),('1','2019-03-01 09:00:02',200.0,'55641815063','1234****3324','MARIA JOSEFINA','LOJA DO Ó - MATRIZ','2020-09-27 19:32:58.954421','2020-09-27 19:32:58.954421'),('5','2019-03-01 14:56:07',802.0,'84515254073','3123****7687','MARCOS PEREIRA','MERCADO DA AVENIDA
+','2020-09-27 19:32:58.954421','2020-09-27 19:32:58.954421'),('2','2019-03-01 23:12:33',102.0,'23270298056','8473****1231','JOSÉ COSTA   ',' MERCEARIA 3 IRMÃO','2020-09-27 19:32:58.954421','2020-09-27 19:32:58.954421'),('3','2019-03-01 17:27:12',6102.0,'23270298056','6777****1313','JOSÉ COSTA   ',' MERCEARIA 3 IRMÃO','2020-09-27 19:32:58.954421','2020-09-27 19:32:58.954421') RETURNING "id"[0m
+  ↳ app/controllers/home_controller.rb:26:in `block in upload'
+  [1m[36mTransaction Create Many Without Validations Or Callbacks (1.7ms)[0m  [1m[32mINSERT INTO "transactions" ("tipo","data","valor","cpf","cartao","dono","loja","created_at","updated_at") VALUES ('3','2019-03-01 15:34:53',142.0,'09620676017','4753****3153','JOÃO MACEDO  ',' BAR DO JOÃO      ','2020-09-27 19:32:58.961605','2020-09-27 19:32:58.961605'),('5','2019-03-01 14:56:07',132.0,'55641815063','3123****7687','MARIA JOSEFINA','LOJA DO Ó - MATRIZ','2020-09-27 19:32:58.961605','2020-09-27 19:32:58.961605'),('3','2019-03-01 17:27:12',122.0,'84515254073','6777****1313','MARCOS PEREIRA','MERCADO DA AVENIDA
+','2020-09-27 19:32:58.961605','2020-09-27 19:32:58.961605'),('2','2019-03-01 23:42:34',112.0,'09620676017','3648****0099','JOÃO MACEDO  ',' BAR DO JOÃO      ','2020-09-27 19:32:58.961605','2020-09-27 19:32:58.961605'),('1','2019-03-01 23:30:00',152.0,'09620676017','1234****7890','JOÃO MACEDO  ',' BAR DO JOÃO      ','2020-09-27 19:32:58.961605','2020-09-27 19:32:58.961605'),('2','2019-03-01 12:33:33',107.0,'84515254073','8723****9987','MARCOS PEREIRA','MERCADO DA AVENIDA
+','2020-09-27 19:32:58.961605','2020-09-27 19:32:58.961605'),('2','2019-03-01 23:12:33',502.0,'84515254073','8473****1231','MARCOS PEREIRA','MERCADO DA AVENIDA
+','2020-09-27 19:32:58.961605','2020-09-27 19:32:58.961605'),('3','2019-03-01 17:27:12',602.0,'23270298056','6777****1313','JOSÉ COSTA   ',' MERCEARIA 3 IRMÃO','2020-09-27 19:32:58.961605','2020-09-27 19:32:58.961605'),('1','2019-03-01 09:00:02',200.0,'55641815063','1234****3324','MARIA JOSEFINA','LOJA DO Ó - MATRIZ','2020-09-27 19:32:58.961605','2020-09-27 19:32:58.961605'),('5','2019-03-01 14:56:07',802.0,'84515254073','3123****7687','MARCOS PEREIRA','MERCADO DA AVENIDA
+','2020-09-27 19:32:58.961605','2020-09-27 19:32:58.961605'),('2','2019-03-01 23:12:33',102.0,'23270298056','8473****1231','JOSÉ COSTA   ',' MERCEARIA 3 IRMÃO','2020-09-27 19:32:58.961605','2020-09-27 19:32:58.961605'),('3','2019-03-01 17:27:12',6102.0,'23270298056','6777****1313','JOSÉ COSTA   ',' MERCEARIA 3 IRMÃO','2020-09-27 19:32:58.961605','2020-09-27 19:32:58.961605'),('4','2019-03-01 10:00:00',152.32,'55641815063','1234****6678','MARIA JOSEFINA','LOJA DO Ó - FILIAL','2020-09-27 19:32:58.961605','2020-09-27 19:32:58.961605') RETURNING "id"[0m
+  ↳ app/controllers/home_controller.rb:26:in `block in upload'
+  [1m[36mTransaction Create Many Without Validations Or Callbacks (1.4ms)[0m  [1m[32mINSERT INTO "transactions" ("tipo","data","valor","cpf","cartao","dono","loja","created_at","updated_at") VALUES ('3','2019-03-01 15:34:53',142.0,'09620676017','4753****3153','JOÃO MACEDO  ',' BAR DO JOÃO      ','2020-09-27 19:32:58.968750','2020-09-27 19:32:58.968750'),('5','2019-03-01 14:56:07',132.0,'55641815063','3123****7687','MARIA JOSEFINA','LOJA DO Ó - MATRIZ','2020-09-27 19:32:58.968750','2020-09-27 19:32:58.968750'),('3','2019-03-01 17:27:12',122.0,'84515254073','6777****1313','MARCOS PEREIRA','MERCADO DA AVENIDA
+','2020-09-27 19:32:58.968750','2020-09-27 19:32:58.968750'),('2','2019-03-01 23:42:34',112.0,'09620676017','3648****0099','JOÃO MACEDO  ',' BAR DO JOÃO      ','2020-09-27 19:32:58.968750','2020-09-27 19:32:58.968750'),('1','2019-03-01 23:30:00',152.0,'09620676017','1234****7890','JOÃO MACEDO  ',' BAR DO JOÃO      ','2020-09-27 19:32:58.968750','2020-09-27 19:32:58.968750'),('2','2019-03-01 12:33:33',107.0,'84515254073','8723****9987','MARCOS PEREIRA','MERCADO DA AVENIDA
+','2020-09-27 19:32:58.968750','2020-09-27 19:32:58.968750'),('2','2019-03-01 23:12:33',502.0,'84515254073','8473****1231','MARCOS PEREIRA','MERCADO DA AVENIDA
+','2020-09-27 19:32:58.968750','2020-09-27 19:32:58.968750'),('3','2019-03-01 17:27:12',602.0,'23270298056','6777****1313','JOSÉ COSTA   ',' MERCEARIA 3 IRMÃO','2020-09-27 19:32:58.968750','2020-09-27 19:32:58.968750'),('1','2019-03-01 09:00:02',200.0,'55641815063','1234****3324','MARIA JOSEFINA','LOJA DO Ó - MATRIZ','2020-09-27 19:32:58.968750','2020-09-27 19:32:58.968750'),('5','2019-03-01 14:56:07',802.0,'84515254073','3123****7687','MARCOS PEREIRA','MERCADO DA AVENIDA
+','2020-09-27 19:32:58.968750','2020-09-27 19:32:58.968750'),('2','2019-03-01 23:12:33',102.0,'23270298056','8473****1231','JOSÉ COSTA   ',' MERCEARIA 3 IRMÃO','2020-09-27 19:32:58.968750','2020-09-27 19:32:58.968750'),('3','2019-03-01 17:27:12',6102.0,'23270298056','6777****1313','JOSÉ COSTA   ',' MERCEARIA 3 IRMÃO','2020-09-27 19:32:58.968750','2020-09-27 19:32:58.968750'),('4','2019-03-01 10:00:00',152.32,'55641815063','1234****6678','MARIA JOSEFINA','LOJA DO Ó - FILIAL','2020-09-27 19:32:58.968750','2020-09-27 19:32:58.968750'),('8','2019-03-01 12:32:22',102.03,'84515254073','2344****1222','MARCOS PEREIRA','MERCADO DA AVENIDA
+','2020-09-27 19:32:58.968750','2020-09-27 19:32:58.968750') RETURNING "id"[0m
+  ↳ app/controllers/home_controller.rb:26:in `block in upload'
+  [1m[36mTransaction Create Many Without Validations Or Callbacks (1.3ms)[0m  [1m[32mINSERT INTO "transactions" ("tipo","data","valor","cpf","cartao","dono","loja","created_at","updated_at") VALUES ('3','2019-03-01 15:34:53',142.0,'09620676017','4753****3153','JOÃO MACEDO  ',' BAR DO JOÃO      ','2020-09-27 19:32:58.975518','2020-09-27 19:32:58.975518'),('5','2019-03-01 14:56:07',132.0,'55641815063','3123****7687','MARIA JOSEFINA','LOJA DO Ó - MATRIZ','2020-09-27 19:32:58.975518','2020-09-27 19:32:58.975518'),('3','2019-03-01 17:27:12',122.0,'84515254073','6777****1313','MARCOS PEREIRA','MERCADO DA AVENIDA
+','2020-09-27 19:32:58.975518','2020-09-27 19:32:58.975518'),('2','2019-03-01 23:42:34',112.0,'09620676017','3648****0099','JOÃO MACEDO  ',' BAR DO JOÃO      ','2020-09-27 19:32:58.975518','2020-09-27 19:32:58.975518'),('1','2019-03-01 23:30:00',152.0,'09620676017','1234****7890','JOÃO MACEDO  ',' BAR DO JOÃO      ','2020-09-27 19:32:58.975518','2020-09-27 19:32:58.975518'),('2','2019-03-01 12:33:33',107.0,'84515254073','8723****9987','MARCOS PEREIRA','MERCADO DA AVENIDA
+','2020-09-27 19:32:58.975518','2020-09-27 19:32:58.975518'),('2','2019-03-01 23:12:33',502.0,'84515254073','8473****1231','MARCOS PEREIRA','MERCADO DA AVENIDA
+','2020-09-27 19:32:58.975518','2020-09-27 19:32:58.975518'),('3','2019-03-01 17:27:12',602.0,'23270298056','6777****1313','JOSÉ COSTA   ',' MERCEARIA 3 IRMÃO','2020-09-27 19:32:58.975518','2020-09-27 19:32:58.975518'),('1','2019-03-01 09:00:02',200.0,'55641815063','1234****3324','MARIA JOSEFINA','LOJA DO Ó - MATRIZ','2020-09-27 19:32:58.975518','2020-09-27 19:32:58.975518'),('5','2019-03-01 14:56:07',802.0,'84515254073','3123****7687','MARCOS PEREIRA','MERCADO DA AVENIDA
+','2020-09-27 19:32:58.975518','2020-09-27 19:32:58.975518'),('2','2019-03-01 23:12:33',102.0,'23270298056','8473****1231','JOSÉ COSTA   ',' MERCEARIA 3 IRMÃO','2020-09-27 19:32:58.975518','2020-09-27 19:32:58.975518'),('3','2019-03-01 17:27:12',6102.0,'23270298056','6777****1313','JOSÉ COSTA   ',' MERCEARIA 3 IRMÃO','2020-09-27 19:32:58.975518','2020-09-27 19:32:58.975518'),('4','2019-03-01 10:00:00',152.32,'55641815063','1234****6678','MARIA JOSEFINA','LOJA DO Ó - FILIAL','2020-09-27 19:32:58.975518','2020-09-27 19:32:58.975518'),('8','2019-03-01 12:32:22',102.03,'84515254073','2344****1222','MARCOS PEREIRA','MERCADO DA AVENIDA
+','2020-09-27 19:32:58.975518','2020-09-27 19:32:58.975518'),('3','2019-03-01 17:27:12',103.0,'23270298056','6777****1313','JOSÉ COSTA   ',' MERCEARIA 3 IRMÃO','2020-09-27 19:32:58.975518','2020-09-27 19:32:58.975518') RETURNING "id"[0m
+  ↳ app/controllers/home_controller.rb:26:in `block in upload'
+  [1m[36mTransaction Create Many Without Validations Or Callbacks (1.6ms)[0m  [1m[32mINSERT INTO "transactions" ("tipo","data","valor","cpf","cartao","dono","loja","created_at","updated_at") VALUES ('3','2019-03-01 15:34:53',142.0,'09620676017','4753****3153','JOÃO MACEDO  ',' BAR DO JOÃO      ','2020-09-27 19:32:58.982503','2020-09-27 19:32:58.982503'),('5','2019-03-01 14:56:07',132.0,'55641815063','3123****7687','MARIA JOSEFINA','LOJA DO Ó - MATRIZ','2020-09-27 19:32:58.982503','2020-09-27 19:32:58.982503'),('3','2019-03-01 17:27:12',122.0,'84515254073','6777****1313','MARCOS PEREIRA','MERCADO DA AVENIDA
+','2020-09-27 19:32:58.982503','2020-09-27 19:32:58.982503'),('2','2019-03-01 23:42:34',112.0,'09620676017','3648****0099','JOÃO MACEDO  ',' BAR DO JOÃO      ','2020-09-27 19:32:58.982503','2020-09-27 19:32:58.982503'),('1','2019-03-01 23:30:00',152.0,'09620676017','1234****7890','JOÃO MACEDO  ',' BAR DO JOÃO      ','2020-09-27 19:32:58.982503','2020-09-27 19:32:58.982503'),('2','2019-03-01 12:33:33',107.0,'84515254073','8723****9987','MARCOS PEREIRA','MERCADO DA AVENIDA
+','2020-09-27 19:32:58.982503','2020-09-27 19:32:58.982503'),('2','2019-03-01 23:12:33',502.0,'84515254073','8473****1231','MARCOS PEREIRA','MERCADO DA AVENIDA
+','2020-09-27 19:32:58.982503','2020-09-27 19:32:58.982503'),('3','2019-03-01 17:27:12',602.0,'23270298056','6777****1313','JOSÉ COSTA   ',' MERCEARIA 3 IRMÃO','2020-09-27 19:32:58.982503','2020-09-27 19:32:58.982503'),('1','2019-03-01 09:00:02',200.0,'55641815063','1234****3324','MARIA JOSEFINA','LOJA DO Ó - MATRIZ','2020-09-27 19:32:58.982503','2020-09-27 19:32:58.982503'),('5','2019-03-01 14:56:07',802.0,'84515254073','3123****7687','MARCOS PEREIRA','MERCADO DA AVENIDA
+','2020-09-27 19:32:58.982503','2020-09-27 19:32:58.982503'),('2','2019-03-01 23:12:33',102.0,'23270298056','8473****1231','JOSÉ COSTA   ',' MERCEARIA 3 IRMÃO','2020-09-27 19:32:58.982503','2020-09-27 19:32:58.982503'),('3','2019-03-01 17:27:12',6102.0,'23270298056','6777****1313','JOSÉ COSTA   ',' MERCEARIA 3 IRMÃO','2020-09-27 19:32:58.982503','2020-09-27 19:32:58.982503'),('4','2019-03-01 10:00:00',152.32,'55641815063','1234****6678','MARIA JOSEFINA','LOJA DO Ó - FILIAL','2020-09-27 19:32:58.982503','2020-09-27 19:32:58.982503'),('8','2019-03-01 12:32:22',102.03,'84515254073','2344****1222','MARCOS PEREIRA','MERCADO DA AVENIDA
+','2020-09-27 19:32:58.982503','2020-09-27 19:32:58.982503'),('3','2019-03-01 17:27:12',103.0,'23270298056','6777****1313','JOSÉ COSTA   ',' MERCEARIA 3 IRMÃO','2020-09-27 19:32:58.982503','2020-09-27 19:32:58.982503'),('9','2019-03-01 00:00:00',102.0,'55641815063','6228****9090','MARIA JOSEFINA','LOJA DO Ó - MATRIZ','2020-09-27 19:32:58.982503','2020-09-27 19:32:58.982503') RETURNING "id"[0m
+  ↳ app/controllers/home_controller.rb:26:in `block in upload'
+  [1m[36mTransaction Create Many Without Validations Or Callbacks (1.4ms)[0m  [1m[32mINSERT INTO "transactions" ("tipo","data","valor","cpf","cartao","dono","loja","created_at","updated_at") VALUES ('3','2019-03-01 15:34:53',142.0,'09620676017','4753****3153','JOÃO MACEDO  ',' BAR DO JOÃO      ','2020-09-27 19:32:58.992144','2020-09-27 19:32:58.992144'),('5','2019-03-01 14:56:07',132.0,'55641815063','3123****7687','MARIA JOSEFINA','LOJA DO Ó - MATRIZ','2020-09-27 19:32:58.992144','2020-09-27 19:32:58.992144'),('3','2019-03-01 17:27:12',122.0,'84515254073','6777****1313','MARCOS PEREIRA','MERCADO DA AVENIDA
+','2020-09-27 19:32:58.992144','2020-09-27 19:32:58.992144'),('2','2019-03-01 23:42:34',112.0,'09620676017','3648****0099','JOÃO MACEDO  ',' BAR DO JOÃO      ','2020-09-27 19:32:58.992144','2020-09-27 19:32:58.992144'),('1','2019-03-01 23:30:00',152.0,'09620676017','1234****7890','JOÃO MACEDO  ',' BAR DO JOÃO      ','2020-09-27 19:32:58.992144','2020-09-27 19:32:58.992144'),('2','2019-03-01 12:33:33',107.0,'84515254073','8723****9987','MARCOS PEREIRA','MERCADO DA AVENIDA
+','2020-09-27 19:32:58.992144','2020-09-27 19:32:58.992144'),('2','2019-03-01 23:12:33',502.0,'84515254073','8473****1231','MARCOS PEREIRA','MERCADO DA AVENIDA
+','2020-09-27 19:32:58.992144','2020-09-27 19:32:58.992144'),('3','2019-03-01 17:27:12',602.0,'23270298056','6777****1313','JOSÉ COSTA   ',' MERCEARIA 3 IRMÃO','2020-09-27 19:32:58.992144','2020-09-27 19:32:58.992144'),('1','2019-03-01 09:00:02',200.0,'55641815063','1234****3324','MARIA JOSEFINA','LOJA DO Ó - MATRIZ','2020-09-27 19:32:58.992144','2020-09-27 19:32:58.992144'),('5','2019-03-01 14:56:07',802.0,'84515254073','3123****7687','MARCOS PEREIRA','MERCADO DA AVENIDA
+','2020-09-27 19:32:58.992144','2020-09-27 19:32:58.992144'),('2','2019-03-01 23:12:33',102.0,'23270298056','8473****1231','JOSÉ COSTA   ',' MERCEARIA 3 IRMÃO','2020-09-27 19:32:58.992144','2020-09-27 19:32:58.992144'),('3','2019-03-01 17:27:12',6102.0,'23270298056','6777****1313','JOSÉ COSTA   ',' MERCEARIA 3 IRMÃO','2020-09-27 19:32:58.992144','2020-09-27 19:32:58.992144'),('4','2019-03-01 10:00:00',152.32,'55641815063','1234****6678','MARIA JOSEFINA','LOJA DO Ó - FILIAL','2020-09-27 19:32:58.992144','2020-09-27 19:32:58.992144'),('8','2019-03-01 12:32:22',102.03,'84515254073','2344****1222','MARCOS PEREIRA','MERCADO DA AVENIDA
+','2020-09-27 19:32:58.992144','2020-09-27 19:32:58.992144'),('3','2019-03-01 17:27:12',103.0,'23270298056','6777****1313','JOSÉ COSTA   ',' MERCEARIA 3 IRMÃO','2020-09-27 19:32:58.992144','2020-09-27 19:32:58.992144'),('9','2019-03-01 00:00:00',102.0,'55641815063','6228****9090','MARIA JOSEFINA','LOJA DO Ó - MATRIZ','2020-09-27 19:32:58.992144','2020-09-27 19:32:58.992144'),('4','2019-06-01 10:00:00',506.17,'84515254073','1234****2231','MARCOS PEREIRA','MERCADO DA AVENIDA
+','2020-09-27 19:32:58.992144','2020-09-27 19:32:58.992144') RETURNING "id"[0m
+  ↳ app/controllers/home_controller.rb:26:in `block in upload'
+  [1m[36mTransaction Create Many Without Validations Or Callbacks (1.3ms)[0m  [1m[32mINSERT INTO "transactions" ("tipo","data","valor","cpf","cartao","dono","loja","created_at","updated_at") VALUES ('3','2019-03-01 15:34:53',142.0,'09620676017','4753****3153','JOÃO MACEDO  ',' BAR DO JOÃO      ','2020-09-27 19:32:59.000277','2020-09-27 19:32:59.000277'),('5','2019-03-01 14:56:07',132.0,'55641815063','3123****7687','MARIA JOSEFINA','LOJA DO Ó - MATRIZ','2020-09-27 19:32:59.000277','2020-09-27 19:32:59.000277'),('3','2019-03-01 17:27:12',122.0,'84515254073','6777****1313','MARCOS PEREIRA','MERCADO DA AVENIDA
+','2020-09-27 19:32:59.000277','2020-09-27 19:32:59.000277'),('2','2019-03-01 23:42:34',112.0,'09620676017','3648****0099','JOÃO MACEDO  ',' BAR DO JOÃO      ','2020-09-27 19:32:59.000277','2020-09-27 19:32:59.000277'),('1','2019-03-01 23:30:00',152.0,'09620676017','1234****7890','JOÃO MACEDO  ',' BAR DO JOÃO      ','2020-09-27 19:32:59.000277','2020-09-27 19:32:59.000277'),('2','2019-03-01 12:33:33',107.0,'84515254073','8723****9987','MARCOS PEREIRA','MERCADO DA AVENIDA
+','2020-09-27 19:32:59.000277','2020-09-27 19:32:59.000277'),('2','2019-03-01 23:12:33',502.0,'84515254073','8473****1231','MARCOS PEREIRA','MERCADO DA AVENIDA
+','2020-09-27 19:32:59.000277','2020-09-27 19:32:59.000277'),('3','2019-03-01 17:27:12',602.0,'23270298056','6777****1313','JOSÉ COSTA   ',' MERCEARIA 3 IRMÃO','2020-09-27 19:32:59.000277','2020-09-27 19:32:59.000277'),('1','2019-03-01 09:00:02',200.0,'55641815063','1234****3324','MARIA JOSEFINA','LOJA DO Ó - MATRIZ','2020-09-27 19:32:59.000277','2020-09-27 19:32:59.000277'),('5','2019-03-01 14:56:07',802.0,'84515254073','3123****7687','MARCOS PEREIRA','MERCADO DA AVENIDA
+','2020-09-27 19:32:59.000277','2020-09-27 19:32:59.000277'),('2','2019-03-01 23:12:33',102.0,'23270298056','8473****1231','JOSÉ COSTA   ',' MERCEARIA 3 IRMÃO','2020-09-27 19:32:59.000277','2020-09-27 19:32:59.000277'),('3','2019-03-01 17:27:12',6102.0,'23270298056','6777****1313','JOSÉ COSTA   ',' MERCEARIA 3 IRMÃO','2020-09-27 19:32:59.000277','2020-09-27 19:32:59.000277'),('4','2019-03-01 10:00:00',152.32,'55641815063','1234****6678','MARIA JOSEFINA','LOJA DO Ó - FILIAL','2020-09-27 19:32:59.000277','2020-09-27 19:32:59.000277'),('8','2019-03-01 12:32:22',102.03,'84515254073','2344****1222','MARCOS PEREIRA','MERCADO DA AVENIDA
+','2020-09-27 19:32:59.000277','2020-09-27 19:32:59.000277'),('3','2019-03-01 17:27:12',103.0,'23270298056','6777****1313','JOSÉ COSTA   ',' MERCEARIA 3 IRMÃO','2020-09-27 19:32:59.000277','2020-09-27 19:32:59.000277'),('9','2019-03-01 00:00:00',102.0,'55641815063','6228****9090','MARIA JOSEFINA','LOJA DO Ó - MATRIZ','2020-09-27 19:32:59.000277','2020-09-27 19:32:59.000277'),('4','2019-06-01 10:00:00',506.17,'84515254073','1234****2231','MARCOS PEREIRA','MERCADO DA AVENIDA
+','2020-09-27 19:32:59.000277','2020-09-27 19:32:59.000277'),('2','2019-03-01 12:33:33',109.0,'23270298056','8723****9987','JOSÉ COSTA   ',' MERCEARIA 3 IRMÃO','2020-09-27 19:32:59.000277','2020-09-27 19:32:59.000277') RETURNING "id"[0m
+  ↳ app/controllers/home_controller.rb:26:in `block in upload'
+  [1m[36mTransaction Create Many Without Validations Or Callbacks (1.6ms)[0m  [1m[32mINSERT INTO "transactions" ("tipo","data","valor","cpf","cartao","dono","loja","created_at","updated_at") VALUES ('3','2019-03-01 15:34:53',142.0,'09620676017','4753****3153','JOÃO MACEDO  ',' BAR DO JOÃO      ','2020-09-27 19:32:59.008499','2020-09-27 19:32:59.008499'),('5','2019-03-01 14:56:07',132.0,'55641815063','3123****7687','MARIA JOSEFINA','LOJA DO Ó - MATRIZ','2020-09-27 19:32:59.008499','2020-09-27 19:32:59.008499'),('3','2019-03-01 17:27:12',122.0,'84515254073','6777****1313','MARCOS PEREIRA','MERCADO DA AVENIDA
+','2020-09-27 19:32:59.008499','2020-09-27 19:32:59.008499'),('2','2019-03-01 23:42:34',112.0,'09620676017','3648****0099','JOÃO MACEDO  ',' BAR DO JOÃO      ','2020-09-27 19:32:59.008499','2020-09-27 19:32:59.008499'),('1','2019-03-01 23:30:00',152.0,'09620676017','1234****7890','JOÃO MACEDO  ',' BAR DO JOÃO      ','2020-09-27 19:32:59.008499','2020-09-27 19:32:59.008499'),('2','2019-03-01 12:33:33',107.0,'84515254073','8723****9987','MARCOS PEREIRA','MERCADO DA AVENIDA
+','2020-09-27 19:32:59.008499','2020-09-27 19:32:59.008499'),('2','2019-03-01 23:12:33',502.0,'84515254073','8473****1231','MARCOS PEREIRA','MERCADO DA AVENIDA
+','2020-09-27 19:32:59.008499','2020-09-27 19:32:59.008499'),('3','2019-03-01 17:27:12',602.0,'23270298056','6777****1313','JOSÉ COSTA   ',' MERCEARIA 3 IRMÃO','2020-09-27 19:32:59.008499','2020-09-27 19:32:59.008499'),('1','2019-03-01 09:00:02',200.0,'55641815063','1234****3324','MARIA JOSEFINA','LOJA DO Ó - MATRIZ','2020-09-27 19:32:59.008499','2020-09-27 19:32:59.008499'),('5','2019-03-01 14:56:07',802.0,'84515254073','3123****7687','MARCOS PEREIRA','MERCADO DA AVENIDA
+','2020-09-27 19:32:59.008499','2020-09-27 19:32:59.008499'),('2','2019-03-01 23:12:33',102.0,'23270298056','8473****1231','JOSÉ COSTA   ',' MERCEARIA 3 IRMÃO','2020-09-27 19:32:59.008499','2020-09-27 19:32:59.008499'),('3','2019-03-01 17:27:12',6102.0,'23270298056','6777****1313','JOSÉ COSTA   ',' MERCEARIA 3 IRMÃO','2020-09-27 19:32:59.008499','2020-09-27 19:32:59.008499'),('4','2019-03-01 10:00:00',152.32,'55641815063','1234****6678','MARIA JOSEFINA','LOJA DO Ó - FILIAL','2020-09-27 19:32:59.008499','2020-09-27 19:32:59.008499'),('8','2019-03-01 12:32:22',102.03,'84515254073','2344****1222','MARCOS PEREIRA','MERCADO DA AVENIDA
+','2020-09-27 19:32:59.008499','2020-09-27 19:32:59.008499'),('3','2019-03-01 17:27:12',103.0,'23270298056','6777****1313','JOSÉ COSTA   ',' MERCEARIA 3 IRMÃO','2020-09-27 19:32:59.008499','2020-09-27 19:32:59.008499'),('9','2019-03-01 00:00:00',102.0,'55641815063','6228****9090','MARIA JOSEFINA','LOJA DO Ó - MATRIZ','2020-09-27 19:32:59.008499','2020-09-27 19:32:59.008499'),('4','2019-06-01 10:00:00',506.17,'84515254073','1234****2231','MARCOS PEREIRA','MERCADO DA AVENIDA
+','2020-09-27 19:32:59.008499','2020-09-27 19:32:59.008499'),('2','2019-03-01 12:33:33',109.0,'23270298056','8723****9987','JOSÉ COSTA   ',' MERCEARIA 3 IRMÃO','2020-09-27 19:32:59.008499','2020-09-27 19:32:59.008499'),('8','2019-03-01 12:32:22',2.0,'84515254073','2344****1222','MARCOS PEREIRA','MERCADO DA AVENIDA
+','2020-09-27 19:32:59.008499','2020-09-27 19:32:59.008499') RETURNING "id"[0m
+  ↳ app/controllers/home_controller.rb:26:in `block in upload'
+  [1m[36mTransaction Create Many Without Validations Or Callbacks (1.7ms)[0m  [1m[32mINSERT INTO "transactions" ("tipo","data","valor","cpf","cartao","dono","loja","created_at","updated_at") VALUES ('3','2019-03-01 15:34:53',142.0,'09620676017','4753****3153','JOÃO MACEDO  ',' BAR DO JOÃO      ','2020-09-27 19:32:59.016945','2020-09-27 19:32:59.016945'),('5','2019-03-01 14:56:07',132.0,'55641815063','3123****7687','MARIA JOSEFINA','LOJA DO Ó - MATRIZ','2020-09-27 19:32:59.016945','2020-09-27 19:32:59.016945'),('3','2019-03-01 17:27:12',122.0,'84515254073','6777****1313','MARCOS PEREIRA','MERCADO DA AVENIDA
+','2020-09-27 19:32:59.016945','2020-09-27 19:32:59.016945'),('2','2019-03-01 23:42:34',112.0,'09620676017','3648****0099','JOÃO MACEDO  ',' BAR DO JOÃO      ','2020-09-27 19:32:59.016945','2020-09-27 19:32:59.016945'),('1','2019-03-01 23:30:00',152.0,'09620676017','1234****7890','JOÃO MACEDO  ',' BAR DO JOÃO      ','2020-09-27 19:32:59.016945','2020-09-27 19:32:59.016945'),('2','2019-03-01 12:33:33',107.0,'84515254073','8723****9987','MARCOS PEREIRA','MERCADO DA AVENIDA
+','2020-09-27 19:32:59.016945','2020-09-27 19:32:59.016945'),('2','2019-03-01 23:12:33',502.0,'84515254073','8473****1231','MARCOS PEREIRA','MERCADO DA AVENIDA
+','2020-09-27 19:32:59.016945','2020-09-27 19:32:59.016945'),('3','2019-03-01 17:27:12',602.0,'23270298056','6777****1313','JOSÉ COSTA   ',' MERCEARIA 3 IRMÃO','2020-09-27 19:32:59.016945','2020-09-27 19:32:59.016945'),('1','2019-03-01 09:00:02',200.0,'55641815063','1234****3324','MARIA JOSEFINA','LOJA DO Ó - MATRIZ','2020-09-27 19:32:59.016945','2020-09-27 19:32:59.016945'),('5','2019-03-01 14:56:07',802.0,'84515254073','3123****7687','MARCOS PEREIRA','MERCADO DA AVENIDA
+','2020-09-27 19:32:59.016945','2020-09-27 19:32:59.016945'),('2','2019-03-01 23:12:33',102.0,'23270298056','8473****1231','JOSÉ COSTA   ',' MERCEARIA 3 IRMÃO','2020-09-27 19:32:59.016945','2020-09-27 19:32:59.016945'),('3','2019-03-01 17:27:12',6102.0,'23270298056','6777****1313','JOSÉ COSTA   ',' MERCEARIA 3 IRMÃO','2020-09-27 19:32:59.016945','2020-09-27 19:32:59.016945'),('4','2019-03-01 10:00:00',152.32,'55641815063','1234****6678','MARIA JOSEFINA','LOJA DO Ó - FILIAL','2020-09-27 19:32:59.016945','2020-09-27 19:32:59.016945'),('8','2019-03-01 12:32:22',102.03,'84515254073','2344****1222','MARCOS PEREIRA','MERCADO DA AVENIDA
+','2020-09-27 19:32:59.016945','2020-09-27 19:32:59.016945'),('3','2019-03-01 17:27:12',103.0,'23270298056','6777****1313','JOSÉ COSTA   ',' MERCEARIA 3 IRMÃO','2020-09-27 19:32:59.016945','2020-09-27 19:32:59.016945'),('9','2019-03-01 00:00:00',102.0,'55641815063','6228****9090','MARIA JOSEFINA','LOJA DO Ó - MATRIZ','2020-09-27 19:32:59.016945','2020-09-27 19:32:59.016945'),('4','2019-06-01 10:00:00',506.17,'84515254073','1234****2231','MARCOS PEREIRA','MERCADO DA AVENIDA
+','2020-09-27 19:32:59.016945','2020-09-27 19:32:59.016945'),('2','2019-03-01 12:33:33',109.0,'23270298056','8723****9987','JOSÉ COSTA   ',' MERCEARIA 3 IRMÃO','2020-09-27 19:32:59.016945','2020-09-27 19:32:59.016945'),('8','2019-03-01 12:32:22',2.0,'84515254073','2344****1222','MARCOS PEREIRA','MERCADO DA AVENIDA
+','2020-09-27 19:32:59.016945','2020-09-27 19:32:59.016945'),('2','2019-03-01 14:18:08',5.0,'23270298056','7677****8778','JOSÉ COSTA   ',' MERCEARIA 3 IRMÃO','2020-09-27 19:32:59.016945','2020-09-27 19:32:59.016945') RETURNING "id"[0m
+  ↳ app/controllers/home_controller.rb:26:in `block in upload'
+  [1m[36mTransaction Create Many Without Validations Or Callbacks (1.7ms)[0m  [1m[32mINSERT INTO "transactions" ("tipo","data","valor","cpf","cartao","dono","loja","created_at","updated_at") VALUES ('3','2019-03-01 15:34:53',142.0,'09620676017','4753****3153','JOÃO MACEDO  ',' BAR DO JOÃO      ','2020-09-27 19:32:59.027488','2020-09-27 19:32:59.027488'),('5','2019-03-01 14:56:07',132.0,'55641815063','3123****7687','MARIA JOSEFINA','LOJA DO Ó - MATRIZ','2020-09-27 19:32:59.027488','2020-09-27 19:32:59.027488'),('3','2019-03-01 17:27:12',122.0,'84515254073','6777****1313','MARCOS PEREIRA','MERCADO DA AVENIDA
+','2020-09-27 19:32:59.027488','2020-09-27 19:32:59.027488'),('2','2019-03-01 23:42:34',112.0,'09620676017','3648****0099','JOÃO MACEDO  ',' BAR DO JOÃO      ','2020-09-27 19:32:59.027488','2020-09-27 19:32:59.027488'),('1','2019-03-01 23:30:00',152.0,'09620676017','1234****7890','JOÃO MACEDO  ',' BAR DO JOÃO      ','2020-09-27 19:32:59.027488','2020-09-27 19:32:59.027488'),('2','2019-03-01 12:33:33',107.0,'84515254073','8723****9987','MARCOS PEREIRA','MERCADO DA AVENIDA
+','2020-09-27 19:32:59.027488','2020-09-27 19:32:59.027488'),('2','2019-03-01 23:12:33',502.0,'84515254073','8473****1231','MARCOS PEREIRA','MERCADO DA AVENIDA
+','2020-09-27 19:32:59.027488','2020-09-27 19:32:59.027488'),('3','2019-03-01 17:27:12',602.0,'23270298056','6777****1313','JOSÉ COSTA   ',' MERCEARIA 3 IRMÃO','2020-09-27 19:32:59.027488','2020-09-27 19:32:59.027488'),('1','2019-03-01 09:00:02',200.0,'55641815063','1234****3324','MARIA JOSEFINA','LOJA DO Ó - MATRIZ','2020-09-27 19:32:59.027488','2020-09-27 19:32:59.027488'),('5','2019-03-01 14:56:07',802.0,'84515254073','3123****7687','MARCOS PEREIRA','MERCADO DA AVENIDA
+','2020-09-27 19:32:59.027488','2020-09-27 19:32:59.027488'),('2','2019-03-01 23:12:33',102.0,'23270298056','8473****1231','JOSÉ COSTA   ',' MERCEARIA 3 IRMÃO','2020-09-27 19:32:59.027488','2020-09-27 19:32:59.027488'),('3','2019-03-01 17:27:12',6102.0,'23270298056','6777****1313','JOSÉ COSTA   ',' MERCEARIA 3 IRMÃO','2020-09-27 19:32:59.027488','2020-09-27 19:32:59.027488'),('4','2019-03-01 10:00:00',152.32,'55641815063','1234****6678','MARIA JOSEFINA','LOJA DO Ó - FILIAL','2020-09-27 19:32:59.027488','2020-09-27 19:32:59.027488'),('8','2019-03-01 12:32:22',102.03,'84515254073','2344****1222','MARCOS PEREIRA','MERCADO DA AVENIDA
+','2020-09-27 19:32:59.027488','2020-09-27 19:32:59.027488'),('3','2019-03-01 17:27:12',103.0,'23270298056','6777****1313','JOSÉ COSTA   ',' MERCEARIA 3 IRMÃO','2020-09-27 19:32:59.027488','2020-09-27 19:32:59.027488'),('9','2019-03-01 00:00:00',102.0,'55641815063','6228****9090','MARIA JOSEFINA','LOJA DO Ó - MATRIZ','2020-09-27 19:32:59.027488','2020-09-27 19:32:59.027488'),('4','2019-06-01 10:00:00',506.17,'84515254073','1234****2231','MARCOS PEREIRA','MERCADO DA AVENIDA
+','2020-09-27 19:32:59.027488','2020-09-27 19:32:59.027488'),('2','2019-03-01 12:33:33',109.0,'23270298056','8723****9987','JOSÉ COSTA   ',' MERCEARIA 3 IRMÃO','2020-09-27 19:32:59.027488','2020-09-27 19:32:59.027488'),('8','2019-03-01 12:32:22',2.0,'84515254073','2344****1222','MARCOS PEREIRA','MERCADO DA AVENIDA
+','2020-09-27 19:32:59.027488','2020-09-27 19:32:59.027488'),('2','2019-03-01 14:18:08',5.0,'23270298056','7677****8778','JOSÉ COSTA   ',' MERCEARIA 3 IRMÃO','2020-09-27 19:32:59.027488','2020-09-27 19:32:59.027488'),('3','2019-03-01 17:27:12',192.0,'84515254073','6777****1313','MARCOS PEREIRA','MERCADO DA AVENIDA
+','2020-09-27 19:32:59.027488','2020-09-27 19:32:59.027488') RETURNING "id"[0m
+  ↳ app/controllers/home_controller.rb:26:in `block in upload'
+Redirected to http://localhost:3000/
+Completed 302 Found in 160ms (ActiveRecord: 37.0ms | Allocations: 82336)
+
+
+Started GET "/" for 172.18.0.1 at 2020-09-27 19:32:59 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 169)
+Completed 200 OK in 1ms (Views: 0.7ms | ActiveRecord: 0.0ms | Allocations: 684)
+
+
+Started GET "/" for 172.18.0.1 at 2020-09-27 19:51:05 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 171)
+Completed 200 OK in 4ms (Views: 1.8ms | ActiveRecord: 0.0ms | Allocations: 1177)
+
+
+Started GET "/" for 172.18.0.1 at 2020-09-27 19:54:32 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mTransaction Load (1.7ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions"[0m
+  ↳ app/views/home/index.html.erb:10
+  Rendered home/index.html.erb within layouts/application (Duration: 25.0ms | Allocations: 10354)
+Completed 200 OK in 31ms (Views: 27.2ms | ActiveRecord: 1.7ms | Allocations: 11744)
+
+
+Started GET "/" for 172.18.0.1 at 2020-09-27 19:55:36 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mTransaction Load (2.0ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions"[0m
+  ↳ app/views/home/index.html.erb:10
+  Rendered home/index.html.erb within layouts/application (Duration: 11.6ms | Allocations: 4948)
+Completed 200 OK in 15ms (Views: 11.9ms | ActiveRecord: 2.0ms | Allocations: 5476)
+
+
+Started POST "/upload" for 172.18.0.1 at 2020-09-27 19:56:26 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#upload as HTML
+  Parameters: {"authenticity_token"=>"4J5KWGH37YV9j7tjbrcbcft8/yRdEdti5YYbq8q3v9AOJC6VlRrZMy2buxbdfs1JtPnGxKzWOPOQzUpU8F1ANQ==", "file"=>#<ActionDispatch::Http::UploadedFile:0x00007f1d38223498 @tempfile=#<Tempfile:/tmp/RackMultipart20200927-1-yketp7.txt>, @original_filename="CNAB (copy).txt", @content_type="text/plain", @headers="Content-Disposition: form-data; name=\"file\"; filename=\"CNAB (copy).txt\"\r\nContent-Type: text/plain\r\n">, "commit"=>"Save changes"}
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 0.0ms | Allocations: 1917)
+
+
+  
+NoMethodError (undefined method `new_transaction_from_line' for HomeHelper:Module):
+  
+app/helpers/home_helper.rb:8:in `block in parse_transaction'
+app/helpers/home_helper.rb:7:in `each_line'
+app/helpers/home_helper.rb:7:in `parse_transaction'
+app/controllers/home_controller.rb:16:in `upload'
+Started GET "/" for 172.18.0.1 at 2020-09-27 19:58:49 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mTransaction Load (0.6ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions"[0m
+  ↳ app/views/home/index.html.erb:10
+  Rendered home/index.html.erb within layouts/application (Duration: 35.7ms | Allocations: 10228)
+Completed 200 OK in 41ms (Views: 28.7ms | ActiveRecord: 9.3ms | Allocations: 11215)
+
+
+Started POST "/upload" for 172.18.0.1 at 2020-09-27 19:58:56 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#upload as HTML
+  Parameters: {"authenticity_token"=>"M07UaBrqSnB9LVu+hh4FpKVh67O6yBjoqJHP4PA2vNTd9LCl7gd+xi05W8s119Oc6uTSU0sP+3nd2p4fytxDMQ==", "file"=>#<ActionDispatch::Http::UploadedFile:0x00007f1d383e5628 @tempfile=#<Tempfile:/tmp/RackMultipart20200927-1-1gv12jc.txt>, @original_filename="CNAB (copy).txt", @content_type="text/plain", @headers="Content-Disposition: form-data; name=\"file\"; filename=\"CNAB (copy).txt\"\r\nContent-Type: text/plain\r\n">, "commit"=>"Save changes"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 656)
+
+
+  
+TypeError (no implicit conversion of nil into String):
+  
+app/helpers/home_helper.rb:15:in `+'
+app/helpers/home_helper.rb:15:in `new_transaction_from_line'
+app/helpers/home_helper.rb:8:in `block in parse_transaction'
+app/helpers/home_helper.rb:7:in `each_line'
+app/helpers/home_helper.rb:7:in `parse_transaction'
+app/controllers/home_controller.rb:16:in `upload'
+Started POST "/upload" for 172.18.0.1 at 2020-09-27 20:06:30 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+SyntaxError (/app/app/helpers/home_helper.rb:25: syntax error, unexpected `end', expecting end-of-input):
+  
+app/helpers/home_helper.rb:25: syntax error, unexpected `end', expecting end-of-input
+app/helpers/home_helper.rb:25: syntax error, unexpected `end', expecting end-of-input
+app/helpers/home_helper.rb:25: syntax error, unexpected `end', expecting end-of-input
+app/controllers/application_controller.rb:1:in `<main>'
+app/controllers/home_controller.rb:4:in `<main>'
+Started POST "/upload" for 172.18.0.1 at 2020-09-27 20:08:34 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#upload as HTML
+  Parameters: {"authenticity_token"=>"M07UaBrqSnB9LVu+hh4FpKVh67O6yBjoqJHP4PA2vNTd9LCl7gd+xi05W8s119Oc6uTSU0sP+3nd2p4fytxDMQ==", "file"=>#<ActionDispatch::Http::UploadedFile:0x00007f1d38234f68 @tempfile=#<Tempfile:/tmp/RackMultipart20200927-1-ozn8wn.txt>, @original_filename="CNAB (copy).txt", @content_type="text/plain", @headers="Content-Disposition: form-data; name=\"file\"; filename=\"CNAB (copy).txt\"\r\nContent-Type: text/plain\r\n">, "commit"=>"Save changes"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 6ms (ActiveRecord: 3.7ms | Allocations: 1895)
+
+
+Started GET "/" for 172.18.0.1 at 2020-09-27 20:08:34 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mTransaction Load (0.7ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions"[0m
+  ↳ app/views/home/index.html.erb:10
+  Rendered home/index.html.erb within layouts/application (Duration: 14.0ms | Allocations: 9789)
+Completed 200 OK in 17ms (Views: 14.7ms | ActiveRecord: 0.7ms | Allocations: 10481)
+
+
+Started GET "/" for 172.18.0.1 at 2020-09-27 20:15:30 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mTransaction Load (1.5ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions"[0m
+  ↳ app/views/home/index.html.erb:10
+  Rendered home/index.html.erb within layouts/application (Duration: 19.4ms | Allocations: 10307)
+Completed 200 OK in 27ms (Views: 21.4ms | ActiveRecord: 1.5ms | Allocations: 12083)
+
+
+Started POST "/upload" for 172.18.0.1 at 2020-09-27 20:15:34 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#upload as HTML
+  Parameters: {"authenticity_token"=>"VqqyrNlJuo/klxy/N/FvJK2U7RQgQ52s0q7gFQo7kIe4ENZhLaSOObSDHMqEOLkc4hHU9NGEfj2n5bHqMNFvYg==", "file"=>#<ActionDispatch::Http::UploadedFile:0x00005595e1aa83c8 @tempfile=#<Tempfile:/tmp/RackMultipart20200927-1-knfdpz.txt>, @original_filename="CNAB (copy).txt", @content_type="text/plain", @headers="Content-Disposition: form-data; name=\"file\"; filename=\"CNAB (copy).txt\"\r\nContent-Type: text/plain\r\n">, "commit"=>"Save changes"}
+Redirected to http://localhost:3000/?alert=%23%3CRuntimeError%3A+Erro+ao+ler+linha+1+%0A%2C+por+favor+verifique+o+arquivo.%3E
+Redirected to 
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms | Allocations: 1568)
+
+
+  
+AbstractController::DoubleRenderError (Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...) and return".):
+  
+app/controllers/home_controller.rb:27:in `upload'
+Started GET "/" for 172.18.0.1 at 2020-09-27 20:16:39 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mTransaction Load (0.7ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions"[0m
+  ↳ app/views/home/index.html.erb:10
+  Rendered home/index.html.erb within layouts/application (Duration: 41.2ms | Allocations: 10242)
+Completed 200 OK in 44ms (Views: 35.1ms | ActiveRecord: 7.5ms | Allocations: 11252)
+
+
+Started POST "/upload" for 172.18.0.1 at 2020-09-27 20:16:43 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#upload as HTML
+  Parameters: {"authenticity_token"=>"1fOuQ0ouFbchlw0pvXD0kQ0TBiePwJ43fqqg74mpxtQ7ScqOvsMhAXGDDVwOuSKpQpY/x34HfaYL4fEQs0M5MQ==", "file"=>#<ActionDispatch::Http::UploadedFile:0x00007f1d50032810 @tempfile=#<Tempfile:/tmp/RackMultipart20200927-1-fu26ta.txt>, @original_filename="CNAB (copy).txt", @content_type="text/plain", @headers="Content-Disposition: form-data; name=\"file\"; filename=\"CNAB (copy).txt\"\r\nContent-Type: text/plain\r\n">, "commit"=>"Save changes"}
+Redirected to http://localhost:3000/?alert=%23%3CRuntimeError%3A+Erro+ao+ler+linha+1+%0A%2C+por+favor+verifique+o+arquivo.%3E
+Completed 302 Found in 5ms (ActiveRecord: 0.0ms | Allocations: 1192)
+
+
+Started GET "/?alert=%23%3CRuntimeError%3A+Erro+ao+ler+linha+1+%0A%2C+por+favor+verifique+o+arquivo.%3E" for 172.18.0.1 at 2020-09-27 20:16:43 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#index as HTML
+  Parameters: {"alert"=>"#<RuntimeError: Erro ao ler linha 1 \n, por favor verifique o arquivo.>"}
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mTransaction Load (1.0ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions"[0m
+  ↳ app/views/home/index.html.erb:10
+  Rendered home/index.html.erb within layouts/application (Duration: 7.5ms | Allocations: 4947)
+Completed 200 OK in 10ms (Views: 8.2ms | ActiveRecord: 1.0ms | Allocations: 5487)
+
+
+Started GET "/?alert=%23%3CRuntimeError%3A+Erro+ao+ler+linha+1+%0A%2C+por+favor+verifique+o+arquivo.%3E" for 172.18.0.1 at 2020-09-27 20:18:27 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#index as HTML
+  Parameters: {"alert"=>"#<RuntimeError: Erro ao ler linha 1 \n, por favor verifique o arquivo.>"}
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mTransaction Load (0.7ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions"[0m
+  ↳ app/views/home/index.html.erb:10
+  Rendered home/index.html.erb within layouts/application (Duration: 24.6ms | Allocations: 10181)
+Completed 200 OK in 35ms (Views: 25.0ms | ActiveRecord: 6.2ms | Allocations: 11191)
+
+
+Started POST "/upload" for 172.18.0.1 at 2020-09-27 20:18:30 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#upload as HTML
+  Parameters: {"authenticity_token"=>"LjOzdJp6H+iTt1KsD/hlij21bFngx1BPb1nF438KGbTAide5bpcrXsOjUtm8MbOycjBVuREAs94aEpQcReDmUQ==", "file"=>#<ActionDispatch::Http::UploadedFile:0x00007f1d382bc328 @tempfile=#<Tempfile:/tmp/RackMultipart20200927-1-1aqx9ze.txt>, @original_filename="CNAB (copy).txt", @content_type="text/plain", @headers="Content-Disposition: form-data; name=\"file\"; filename=\"CNAB (copy).txt\"\r\nContent-Type: text/plain\r\n">, "commit"=>"Save changes"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 5ms (ActiveRecord: 0.0ms | Allocations: 1199)
+
+
+Started GET "/" for 172.18.0.1 at 2020-09-27 20:18:30 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mTransaction Load (1.0ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions"[0m
+  ↳ app/views/home/index.html.erb:10
+  Rendered home/index.html.erb within layouts/application (Duration: 7.4ms | Allocations: 4947)
+Completed 200 OK in 10ms (Views: 7.7ms | ActiveRecord: 1.0ms | Allocations: 5510)
+
+
+Started GET "/" for 172.18.0.1 at 2020-09-27 20:18:47 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mTransaction Load (0.8ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions"[0m
+  ↳ app/views/home/index.html.erb:10
+  Rendered home/index.html.erb within layouts/application (Duration: 25.7ms | Allocations: 10172)
+Completed 200 OK in 35ms (Views: 23.8ms | ActiveRecord: 5.8ms | Allocations: 11165)
+
+
+Started POST "/upload" for 172.18.0.1 at 2020-09-27 20:18:53 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#upload as HTML
+  Parameters: {"authenticity_token"=>"JFzn7upUHsLccxsH+19yguQe4m/2GlzksPOFe7z2D+PK5oMjHrkqdIxnG3JIlqS6q5vbjwfdv3XFuNSEhhzwBg==", "file"=>#<ActionDispatch::Http::UploadedFile:0x00005595e2294280 @tempfile=#<Tempfile:/tmp/RackMultipart20200927-1-1qb14go.txt>, @original_filename="CNAB (copy).txt", @content_type="text/plain", @headers="Content-Disposition: form-data; name=\"file\"; filename=\"CNAB (copy).txt\"\r\nContent-Type: text/plain\r\n">, "commit"=>"Save changes"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms | Allocations: 1179)
+
+
+Started GET "/" for 172.18.0.1 at 2020-09-27 20:18:53 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mTransaction Load (0.7ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions"[0m
+  ↳ app/views/home/index.html.erb:10
+  Rendered home/index.html.erb within layouts/application (Duration: 5.2ms | Allocations: 4947)
+Completed 200 OK in 7ms (Views: 5.8ms | ActiveRecord: 0.7ms | Allocations: 5508)
+
+
+Started GET "/" for 172.18.0.1 at 2020-09-27 20:19:11 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mTransaction Load (1.0ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions"[0m
+  ↳ app/views/home/index.html.erb:10
+  Rendered home/index.html.erb within layouts/application (Duration: 23.0ms | Allocations: 10204)
+Completed 200 OK in 26ms (Views: 18.2ms | ActiveRecord: 6.4ms | Allocations: 11194)
+
+
+Started POST "/upload" for 172.18.0.1 at 2020-09-27 20:19:15 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#upload as HTML
+  Parameters: {"authenticity_token"=>"GfKvZ2JUb+VE7/0k/3fBWGMtMUCINZCcDtWkZSRd35n3SMuqlrlbUxT7/VFMvhdgLKgIoHnycw17nvWaHrcgfA==", "file"=>#<ActionDispatch::Http::UploadedFile:0x00007f1d3844c8a0 @tempfile=#<Tempfile:/tmp/RackMultipart20200927-1-1daukj6.txt>, @original_filename="CNAB (copy).txt", @content_type="text/plain", @headers="Content-Disposition: form-data; name=\"file\"; filename=\"CNAB (copy).txt\"\r\nContent-Type: text/plain\r\n">, "commit"=>"Save changes"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 5ms (ActiveRecord: 0.0ms | Allocations: 1192)
+
+
+Started GET "/" for 172.18.0.1 at 2020-09-27 20:19:15 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mTransaction Load (1.0ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions"[0m
+  ↳ app/views/home/index.html.erb:10
+  Rendered home/index.html.erb within layouts/application (Duration: 8.2ms | Allocations: 4947)
+Completed 200 OK in 10ms (Views: 8.2ms | ActiveRecord: 1.0ms | Allocations: 5501)
+
+
+Started GET "/" for 172.18.0.1 at 2020-09-27 20:22:08 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mTransaction Load (1.9ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" GROUP BY "transactions"."loja"[0m
+  ↳ app/views/home/index.html.erb:10
+  Rendered home/index.html.erb within layouts/application (Duration: 8.4ms | Allocations: 2853)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 3.5ms | Allocations: 4335)
+
+
+  
+ActionView::Template::Error (PG::GroupingError: ERROR:  column "transactions.id" must appear in the GROUP BY clause or be used in an aggregate function
+LINE 1: SELECT "transactions".* FROM "transactions" GROUP BY "transa...
+               ^
+):
+     7: 
+     8: <div>
+     9:   <ul>
+    10:     <% @lojas.each do |loja| %>
+    11:       <li>
+    12:         <%= loja %>
+    13:       </li>
+  
+app/views/home/index.html.erb:10
+Started GET "/" for 172.18.0.1 at 2020-09-27 20:24:44 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mTransaction Load (1.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" GROUP BY "transactions"."loja"[0m
+  ↳ app/views/home/index.html.erb:10
+  Rendered home/index.html.erb within layouts/application (Duration: 4.2ms | Allocations: 2211)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 1.3ms | Allocations: 2646)
+
+
+  
+ActionView::Template::Error (PG::GroupingError: ERROR:  column "transactions.id" must appear in the GROUP BY clause or be used in an aggregate function
+LINE 1: SELECT "transactions".* FROM "transactions" GROUP BY "transa...
+               ^
+):
+     7: 
+     8: <div>
+     9:   <ul>
+    10:     <% @lojas.each do |loja| %>
+    11:       <li>
+    12:         <%= loja %>
+    13:       </li>
+  
+app/views/home/index.html.erb:10
+Started GET "/" for 172.18.0.1 at 2020-09-27 20:27:13 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mTransaction Load (0.8ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" GROUP BY "transactions"."id", "transactions"."loja"[0m
+  ↳ app/views/home/index.html.erb:10
+  Rendered home/index.html.erb within layouts/application (Duration: 27.7ms | Allocations: 10235)
+Completed 200 OK in 35ms (Views: 26.8ms | ActiveRecord: 5.3ms | Allocations: 11440)
+
+
+Started GET "/" for 172.18.0.1 at 2020-09-27 20:28:04 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#index as HTML
+  [1m[36mTransaction Load (0.4ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" GROUP BY "transactions"."id", "transactions"."loja" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ (eval):5:in `block in print_element'
+  [1m[36mCACHE Transaction Load (0.0ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" GROUP BY "transactions"."id", "transactions"."loja" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ (eval):5:in `block in print_element'
+  [1m[36mCACHE Transaction Load (0.0ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" GROUP BY "transactions"."id", "transactions"."loja" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ (eval):5:in `block in print_variable'
+  [1m[36mCACHE Transaction Load (0.1ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" GROUP BY "transactions"."id", "transactions"."loja" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ (eval):5:in `block in print_element'
+  [1m[36mCACHE Transaction Load (0.0ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" GROUP BY "transactions"."id", "transactions"."loja" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ (eval):5:in `block in print_element'
+  [1m[36mCACHE Transaction Load (0.1ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" GROUP BY "transactions"."id", "transactions"."loja" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ (eval):5:in `block in print_variable'
+  [1m[36mCACHE Transaction Load (0.0ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" GROUP BY "transactions"."id", "transactions"."loja" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ (eval):5:in `block in print_element'
+  [1m[36mCACHE Transaction Load (0.0ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" GROUP BY "transactions"."id", "transactions"."loja" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ (eval):5:in `block in print_element'
+  [1m[36mCACHE Transaction Load (0.1ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" GROUP BY "transactions"."id", "transactions"."loja" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ (eval):5:in `block in print_variable'
+  [1m[36mCACHE Transaction Load (0.0ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" GROUP BY "transactions"."id", "transactions"."loja" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/controllers/home_controller.rb:9:in `index'
+  [1m[36mCACHE Transaction Load (0.0ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" GROUP BY "transactions"."id", "transactions"."loja" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ (eval):5:in `block in print_element'
+  [1m[36mCACHE Transaction Load (0.0ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" GROUP BY "transactions"."id", "transactions"."loja" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ (eval):5:in `block in print_element'
+  [1m[36mCACHE Transaction Load (0.1ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" GROUP BY "transactions"."id", "transactions"."loja" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ (eval):5:in `block in print_variable'
+  [1m[36mCACHE Transaction Load (0.0ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" GROUP BY "transactions"."id", "transactions"."loja" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ (eval):5:in `block in print_element'
+  [1m[36mCACHE Transaction Load (0.0ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" GROUP BY "transactions"."id", "transactions"."loja" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ (eval):5:in `block in print_element'
+  [1m[36mCACHE Transaction Load (0.0ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" GROUP BY "transactions"."id", "transactions"."loja" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ (eval):5:in `block in print_variable'
+  [1m[36mCACHE Transaction Load (0.0ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" GROUP BY "transactions"."id", "transactions"."loja" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ (eval):5:in `block in print_element'
+  [1m[36mCACHE Transaction Load (0.0ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" GROUP BY "transactions"."id", "transactions"."loja" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ (eval):5:in `block in print_element'
+  [1m[36mCACHE Transaction Load (0.0ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" GROUP BY "transactions"."id", "transactions"."loja" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ (eval):5:in `block in print_variable'
+  [1m[36mCACHE Transaction Load (0.0ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" GROUP BY "transactions"."id", "transactions"."loja" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/controllers/home_controller.rb:9:in `index'
+  [1m[36mCACHE Transaction Load (0.0ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" GROUP BY "transactions"."id", "transactions"."loja" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ (eval):5:in `block in print_element'
+  [1m[36mCACHE Transaction Load (0.0ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" GROUP BY "transactions"."id", "transactions"."loja" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ (eval):5:in `block in print_element'
+  [1m[36mCACHE Transaction Load (0.0ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" GROUP BY "transactions"."id", "transactions"."loja" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ (eval):5:in `block in print_variable'
+  [1m[36mCACHE Transaction Load (0.0ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" GROUP BY "transactions"."id", "transactions"."loja" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ (eval):5:in `block in print_element'
+  [1m[36mCACHE Transaction Load (0.0ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" GROUP BY "transactions"."id", "transactions"."loja" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ (eval):5:in `block in print_element'
+  [1m[36mCACHE Transaction Load (0.0ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" GROUP BY "transactions"."id", "transactions"."loja" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ (eval):5:in `block in print_variable'
+  [1m[36mCACHE Transaction Load (0.0ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" GROUP BY "transactions"."id", "transactions"."loja" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/controllers/home_controller.rb:9:in `index'
+  [1m[36mCACHE Transaction Load (0.0ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" GROUP BY "transactions"."id", "transactions"."loja" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ (eval):5:in `block in print_element'
+  [1m[36mCACHE Transaction Load (0.0ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" GROUP BY "transactions"."id", "transactions"."loja" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ (eval):5:in `block in print_element'
+  [1m[36mCACHE Transaction Load (0.0ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" GROUP BY "transactions"."id", "transactions"."loja" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ (eval):5:in `block in print_variable'
+  [1m[36mCACHE Transaction Load (0.0ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" GROUP BY "transactions"."id", "transactions"."loja" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ (eval):5:in `block in print_element'
+  [1m[36mCACHE Transaction Load (0.0ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" GROUP BY "transactions"."id", "transactions"."loja" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ (eval):5:in `block in print_element'
+  [1m[36mCACHE Transaction Load (0.0ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" GROUP BY "transactions"."id", "transactions"."loja" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ (eval):5:in `block in print_variable'
+  [1m[36mCACHE Transaction Load (0.0ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" GROUP BY "transactions"."id", "transactions"."loja" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/controllers/home_controller.rb:9:in `index'
+  [1m[36mCACHE Transaction Load (0.0ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" GROUP BY "transactions"."id", "transactions"."loja" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ (eval):5:in `block in print_element'
+  [1m[36mCACHE Transaction Load (0.0ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" GROUP BY "transactions"."id", "transactions"."loja" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ (eval):5:in `block in print_element'
+  [1m[36mCACHE Transaction Load (0.0ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" GROUP BY "transactions"."id", "transactions"."loja" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ (eval):5:in `block in print_variable'
+  [1m[36mCACHE Transaction Load (0.0ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" GROUP BY "transactions"."id", "transactions"."loja" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/controllers/home_controller.rb:9:in `index'
+  [1m[36mCACHE Transaction Load (0.1ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" GROUP BY "transactions"."id", "transactions"."loja" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/controllers/home_controller.rb:9:in `index'
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mTransaction Load (2.1ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" GROUP BY "transactions"."id", "transactions"."loja"[0m
+  ↳ app/views/home/index.html.erb:10
+  Rendered home/index.html.erb within layouts/application (Duration: 44.4ms | Allocations: 5147)
+Completed 200 OK in 38068ms (Views: 54.7ms | ActiveRecord: 12.5ms | Allocations: 1414397)
+
+
+Started GET "/" for 172.18.0.1 at 2020-09-27 20:29:43 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mTransaction Load (1.1ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" GROUP BY "transactions"."id", "transactions"."loja"[0m
+  ↳ app/views/home/index.html.erb:9
+  Rendered home/index.html.erb within layouts/application (Duration: 11.4ms | Allocations: 5851)
+Completed 500 Internal Server Error in 6270ms (ActiveRecord: 1.1ms | Allocations: 16956)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+     8: <div>
+     9:   <% @lojas.each do |loja| %>
+    10:     <ul>
+    11:       <% @loja.each do |transaction| %>
+    12:         <li>
+    13:           <%= transaction.dono %>
+    14:         </li>
+  
+app/views/home/index.html.erb:11
+app/views/home/index.html.erb:9
+Started GET "/" for 172.18.0.1 at 2020-09-27 20:30:09 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mTransaction Load (1.1ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" GROUP BY "transactions"."id", "transactions"."loja"[0m
+  ↳ app/views/home/index.html.erb:9
+  Rendered home/index.html.erb within layouts/application (Duration: 35.8ms | Allocations: 12840)
+Completed 500 Internal Server Error in 40ms (ActiveRecord: 4.8ms | Allocations: 14313)
+
+
+  
+ActionView::Template::Error (undefined method `each' for #<Transaction:0x00007f1d38268a98>):
+     8: <div>
+     9:   <% @lojas.each do |loja| %>
+    10:     <ul>
+    11:       <% loja.each do |transaction| %>
+    12:         <li>
+    13:           <%= transaction.dono %>
+    14:         </li>
+  
+app/views/home/index.html.erb:11
+app/views/home/index.html.erb:9
+Started GET "/" for 172.18.0.1 at 2020-09-27 20:30:41 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#index as HTML
+  [1m[36mTransaction Load (1.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" GROUP BY "transactions"."id", "transactions"."loja" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/controllers/home_controller.rb:9:in `index'
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mTransaction Load (0.9ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" GROUP BY "transactions"."id", "transactions"."loja"[0m
+  ↳ app/views/home/index.html.erb:9
+  Rendered home/index.html.erb within layouts/application (Duration: 92.2ms | Allocations: 7527)
+Completed 500 Internal Server Error in 181819ms (ActiveRecord: 14.6ms | Allocations: 26292)
+
+
+  
+ActionView::Template::Error (undefined method `each' for #<Transaction:0x00007f1d50036708>):
+     8: <div>
+     9:   <% @lojas.each do |loja| %>
+    10:     <ul>
+    11:       <% loja.each do |transaction| %>
+    12:         <li>
+    13:           <%= transaction.dono %>
+    14:         </li>
+  
+app/views/home/index.html.erb:11
+app/views/home/index.html.erb:9
+Started GET "/" for 172.18.0.1 at 2020-09-27 20:33:52 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#index as HTML
+  [1m[36mTransaction Load (2.7ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" GROUP BY "transactions"."id", "transactions"."loja"[0m
+  ↳ app/controllers/home_controller.rb:9:in `index'
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 73.7ms | Allocations: 3247)
+Completed 500 Internal Server Error in 61480ms (ActiveRecord: 10.3ms | Allocations: 30861)
+
+
+  
+ActionView::Template::Error (undefined method `each' for #<Transaction:0x00007f1d3801b8d0>):
+     8: <div>
+     9:   <% @lojas.each do |loja| %>
+    10:     <ul>
+    11:       <% loja.each do |transaction| %>
+    12:         <li>
+    13:           <%= transaction.dono %>
+    14:         </li>
+  
+app/views/home/index.html.erb:11
+app/views/home/index.html.erb:9
+Started GET "/" for 172.18.0.1 at 2020-09-27 20:36:52 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mTransaction Load (1.4ms)[0m  [1m[34mSELECT dono, MAX(valor), loja FROM "transactions" GROUP BY "transactions"."loja"[0m
+  ↳ app/views/home/index.html.erb:9
+  Rendered home/index.html.erb within layouts/application (Duration: 8.5ms | Allocations: 2641)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 3.3ms | Allocations: 3547)
+
+
+  
+ActionView::Template::Error (PG::GroupingError: ERROR:  column "transactions.dono" must appear in the GROUP BY clause or be used in an aggregate function
+LINE 1: SELECT dono, MAX(valor), loja FROM "transactions" GROUP BY "...
+               ^
+):
+     6: <% end %>
+     7: 
+     8: <div>
+     9:   <% @lojas.each do |loja| %>
+    10:     <ul>
+    11:       <% loja.each do |transaction| %>
+    12:         <li>
+  
+app/views/home/index.html.erb:9
+Started GET "/" for 172.18.0.1 at 2020-09-27 20:37:56 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mTransaction Load (1.5ms)[0m  [1m[34mSELECT loja, array_agg(*) as transactions FROM "transactions" GROUP BY "transactions"."loja"[0m
+  ↳ app/views/home/index.html.erb:9
+  Rendered home/index.html.erb within layouts/application (Duration: 8.6ms | Allocations: 2637)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 3.4ms | Allocations: 3540)
+
+
+  
+ActionView::Template::Error (PG::UndefinedFunction: ERROR:  function array_agg() does not exist
+LINE 1: SELECT loja, array_agg(*) as transactions FROM "transactions...
+                     ^
+HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+):
+     6: <% end %>
+     7: 
+     8: <div>
+     9:   <% @lojas.each do |loja| %>
+    10:     <ul>
+    11:       <% loja.each do |transaction| %>
+    12:         <li>
+  
+app/views/home/index.html.erb:9
+Started GET "/" for 172.18.0.1 at 2020-09-27 20:39:20 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mTransaction Load (1.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" GROUP BY "transactions"."id", "transactions"."loja"[0m
+  ↳ app/views/home/index.html.erb:10
+  Rendered home/index.html.erb within layouts/application (Duration: 43.6ms | Allocations: 10444)
+Completed 200 OK in 51ms (Views: 41.1ms | ActiveRecord: 7.9ms | Allocations: 12229)
+
+
+Started GET "/" for 172.18.0.1 at 2020-09-27 20:39:29 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mTransaction Load (1.8ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" GROUP BY "transactions"."id", "transactions"."loja"[0m
+  ↳ app/views/home/index.html.erb:10
+  Rendered home/index.html.erb within layouts/application (Duration: 11.3ms | Allocations: 5174)
+Completed 200 OK in 21ms (Views: 17.0ms | ActiveRecord: 1.8ms | Allocations: 6654)
+
+
+Started GET "/" for 172.18.0.1 at 2020-09-27 20:44:57 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#index as HTML
+  [1m[36mTransaction Load (1.0ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions"[0m
+  ↳ app/controllers/home_controller.rb:9:in `group_by'
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 20.8ms | Allocations: 6468)
+Completed 500 Internal Server Error in 48ms (ActiveRecord: 1.0ms | Allocations: 17035)
+
+
+  
+ActionView::Template::Error (undefined method `loja' for #<Array:0x00007f1d381c4d80>):
+     9:   <ul>
+    10:     <% @lojas.each do |loja| %>
+    11:       <li>
+    12:         <%= loja.loja %>
+    13:       </li>
+    14:     <% end %>
+    15:   </ul>
+  
+app/views/home/index.html.erb:12
+app/views/home/index.html.erb:10:in `each'
+app/views/home/index.html.erb:10
+Started GET "/" for 172.18.0.1 at 2020-09-27 20:46:46 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#index as HTML
+  [1m[36mTransaction Load (1.7ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions"[0m
+  ↳ app/controllers/home_controller.rb:9:in `group_by'
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 9.0ms | Allocations: 2432)
+Completed 500 Internal Server Error in 49ms (ActiveRecord: 10.9ms | Allocations: 13701)
+
+
+  
+ActionView::Template::Error (undefined method `loja' for " BAR DO JOÃO      ":String):
+    10:     <ul>
+    11:       <% loja.each do |transaction| %>
+    12:         <li>
+    13:           <%= transaction.loja %>
+    14:         </li>
+    15:       <% end %>
+    16:     </ul>
+  
+app/views/home/index.html.erb:13
+app/views/home/index.html.erb:11:in `each'
+app/views/home/index.html.erb:11
+app/views/home/index.html.erb:9:in `each'
+app/views/home/index.html.erb:9
+Started GET "/" for 172.18.0.1 at 2020-09-27 20:47:17 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#index as HTML
+  [1m[36mTransaction Load (0.9ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions"[0m
+  ↳ app/controllers/home_controller.rb:9:in `group_by'
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 30.7ms | Allocations: 2239)
+Completed 500 Internal Server Error in 29998ms (ActiveRecord: 9.8ms | Allocations: 40969)
+
+
+  
+ActionView::Template::Error (undefined method `loja' for " BAR DO JOÃO      ":String):
+    10:     <ul>
+    11:       <% loja.each do |transaction| %>
+    12:         <li>
+    13:           <%= transaction.loja %>
+    14:         </li>
+    15:       <% end %>
+    16:     </ul>
+  
+app/views/home/index.html.erb:13
+app/views/home/index.html.erb:11:in `each'
+app/views/home/index.html.erb:11
+app/views/home/index.html.erb:9:in `each'
+app/views/home/index.html.erb:9
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE DATABASE "app_development" ENCODING = 'unicode'[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE DATABASE "app_test" ENCODING = 'unicode'[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5277929974492897470)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(5277929974492897470)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 172.18.0.1 at 2020-09-27 20:48:39 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  [1m[36mTransaction Load (1.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions"[0m
+  ↳ app/controllers/home_controller.rb:9:in `group_by'
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 10.2ms | Allocations: 882)
+Completed 200 OK in 29386ms (Views: 17.4ms | ActiveRecord: 6.0ms | Allocations: 46115)
+
+
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE DATABASE "app_development" ENCODING = 'unicode'[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE DATABASE "app_test" ENCODING = 'unicode'[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5277929974492897470)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(5277929974492897470)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 172.18.0.1 at 2020-09-27 20:49:46 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  [1m[36mTransaction Load (1.4ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions"[0m
+  ↳ app/controllers/home_controller.rb:9:in `group_by'
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 2.3ms | Allocations: 804)
+Completed 200 OK in 6872ms (Views: 6.9ms | ActiveRecord: 8.4ms | Allocations: 17452)
+
+
+Started GET "/" for 172.18.0.1 at 2020-09-27 20:50:56 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#index as HTML
+  [1m[36mTransaction Load (1.1ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions"[0m
+  ↳ app/controllers/home_controller.rb:9:in `group_by'
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1134)
+Completed 200 OK in 25ms (Views: 4.1ms | ActiveRecord: 5.1ms | Allocations: 12654)
+
+
+Started GET "/" for 172.18.0.1 at 2020-09-27 21:07:37 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#index as HTML
+  [1m[36mTransaction Load (1.5ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions"[0m
+  ↳ app/controllers/home_controller.rb:9:in `group_by'
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 3.7ms | Allocations: 1118)
+Completed 200 OK in 19ms (Views: 7.9ms | ActiveRecord: 1.5ms | Allocations: 7228)
+
+
+Started GET "/" for 172.18.0.1 at 2020-09-27 21:10:15 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#index as HTML
+  [1m[36mTransaction Load (1.0ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions"[0m
+  ↳ app/controllers/home_controller.rb:9:in `group_by'
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 16.2ms | Allocations: 6268)
+Completed 200 OK in 28ms (Views: 19.1ms | ActiveRecord: 1.0ms | Allocations: 12252)
+
+
+Started GET "/" for 172.18.0.1 at 2020-09-27 21:15:11 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#index as HTML
+  [1m[36mTransaction Load (1.7ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions"[0m
+  ↳ app/controllers/home_controller.rb:9:in `group_by'
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 17.4ms | Allocations: 6900)
+Completed 200 OK in 33ms (Views: 20.6ms | ActiveRecord: 1.7ms | Allocations: 12900)
+
+
+Started GET "/" for 172.18.0.1 at 2020-09-27 21:15:37 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#index as HTML
+  [1m[36mTransaction Load (1.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions"[0m
+  ↳ app/controllers/home_controller.rb:9:in `group_by'
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 12.7ms | Allocations: 5940)
+Completed 200 OK in 22ms (Views: 13.5ms | ActiveRecord: 1.3ms | Allocations: 10989)
+
+
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE DATABASE "app_development" ENCODING = 'unicode'[0m
+  [1m[35m (2.4ms)[0m  [1m[35mCREATE DATABASE "app_test" ENCODING = 'unicode'[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5277929974492897470)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT pg_advisory_unlock(5277929974492897470)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 172.18.0.1 at 2020-09-27 21:19:47 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  [1m[36mTransaction Load (1.5ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions"[0m
+  ↳ app/controllers/home_controller.rb:9:in `group_by'
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 12.0ms | Allocations: 7067)
+Completed 500 Internal Server Error in 74ms (ActiveRecord: 5.5ms | Allocations: 35274)
+
+
+  
+ActionView::Template::Error (The asset "application.js" is not present in the asset pipeline.
+):
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag "application", media: "all" %>
+     9:     <%= javascript_include_tag "application" %>
+    10:   </head>
+    11: 
+    12:   <body>
+  
+app/views/layouts/application.html.erb:9
+Started GET "/" for 172.18.0.1 at 2020-09-27 21:20:12 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#index as HTML
+  [1m[36mTransaction Load (1.1ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions"[0m
+  ↳ app/controllers/home_controller.rb:9:in `group_by'
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 23.4ms | Allocations: 6899)
+Completed 200 OK in 39ms (Views: 28.0ms | ActiveRecord: 1.1ms | Allocations: 14166)
+
+
+Started GET "/fonts/montserrat/Montserrat-Medium.ttf" for 172.18.0.1 at 2020-09-27 21:20:12 +0000
+Started GET "/fonts/montserrat/Montserrat-Regular.ttf" for 172.18.0.1 at 2020-09-27 21:20:12 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/montserrat/Montserrat-Medium.ttf"):
+  
+actionpack (6.0.3.3) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.4) lib/web_console/middleware.rb:19:in `block in call'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.3) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/montserrat/Montserrat-Regular.ttf"):
+  
+actionpack (6.0.3.3) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.4) lib/web_console/middleware.rb:19:in `block in call'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.3) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/" for 172.18.0.1 at 2020-09-27 21:26:20 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#index as HTML
+  [1m[36mTransaction Load (1.9ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions"[0m
+  ↳ app/controllers/home_controller.rb:9:in `group_by'
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 14.3ms | Allocations: 6276)
+Completed 200 OK in 42ms (Views: 32.8ms | ActiveRecord: 1.9ms | Allocations: 18080)
+
+
+Started GET "/fonts/montserrat/Montserrat-Medium.ttf" for 172.18.0.1 at 2020-09-27 21:26:21 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started GET "/fonts/montserrat/Montserrat-Regular.ttf" for 172.18.0.1 at 2020-09-27 21:26:21 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/montserrat/Montserrat-Regular.ttf"):
+  
+actionpack (6.0.3.3) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.4) lib/web_console/middleware.rb:19:in `block in call'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.3) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/montserrat/Montserrat-Medium.ttf"):
+  
+actionpack (6.0.3.3) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.4) lib/web_console/middleware.rb:19:in `block in call'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.3) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/" for 172.18.0.1 at 2020-09-27 21:27:58 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#index as HTML
+  [1m[36mTransaction Load (2.8ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions"[0m
+  ↳ app/controllers/home_controller.rb:9:in `group_by'
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 20.5ms | Allocations: 6290)
+Completed 200 OK in 40ms (Views: 25.4ms | ActiveRecord: 2.8ms | Allocations: 13659)
+
+
+Started GET "/fonts/montserrat/Montserrat-Medium.ttf" for 172.18.0.1 at 2020-09-27 21:27:58 +0000
+Started GET "/fonts/montserrat/Montserrat-Regular.ttf" for 172.18.0.1 at 2020-09-27 21:27:58 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/montserrat/Montserrat-Regular.ttf"):
+  
+actionpack (6.0.3.3) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.4) lib/web_console/middleware.rb:19:in `block in call'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.3) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/montserrat/Montserrat-Medium.ttf"):
+  
+actionpack (6.0.3.3) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.4) lib/web_console/middleware.rb:19:in `block in call'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.3) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/" for 172.18.0.1 at 2020-09-27 21:28:49 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#index as HTML
+  [1m[36mTransaction Load (1.9ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions"[0m
+  ↳ app/controllers/home_controller.rb:9:in `group_by'
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 28.9ms | Allocations: 6288)
+Completed 200 OK in 51ms (Views: 33.4ms | ActiveRecord: 1.9ms | Allocations: 13505)
+
+
+Started GET "/fonts/montserrat/Montserrat-Medium.ttf" for 172.18.0.1 at 2020-09-27 21:28:49 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started GET "/fonts/montserrat/Montserrat-Regular.ttf" for 172.18.0.1 at 2020-09-27 21:28:49 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/montserrat/Montserrat-Regular.ttf"):
+  
+actionpack (6.0.3.3) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.4) lib/web_console/middleware.rb:19:in `block in call'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.3) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/montserrat/Montserrat-Medium.ttf"):
+  
+actionpack (6.0.3.3) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.4) lib/web_console/middleware.rb:19:in `block in call'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.3) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/" for 172.18.0.1 at 2020-09-27 21:29:08 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#index as HTML
+  [1m[36mTransaction Load (1.1ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions"[0m
+  ↳ app/controllers/home_controller.rb:9:in `group_by'
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 21.5ms | Allocations: 6288)
+Completed 200 OK in 44ms (Views: 29.7ms | ActiveRecord: 1.1ms | Allocations: 13498)
+
+
+Started GET "/fonts/montserrat/Montserrat-Medium.ttf" for 172.18.0.1 at 2020-09-27 21:29:09 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started GET "/fonts/montserrat/Montserrat-Regular.ttf" for 172.18.0.1 at 2020-09-27 21:29:09 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/montserrat/Montserrat-Medium.ttf"):
+  
+actionpack (6.0.3.3) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.4) lib/web_console/middleware.rb:19:in `block in call'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.3) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/montserrat/Montserrat-Regular.ttf"):
+  
+actionpack (6.0.3.3) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.4) lib/web_console/middleware.rb:19:in `block in call'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.3) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/" for 172.18.0.1 at 2020-09-27 21:32:33 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#index as HTML
+  [1m[36mTransaction Load (1.7ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions"[0m
+  ↳ app/controllers/home_controller.rb:9:in `group_by'
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 13.1ms | Allocations: 6296)
+Completed 200 OK in 38ms (Views: 25.2ms | ActiveRecord: 1.7ms | Allocations: 16630)
+
+
+Started GET "/" for 172.18.0.1 at 2020-09-27 21:32:36 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#index as HTML
+  [1m[36mTransaction Load (3.1ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions"[0m
+  ↳ app/controllers/home_controller.rb:9:in `group_by'
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 15.8ms | Allocations: 5940)
+Completed 200 OK in 36ms (Views: 18.0ms | ActiveRecord: 3.1ms | Allocations: 12092)
+
+

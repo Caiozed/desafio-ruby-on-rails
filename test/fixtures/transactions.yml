@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  tipo: MyString
+  data: 2020-09-26 19:40:27
+  valor: 9.99
+  cpf: MyString
+  cartao: MyString
+  dono: MyString
+  loja: MyString
+
+two:
+  tipo: MyString
+  data: 2020-09-26 19:40:27
+  valor: 9.99
+  cpf: MyString
+  cartao: MyString
+  dono: MyString
+  loja: MyString

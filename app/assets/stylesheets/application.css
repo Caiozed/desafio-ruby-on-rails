@@ -1,15 +1,172 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+
+  /*//////////////////////////////////////////////////////////////////
+  [ RESTYLE TAG ]*/
+  * {
+      margin: 0px; 
+      padding: 0px; 
+      box-sizing: border-box;
+  }
+  
+  body, html {
+      height: 100%;
+      font-family: sans-serif;
+  }
+  
+  /* ------------------------------------ */
+  a {
+      margin: 0px;
+      transition: all 0.4s;
+      -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+  }
+  
+  a:focus {
+      outline: none !important;
+  }
+  
+  a:hover {
+      text-decoration: none;
+  }
+  
+  /* ------------------------------------ */
+  h1,h2,h3,h4,h5,h6 {margin: 0px;}
+  
+  p {margin: 0px;}
+  
+  ul, li {
+      margin: 0px;
+      list-style-type: none;
+  }
+  
+  
+  /* ------------------------------------ */
+  input {
+    display: block;
+      outline: none;
+      border: none !important;
+  }
+  
+  textarea {
+    display: block;
+    outline: none;
+  }
+  
+  textarea:focus, input:focus {
+    border-color: transparent !important;
+  }
+  
+  /* ------------------------------------ */
+  button {
+      outline: none !important;
+      border: none;
+      background: transparent;
+  }
+  
+  button:hover {
+      cursor: pointer;
+  }
+  
+  iframe {
+      border: none !important;
+  }
+  
+  
+  
+  /*//////////////////////////////////////////////////////////////////
+  [ Table ]*/
+  
+  .limiter {
+    width: 100%;
+    margin: 0 auto;
+  }
+  
+  .container-table {
+    width: 100%;
+    min-height: 100vh;
+    background: #d1d1d1;
+  
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 33px 30px;
+  }
+  
+  .wrap-table {
+    width: 1300px;
+  }
+  
+  /*//////////////////////////////////////////////////////////////////
+  [ Table ]*/
+  table {
+    width: 100%;
+    background-color: #fff;
+  }
+  
+  th, td {
+    font-weight: unset;
+    padding-right: 10px;
+  }
+  
+  .column {
+    width: 130px;
+    padding-left: 25px;
+  }
+  
+  .column.column1 {
+    width: 265px;
+    padding-left: 42px;
+  }
+  
+  .row.head th {
+    padding-top: 24px;
+    padding-bottom: 20px;
+  }
+  
+  .row td {
+    padding-top: 18px;
+    padding-bottom: 14px;
+  }
+  
+  
+  /*==================================================================
+  [ Color style ]*/
+  .table td {
+    font-family: Montserrat-Regular;
+    font-size: 14px;
+    color: #808080;
+    line-height: 1.4;
+  }
+  
+  .table th {
+    font-family: Montserrat-Medium;
+    font-size: 12px;
+    color: #fff;
+    line-height: 1.4;
+    text-transform: uppercase;
+  
+    background-color: #36304a;
+  }
+  
+  .table .row:hover {
+    background-color: #f2f2f2;
+  }
+  
+  .table .hov-column {
+    background-color: #f2f2f2;
+  }
+  
+  .table.hov-column-head {
+    background-color: #484848 !important;
+  }
+  
+  .table .row td:hover {
+    background-color: #6c7ae0;
+    color: #fff;
+  }
+  

@@ -1,0 +1,40 @@
+<h1>Home</h1>
+
+<div class="container-table">
+  <div class="wrap-table">
+
+    <%= form_tag '/upload', method: "POST", multipart: true do %>
+      <label for="file">File to Upload</label> <%= file_field_tag "file" %>
+      <%= submit_tag %>
+    <% end %>
+
+    <div class="table m-b-110">
+      <% @lojas.each do |key, loja| %>
+        <table>
+          <thead>
+            <tr class="row head">
+                <th class="column">Data</th>
+                <th class="column">Tipo</th>
+                <th class="column">Valor</th>
+                <th class="column">CPF</th>
+                <th class="column">Cartão</th>
+                <th class="column">Dono da loja</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% loja.each do |transaction| %>  
+              <tr class="row">
+                <td class="column"><%= transaction.tipo %></td>
+                <td class="column"><%= transaction.data %></td>
+                <td class="column"><%= transaction.valor %></td>
+                <td class="column"><%= transaction.cpf %></td>
+                <td class="column"><%= transaction.cartao %></td>
+                <td class="column"><%= transaction.dono %></td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      <% end %>
+    </div>
+  </div>
+</div>
