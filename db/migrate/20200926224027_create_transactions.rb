@@ -1,7 +1,7 @@
 class CreateTransactions < ActiveRecord::Migration[6.0]
   def change
     create_table :transactions do |t|
-      t.string :tipo
+      t.integer :tipo
       t.datetime :data
       t.float :valor
       t.string :cpf

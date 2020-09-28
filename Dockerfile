@@ -16,6 +16,7 @@ COPY . /app
 COPY entrypoint.sh /usr/bin/
 RUN chmod +x /usr/bin/entrypoint.sh
 ENTRYPOINT ["entrypoint.sh"]
+RUN yarn install
 RUN rails webpacker:install && rake assets:precompile
 EXPOSE 3000 9000
 

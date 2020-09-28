@@ -14,8 +14,16 @@ module HomeHelper
     trasactions
   end
 
+  def calulate_total(loja)
+    total = 0
+    loja.each do |transaction|
+      total = transaction.transaction_type.sinal == '+' ? total + transaction.valor : total - transaction.valor
+    end
+    total
+  end
+
   private_class_method def self.new_transaction_from_line(line)
-    Transaction.new({ tipo: line[0],
+    Transaction.new({ tipo: line[0].to_i,
                       data: DateTime.parse(line[1...9] + 'T' + line[42...48]),
                       valor: (line[9...19].to_f / 100),
                       cpf: line[19...30],

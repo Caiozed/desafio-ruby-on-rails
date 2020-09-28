@@ -5,7 +5,7 @@ class HomeController < ApplicationController
   include HomeHelper
 
   def index
-    transactions = Transaction.all
+    transactions = Transaction.order(data: :desc)
     @lojas = transactions.group_by(&:loja)
   end
 

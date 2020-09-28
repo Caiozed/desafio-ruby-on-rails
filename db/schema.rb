@@ -10,13 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_09_26_224027) do
+ActiveRecord::Schema.define(version: 2020_09_28_144529) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "transaction_types", force: :cascade do |t|
+    t.string "descricao"
+    t.string "natureza"
+    t.string "sinal"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "transactions", force: :cascade do |t|
-    t.string "tipo"
+    t.integer "tipo"
     t.datetime "data"
     t.float "valor"
     t.string "cpf"

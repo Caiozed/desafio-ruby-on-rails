@@ -1,36 +1,47 @@
-<h1>Home</h1>
+<div class="navbar">
+  <span class="logo">BycodersTest |</span>
+
+  <%= form_tag '/upload', accept_charset: "UTF-8", class: "dropzone", method: "POST", multipart: true do %>
+    <%= file_field_tag :file, multiple: false, required: true%>
+    <%= submit_tag "Enviar", class: "btn"%>
+  <% end %>
+</div>
 
 <div class="container-table">
   <div class="wrap-table">
-    <%= form_tag '/upload', accept_charset: "UTF-8", class: "dropzone", method: "POST", multipart: true do %>
-      <%= file_field_tag :file, multiple: false, required: true%>
-      <%= submit_tag "Enviar", class: "btn"%>
-    <% end %>
+   
     <div class="table m-b-110">
       <% @lojas.each do |key, loja| %>
         <table>
+          <h3 style="margin-top: 20px;">LOJA: <%= key %></h3>
           <thead>
             <tr class="row head">
                 <th class="column">Tipo</th>
                 <th class="column">Data</th>
-                <th class="column">Valor</th>
                 <th class="column">CPF</th>
                 <th class="column">Cartão</th>
                 <th class="column">Dono da loja</th>
+                <th class="column">Valor</th>
             </tr>
           </thead>
           <tbody>
             <% loja.each do |transaction| %>  
-              <tr class="row">
-                <td class="column"><%= transaction.tipo %></td>
+              <tr class="row <%= transaction.transaction_type.sinal == '+' ? "table-entrada" : "table-saida"%>">
+                <td class="column"><%= transaction.transaction_type.descricao %></td>
                 <td class="column"><%= transaction.data %></td>
-                <td class="column"><%= transaction.valor %></td>
                 <td class="column"><%= transaction.cpf %></td>
                 <td class="column"><%= transaction.cartao %></td>
                 <td class="column"><%= transaction.dono %></td>
+                <td class="column"><%= transaction.transaction_type.sinal%><%= transaction.valor %></td>
               </tr>
             <% end %>
           </tbody>
+          <tfoot>
+            <tr class="row">
+              <td lass="column" colspan="5">TOTAL:</td>
+              <td lass="column">R$ <%= calulate_total(loja) %></td>
+            </tr>
+          </tfoot>
         </table>
       <% end %>
     </div>
