@@ -2,19 +2,17 @@
 
 <div class="container-table">
   <div class="wrap-table">
-
-    <%= form_tag '/upload', method: "POST", multipart: true do %>
-      <label for="file">File to Upload</label> <%= file_field_tag "file" %>
-      <%= submit_tag %>
+    <%= form_tag '/upload', accept_charset: "UTF-8", class: "dropzone", method: "POST", multipart: true do %>
+      <%= file_field_tag :file, multiple: false, required: true%>
+      <%= submit_tag "Enviar", class: "btn"%>
     <% end %>
-
     <div class="table m-b-110">
       <% @lojas.each do |key, loja| %>
         <table>
           <thead>
             <tr class="row head">
-                <th class="column">Data</th>
                 <th class="column">Tipo</th>
+                <th class="column">Data</th>
                 <th class="column">Valor</th>
                 <th class="column">CPF</th>
                 <th class="column">Cartão</th>

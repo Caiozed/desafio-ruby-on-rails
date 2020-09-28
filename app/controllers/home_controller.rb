@@ -21,9 +21,9 @@ class HomeController < ApplicationController
         @trasactions
       )
 
-      flash[:success] = 'It worked!'
+      flash[:success] = 'Arquivo importado com sucesso!'
     rescue StandardError => e
-      flash[:warning] = e.message
+      flash[:danger] = e.message
     end
 
     redirect_to action: 'index'

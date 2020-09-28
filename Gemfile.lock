@@ -79,6 +79,8 @@ GEM
     debase (0.2.4.1)
       debase-ruby_core_source (>= 0.10.2)
     debase-ruby_core_source (0.10.10)
+    dropzonejs-rails (0.8.5)
+      rails (> 3.1)
     erubi (1.9.0)
     ffi (1.13.1)
     globalid (0.4.2)
@@ -212,6 +214,7 @@ DEPENDENCIES
   byebug
   capybara (>= 2.15)
   debase
+  dropzonejs-rails
   jbuilder (~> 2.7)
   listen (>= 3.0.5, < 3.2)
   pg (>= 0.18, < 2.0)

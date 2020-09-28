@@ -4,10 +4,12 @@
 module HomeHelper
   def self.parse_transaction(text)
     trasactions = []
-    text.each_line do |x, line|
+    line_count = 1
+    text.each_line do |line|
       trasactions.push(new_transaction_from_line(line))
+      line_count = + 1
     rescue StandardError => e
-      raise "Erro ao ler linha #{x}, por favor verifique o arquivo."
+      raise "Erro ao ler linha #{line_count}, por favor verifique o arquivo."
     end
     trasactions
   end

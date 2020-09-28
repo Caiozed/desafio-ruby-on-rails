@@ -1,4 +1,7 @@
-  /*//////////////////////////////////////////////////////////////////
+@import 'basic.min.css';
+@import 'dropzone.min.css';
+ 
+ /*//////////////////////////////////////////////////////////////////
   [ RESTYLE TAG ]*/
   * {
       margin: 0px; 
@@ -167,54 +170,5 @@
   .table .row td:hover {
     background-color: #6c7ae0;
     color: #fff;
-  }
-
-  /* ALERTS */
-  .alert{
-    position: fixed;
-    right: 15px;
-    top: 15px;
-    padding: 12px;
-    border-radius: 50px;
-    z-index: 999;
-  }
-
-  .alert-danger{
-    background: #ff4e4e;
-  }
-
-  .alert-success{
-    background: green;
-  }
-
- /* Butons */
- .btn{
-   padding: 15px;
-   border-radius: 50px;
-   display: inline;
-   color: white;
-   background-color: rgb(0, 132, 255);
-   cursor: pointer;
- }
-
- .btn:hover{
-  background-color: rgb(0, 102, 255);
- }
- .btn:active{
-  background-color: rgb(0, 162, 255);
- }
-
-
- [type="file"]{
-  display: inline;
- }
-
-  /* Overrides */
-  .dropzone{
-    width: 400px;
-    padding: 10px;
-    border: 2px dashed #0087F7;
-    border-radius: 5px;
-    background: white;
   }
   
