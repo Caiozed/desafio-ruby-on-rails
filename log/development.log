@@ -11215,3 +11215,39 @@ Processing by HomeController#index as HTML
 Completed 200 OK in 247ms (Views: 164.3ms | ActiveRecord: 36.0ms | Allocations: 45097)
 
 
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE DATABASE "app_development" ENCODING = 'unicode'[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE DATABASE "app_test" ENCODING = 'unicode'[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5277929974492897470)[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(5277929974492897470)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTransactionType Load (0.4ms)[0m  [1m[34mSELECT "transaction_types".* FROM "transaction_types" ORDER BY "transaction_types"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+Started POST "/upload" for 172.18.0.1 at 2020-09-28 19:43:33 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#upload as */*
+  Parameters: {"file"=>#<ActionDispatch::Http::UploadedFile:0x00007f38dcbe90f8 @tempfile=#<Tempfile:/tmp/RackMultipart20200928-1-1ib3v6b.txt>, @original_filename="CNAB.txt", @content_type="text/plain", @headers="Content-Disposition: form-data; name=\"file\"; filename=\"CNAB.txt\"\r\nContent-Type: text/plain\r\n">}
+  [1m[36mTransaction Create Many Without Validations Or Callbacks (3.8ms)[0m  [1m[32mINSERT INTO "transactions" ("tipo","data","valor","cpf","cartao","dono","loja","created_at","updated_at") VALUES (3,'2019-03-01 15:34:53',142.0,'09620676017','4753****3153','JOÃO MACEDO  ',' BAR DO JOÃO      ','2020-09-28 19:43:39.295555','2020-09-28 19:43:39.295555'),(5,'2019-03-01 14:56:07',132.0,'55641815063','3123****7687','MARIA JOSEFINA','LOJA DO Ó - MATRIZ','2020-09-28 19:43:39.295555','2020-09-28 19:43:39.295555'),(3,'2019-03-01 17:27:12',122.0,'84515254073','6777****1313','MARCOS PEREIRA','MERCADO DA AVENIDA
+','2020-09-28 19:43:39.295555','2020-09-28 19:43:39.295555'),(2,'2019-03-01 23:42:34',112.0,'09620676017','3648****0099','JOÃO MACEDO  ',' BAR DO JOÃO      ','2020-09-28 19:43:39.295555','2020-09-28 19:43:39.295555'),(1,'2019-03-01 23:30:00',152.0,'09620676017','1234****7890','JOÃO MACEDO  ',' BAR DO JOÃO      ','2020-09-28 19:43:39.295555','2020-09-28 19:43:39.295555'),(2,'2019-03-01 12:33:33',107.0,'84515254073','8723****9987','MARCOS PEREIRA','MERCADO DA AVENIDA
+','2020-09-28 19:43:39.295555','2020-09-28 19:43:39.295555'),(2,'2019-03-01 23:12:33',502.0,'84515254073','8473****1231','MARCOS PEREIRA','MERCADO DA AVENIDA
+','2020-09-28 19:43:39.295555','2020-09-28 19:43:39.295555'),(3,'2019-03-01 17:27:12',602.0,'23270298056','6777****1313','JOSÉ COSTA   ',' MERCEARIA 3 IRMÃO','2020-09-28 19:43:39.295555','2020-09-28 19:43:39.295555'),(1,'2019-03-01 09:00:02',200.0,'55641815063','1234****3324','MARIA JOSEFINA','LOJA DO Ó - MATRIZ','2020-09-28 19:43:39.295555','2020-09-28 19:43:39.295555'),(5,'2019-03-01 14:56:07',802.0,'84515254073','3123****7687','MARCOS PEREIRA','MERCADO DA AVENIDA
+','2020-09-28 19:43:39.295555','2020-09-28 19:43:39.295555'),(2,'2019-03-01 23:12:33',102.0,'23270298056','8473****1231','JOSÉ COSTA   ',' MERCEARIA 3 IRMÃO','2020-09-28 19:43:39.295555','2020-09-28 19:43:39.295555'),(3,'2019-03-01 17:27:12',6102.0,'23270298056','6777****1313','JOSÉ COSTA   ',' MERCEARIA 3 IRMÃO','2020-09-28 19:43:39.295555','2020-09-28 19:43:39.295555'),(4,'2019-03-01 10:00:00',152.32,'55641815063','1234****6678','MARIA JOSEFINA','LOJA DO Ó - FILIAL','2020-09-28 19:43:39.295555','2020-09-28 19:43:39.295555'),(8,'2019-03-01 12:32:22',102.03,'84515254073','2344****1222','MARCOS PEREIRA','MERCADO DA AVENIDA
+','2020-09-28 19:43:39.295555','2020-09-28 19:43:39.295555'),(3,'2019-03-01 17:27:12',103.0,'23270298056','6777****1313','JOSÉ COSTA   ',' MERCEARIA 3 IRMÃO','2020-09-28 19:43:39.295555','2020-09-28 19:43:39.295555'),(9,'2019-03-01 00:00:00',102.0,'55641815063','6228****9090','MARIA JOSEFINA','LOJA DO Ó - MATRIZ','2020-09-28 19:43:39.295555','2020-09-28 19:43:39.295555'),(4,'2019-06-01 10:00:00',506.17,'84515254073','1234****2231','MARCOS PEREIRA','MERCADO DA AVENIDA
+','2020-09-28 19:43:39.295555','2020-09-28 19:43:39.295555'),(2,'2019-03-01 12:33:33',109.0,'23270298056','8723****9987','JOSÉ COSTA   ',' MERCEARIA 3 IRMÃO','2020-09-28 19:43:39.295555','2020-09-28 19:43:39.295555'),(8,'2019-03-01 12:32:22',2.0,'84515254073','2344****1222','MARCOS PEREIRA','MERCADO DA AVENIDA
+','2020-09-28 19:43:39.295555','2020-09-28 19:43:39.295555'),(2,'2019-03-01 14:18:08',5.0,'23270298056','7677****8778','JOSÉ COSTA   ',' MERCEARIA 3 IRMÃO','2020-09-28 19:43:39.295555','2020-09-28 19:43:39.295555'),(3,'2019-03-01 17:27:12',192.0,'84515254073','6777****1313','MARCOS PEREIRA','MERCADO DA AVENIDA
+','2020-09-28 19:43:39.295555','2020-09-28 19:43:39.295555') RETURNING "id"[0m
+  ↳ app/controllers/home_controller.rb:24:in `upload'
+Redirected to http://localhost:3000/
+Completed 302 Found in 6178ms (ActiveRecord: 19.3ms | Allocations: 148180)
+
+
+Started GET "/" for 172.18.0.1 at 2020-09-28 19:43:39 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#index as */*
+  [1m[36mTransaction Load (0.9ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" ORDER BY "transactions"."data" DESC[0m
+  ↳ app/controllers/home_controller.rb:10:in `group_by'
+Completed 200 OK in 53ms (Views: 40.8ms | ActiveRecord: 0.9ms | Allocations: 4796)
+
+

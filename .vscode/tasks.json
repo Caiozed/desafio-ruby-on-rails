@@ -6,7 +6,7 @@
     "reveal": "always",
     "tasks": [
         {
-            "label": "start_node_compose",
+            "label": "start",
             "group": "build",
             "command": "/bin/bash",
             "args": [

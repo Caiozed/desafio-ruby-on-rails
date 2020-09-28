@@ -13,7 +13,7 @@
             "remoteWorkspaceRoot": "/app",
             "cwd": "${workspaceRoot}",
             "showDebuggerOutput": true,
-            "preLaunchTask": "start_node_compose"
-        },
+            "preLaunchTask": "start"
+        }
     ]
 }

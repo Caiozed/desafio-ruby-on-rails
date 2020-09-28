@@ -3,10 +3,15 @@
 # Home controller for retrieval of data
 class HomeController < ApplicationController
   include HomeHelper
+  skip_before_action :verify_authenticity_token
 
   def index
     transactions = Transaction.order(data: :desc)
     @lojas = transactions.group_by(&:loja)
+    respond_to do |format|
+      format.json { render json: @lojas }
+      format.html
+    end
   end
 
   def upload
