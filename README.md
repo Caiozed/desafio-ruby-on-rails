@@ -16,3 +16,6 @@ Project made in Ruby on Rails with the object of parsing a text file, saving it 
 # Running tests 
 1. run ```sudo docker-compose run -e "RAILS_ENV=test" web bundle exec rake assets:precompile``` once
 2. then ```sudo docker-compose run -e "RAILS_ENV=test" web bundle exec rspec``` to run the tests
+
+# API example
+Postman file available on project root
