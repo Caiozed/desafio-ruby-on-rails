@@ -1947,3 +1947,253 @@ Processing by HomeController#index as JSON
   [1m[36mTransaction Load (0.4ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" ORDER BY "transactions"."data" DESC[0m
 Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.4ms | Allocations: 342)
   [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (134.9ms)[0m  [1m[35mCREATE DATABASE "app_test" ENCODING = 'unicode'[0m
+  [1m[35m (11.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (10.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7624705949065083900)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateTransactions (20200926224027)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (7.0ms)[0m  [1m[35mCREATE TABLE "transactions" ("id" bigserial primary key, "tipo" integer, "data" timestamp, "valor" float, "cpf" character varying, "cartao" character varying, "dono" character varying, "loja" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (1.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200926224027"]]
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateTransactionTypes (20200928144529)
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (8.4ms)[0m  [1m[35mCREATE TABLE "transaction_types" ("id" bigserial primary key, "descricao" character varying, "natureza" character varying, "sinal" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (1.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200928144529"]]
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "test"], ["created_at", "2020-09-29 16:46:05.033103"], ["updated_at", "2020-09-29 16:46:05.033103"]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(7624705949065083900)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTransactionType Load (0.3ms)[0m  [1m[34mSELECT "transaction_types".* FROM "transaction_types" ORDER BY "transaction_types"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTransactionType Create (0.4ms)[0m  [1m[32mINSERT INTO "transaction_types" ("id", "descricao", "natureza", "sinal", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["id", 1], ["descricao", "Débito"], ["natureza", "Entrada"], ["sinal", "+"], ["created_at", "2020-09-29 16:46:05.992614"], ["updated_at", "2020-09-29 16:46:05.992614"]]
+  [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTransactionType Create (0.2ms)[0m  [1m[32mINSERT INTO "transaction_types" ("id", "descricao", "natureza", "sinal", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["id", 2], ["descricao", "Boleto"], ["natureza", "Saída"], ["sinal", "-"], ["created_at", "2020-09-29 16:46:05.996297"], ["updated_at", "2020-09-29 16:46:05.996297"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTransactionType Create (0.7ms)[0m  [1m[32mINSERT INTO "transaction_types" ("id", "descricao", "natureza", "sinal", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["id", 3], ["descricao", "Financiamento"], ["natureza", "Saída"], ["sinal", "-"], ["created_at", "2020-09-29 16:46:05.998796"], ["updated_at", "2020-09-29 16:46:05.998796"]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTransactionType Create (0.6ms)[0m  [1m[32mINSERT INTO "transaction_types" ("id", "descricao", "natureza", "sinal", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["id", 4], ["descricao", "Crédito"], ["natureza", "Entrada"], ["sinal", "+"], ["created_at", "2020-09-29 16:46:06.003453"], ["updated_at", "2020-09-29 16:46:06.003453"]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTransactionType Create (0.7ms)[0m  [1m[32mINSERT INTO "transaction_types" ("id", "descricao", "natureza", "sinal", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["id", 5], ["descricao", "Recebimento Empréstimo"], ["natureza", "Entrada"], ["sinal", "+"], ["created_at", "2020-09-29 16:46:06.008059"], ["updated_at", "2020-09-29 16:46:06.008059"]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTransactionType Create (0.7ms)[0m  [1m[32mINSERT INTO "transaction_types" ("id", "descricao", "natureza", "sinal", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["id", 6], ["descricao", "Vendas"], ["natureza", "Entrada"], ["sinal", "+"], ["created_at", "2020-09-29 16:46:06.012671"], ["updated_at", "2020-09-29 16:46:06.012671"]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTransactionType Create (0.6ms)[0m  [1m[32mINSERT INTO "transaction_types" ("id", "descricao", "natureza", "sinal", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["id", 7], ["descricao", "Recebimento TED"], ["natureza", "Entrada"], ["sinal", "+"], ["created_at", "2020-09-29 16:46:06.017599"], ["updated_at", "2020-09-29 16:46:06.017599"]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTransactionType Create (0.9ms)[0m  [1m[32mINSERT INTO "transaction_types" ("id", "descricao", "natureza", "sinal", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["id", 8], ["descricao", "Recebimento DOC"], ["natureza", "Entrada"], ["sinal", "+"], ["created_at", "2020-09-29 16:46:06.022551"], ["updated_at", "2020-09-29 16:46:06.022551"]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTransactionType Create (0.6ms)[0m  [1m[32mINSERT INTO "transaction_types" ("id", "descricao", "natureza", "sinal", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["id", 9], ["descricao", "Aluguel"], ["natureza", "Saída"], ["sinal", "-"], ["created_at", "2020-09-29 16:46:06.028949"], ["updated_at", "2020-09-29 16:46:06.028949"]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (17.9ms)[0m  [1m[35mDROP DATABASE IF EXISTS "app_test"[0m
+  [1m[35m (64.6ms)[0m  [1m[35mCREATE DATABASE "app_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "transaction_types" CASCADE[0m
+  [1m[35m (10.1ms)[0m  [1m[35mCREATE TABLE "transaction_types" ("id" bigserial primary key, "descricao" character varying, "natureza" character varying, "sinal" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE IF EXISTS "transactions" CASCADE[0m
+  [1m[35m (11.1ms)[0m  [1m[35mCREATE TABLE "transactions" ("id" bigserial primary key, "tipo" integer, "data" timestamp, "valor" float, "cpf" character varying, "cartao" character varying, "dono" character varying, "loja" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (8.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20200928144529)[0m
+  [1m[35m (1.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20200926224027);
+
+[0m
+  [1m[35m (10.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.9ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "test"], ["created_at", "2020-09-29 16:46:08.468256"], ["updated_at", "2020-09-29 16:46:08.468256"]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.7ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "7ceaf52c18a0eb3483d20ddc8c79ef382a89bb3f"], ["created_at", "2020-09-29 16:46:08.478680"], ["updated_at", "2020-09-29 16:46:08.478680"]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Started GET "/" for 127.0.0.1 at 2020-09-29 16:46:08 +0000
+Processing by HomeController#index as HTML
+  [1m[36mTransaction Load (0.4ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" ORDER BY "transactions"."data" DESC[0m
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.2ms | Allocations: 765)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+yarn run v1.22.5
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+
+
+error Command "webpack" not found.
+
+Completed 500 Internal Server Error in 1394ms (ActiveRecord: 1.5ms | Allocations: 6677)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTransaction Create Many Without Validations Or Callbacks (0.7ms)[0m  [1m[32mINSERT INTO "transactions" ("tipo","data","valor","cpf","cartao","dono","loja","created_at","updated_at") VALUES (3,'2019-03-01 15:34:53',142.0,'09620676017','4753****3153','JOÃO MACEDO   ','BAR DO JOÃO    ','2020-09-29 16:46:09.942845','2020-09-29 16:46:09.942845') RETURNING "id"[0m
+Started GET "/?format=json" for 127.0.0.1 at 2020-09-29 16:46:09 +0000
+Processing by HomeController#index as JSON
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" ORDER BY "transactions"."data" DESC[0m
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.3ms | Allocations: 558)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Started POST "/upload" for 127.0.0.1 at 2020-09-29 16:46:09 +0000
+Processing by HomeController#upload as JSON
+  Parameters: {"file"=>#<ActionDispatch::Http::UploadedFile:0x000055ec1315d7b8 @tempfile=#<Tempfile:/tmp/RackMultipart20200929-1-1i107ar.txt>, @original_filename="CNAB.txt", @content_type="", @headers="Content-Disposition: form-data; name=\"file\"; filename=\"CNAB.txt\"\r\nContent-Type: \r\nContent-Length: 1723\r\n">}
+  [1m[36mTransaction Create Many Without Validations Or Callbacks (0.6ms)[0m  [1m[32mINSERT INTO "transactions" ("tipo","data","valor","cpf","cartao","dono","loja","created_at","updated_at") VALUES (3,'2019-03-01 15:34:53',142.0,'09620676017','4753****3153','JOÃO MACEDO  ',' BAR DO JOÃO      ','2020-09-29 16:46:09.966234','2020-09-29 16:46:09.966234'),(5,'2019-03-01 14:56:07',132.0,'55641815063','3123****7687','MARIA JOSEFINA','LOJA DO Ó - MATRIZ','2020-09-29 16:46:09.966234','2020-09-29 16:46:09.966234'),(3,'2019-03-01 17:27:12',122.0,'84515254073','6777****1313','MARCOS PEREIRA','MERCADO DA AVENIDA
+','2020-09-29 16:46:09.966234','2020-09-29 16:46:09.966234'),(2,'2019-03-01 23:42:34',112.0,'09620676017','3648****0099','JOÃO MACEDO  ',' BAR DO JOÃO      ','2020-09-29 16:46:09.966234','2020-09-29 16:46:09.966234'),(1,'2019-03-01 23:30:00',152.0,'09620676017','1234****7890','JOÃO MACEDO  ',' BAR DO JOÃO      ','2020-09-29 16:46:09.966234','2020-09-29 16:46:09.966234'),(2,'2019-03-01 12:33:33',107.0,'84515254073','8723****9987','MARCOS PEREIRA','MERCADO DA AVENIDA
+','2020-09-29 16:46:09.966234','2020-09-29 16:46:09.966234'),(2,'2019-03-01 23:12:33',502.0,'84515254073','8473****1231','MARCOS PEREIRA','MERCADO DA AVENIDA
+','2020-09-29 16:46:09.966234','2020-09-29 16:46:09.966234'),(3,'2019-03-01 17:27:12',602.0,'23270298056','6777****1313','JOSÉ COSTA   ',' MERCEARIA 3 IRMÃO','2020-09-29 16:46:09.966234','2020-09-29 16:46:09.966234'),(1,'2019-03-01 09:00:02',200.0,'55641815063','1234****3324','MARIA JOSEFINA','LOJA DO Ó - MATRIZ','2020-09-29 16:46:09.966234','2020-09-29 16:46:09.966234'),(5,'2019-03-01 14:56:07',802.0,'84515254073','3123****7687','MARCOS PEREIRA','MERCADO DA AVENIDA
+','2020-09-29 16:46:09.966234','2020-09-29 16:46:09.966234'),(2,'2019-03-01 23:12:33',102.0,'23270298056','8473****1231','JOSÉ COSTA   ',' MERCEARIA 3 IRMÃO','2020-09-29 16:46:09.966234','2020-09-29 16:46:09.966234'),(3,'2019-03-01 17:27:12',6102.0,'23270298056','6777****1313','JOSÉ COSTA   ',' MERCEARIA 3 IRMÃO','2020-09-29 16:46:09.966234','2020-09-29 16:46:09.966234'),(4,'2019-03-01 10:00:00',152.32,'55641815063','1234****6678','MARIA JOSEFINA','LOJA DO Ó - FILIAL','2020-09-29 16:46:09.966234','2020-09-29 16:46:09.966234'),(8,'2019-03-01 12:32:22',102.03,'84515254073','2344****1222','MARCOS PEREIRA','MERCADO DA AVENIDA
+','2020-09-29 16:46:09.966234','2020-09-29 16:46:09.966234'),(3,'2019-03-01 17:27:12',103.0,'23270298056','6777****1313','JOSÉ COSTA   ',' MERCEARIA 3 IRMÃO','2020-09-29 16:46:09.966234','2020-09-29 16:46:09.966234'),(9,'2019-03-01 00:00:00',102.0,'55641815063','6228****9090','MARIA JOSEFINA','LOJA DO Ó - MATRIZ','2020-09-29 16:46:09.966234','2020-09-29 16:46:09.966234'),(4,'2019-06-01 10:00:00',506.17,'84515254073','1234****2231','MARCOS PEREIRA','MERCADO DA AVENIDA
+','2020-09-29 16:46:09.966234','2020-09-29 16:46:09.966234'),(2,'2019-03-01 12:33:33',109.0,'23270298056','8723****9987','JOSÉ COSTA   ',' MERCEARIA 3 IRMÃO','2020-09-29 16:46:09.966234','2020-09-29 16:46:09.966234'),(8,'2019-03-01 12:32:22',2.0,'84515254073','2344****1222','MARCOS PEREIRA','MERCADO DA AVENIDA
+','2020-09-29 16:46:09.966234','2020-09-29 16:46:09.966234'),(2,'2019-03-01 14:18:08',5.0,'23270298056','7677****8778','JOSÉ COSTA   ',' MERCEARIA 3 IRMÃO','2020-09-29 16:46:09.966234','2020-09-29 16:46:09.966234'),(3,'2019-03-01 17:27:12',192.0,'84515254073','6777****1313','MARCOS PEREIRA','MERCADO DA AVENIDA
+','2020-09-29 16:46:09.966234','2020-09-29 16:46:09.966234') RETURNING "id"[0m
+Completed 200 OK in 15ms (Views: 0.1ms | ActiveRecord: 0.6ms | Allocations: 6805)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started POST "/upload" for 127.0.0.1 at 2020-09-29 16:46:09 +0000
+Processing by HomeController#upload as JSON
+  Parameters: {"file"=>#<ActionDispatch::Http::UploadedFile:0x000055ec116222c8 @tempfile=#<Tempfile:/tmp/RackMultipart20200929-1-1ecbddu.txt>, @original_filename="CNAB.txt", @content_type="", @headers="Content-Disposition: form-data; name=\"file\"; filename=\"CNAB.txt\"\r\nContent-Type: \r\nContent-Length: 1723\r\n">}
+  [1m[36mTransaction Create Many Without Validations Or Callbacks (0.7ms)[0m  [1m[32mINSERT INTO "transactions" ("tipo","data","valor","cpf","cartao","dono","loja","created_at","updated_at") VALUES (3,'2019-03-01 15:34:53',142.0,'09620676017','4753****3153','JOÃO MACEDO  ',' BAR DO JOÃO      ','2020-09-29 16:46:09.986048','2020-09-29 16:46:09.986048'),(5,'2019-03-01 14:56:07',132.0,'55641815063','3123****7687','MARIA JOSEFINA','LOJA DO Ó - MATRIZ','2020-09-29 16:46:09.986048','2020-09-29 16:46:09.986048'),(3,'2019-03-01 17:27:12',122.0,'84515254073','6777****1313','MARCOS PEREIRA','MERCADO DA AVENIDA
+','2020-09-29 16:46:09.986048','2020-09-29 16:46:09.986048'),(2,'2019-03-01 23:42:34',112.0,'09620676017','3648****0099','JOÃO MACEDO  ',' BAR DO JOÃO      ','2020-09-29 16:46:09.986048','2020-09-29 16:46:09.986048'),(1,'2019-03-01 23:30:00',152.0,'09620676017','1234****7890','JOÃO MACEDO  ',' BAR DO JOÃO      ','2020-09-29 16:46:09.986048','2020-09-29 16:46:09.986048'),(2,'2019-03-01 12:33:33',107.0,'84515254073','8723****9987','MARCOS PEREIRA','MERCADO DA AVENIDA
+','2020-09-29 16:46:09.986048','2020-09-29 16:46:09.986048'),(2,'2019-03-01 23:12:33',502.0,'84515254073','8473****1231','MARCOS PEREIRA','MERCADO DA AVENIDA
+','2020-09-29 16:46:09.986048','2020-09-29 16:46:09.986048'),(3,'2019-03-01 17:27:12',602.0,'23270298056','6777****1313','JOSÉ COSTA   ',' MERCEARIA 3 IRMÃO','2020-09-29 16:46:09.986048','2020-09-29 16:46:09.986048'),(1,'2019-03-01 09:00:02',200.0,'55641815063','1234****3324','MARIA JOSEFINA','LOJA DO Ó - MATRIZ','2020-09-29 16:46:09.986048','2020-09-29 16:46:09.986048'),(5,'2019-03-01 14:56:07',802.0,'84515254073','3123****7687','MARCOS PEREIRA','MERCADO DA AVENIDA
+','2020-09-29 16:46:09.986048','2020-09-29 16:46:09.986048'),(2,'2019-03-01 23:12:33',102.0,'23270298056','8473****1231','JOSÉ COSTA   ',' MERCEARIA 3 IRMÃO','2020-09-29 16:46:09.986048','2020-09-29 16:46:09.986048'),(3,'2019-03-01 17:27:12',6102.0,'23270298056','6777****1313','JOSÉ COSTA   ',' MERCEARIA 3 IRMÃO','2020-09-29 16:46:09.986048','2020-09-29 16:46:09.986048'),(4,'2019-03-01 10:00:00',152.32,'55641815063','1234****6678','MARIA JOSEFINA','LOJA DO Ó - FILIAL','2020-09-29 16:46:09.986048','2020-09-29 16:46:09.986048'),(8,'2019-03-01 12:32:22',102.03,'84515254073','2344****1222','MARCOS PEREIRA','MERCADO DA AVENIDA
+','2020-09-29 16:46:09.986048','2020-09-29 16:46:09.986048'),(3,'2019-03-01 17:27:12',103.0,'23270298056','6777****1313','JOSÉ COSTA   ',' MERCEARIA 3 IRMÃO','2020-09-29 16:46:09.986048','2020-09-29 16:46:09.986048'),(9,'2019-03-01 00:00:00',102.0,'55641815063','6228****9090','MARIA JOSEFINA','LOJA DO Ó - MATRIZ','2020-09-29 16:46:09.986048','2020-09-29 16:46:09.986048'),(4,'2019-06-01 10:00:00',506.17,'84515254073','1234****2231','MARCOS PEREIRA','MERCADO DA AVENIDA
+','2020-09-29 16:46:09.986048','2020-09-29 16:46:09.986048'),(2,'2019-03-01 12:33:33',109.0,'23270298056','8723****9987','JOSÉ COSTA   ',' MERCEARIA 3 IRMÃO','2020-09-29 16:46:09.986048','2020-09-29 16:46:09.986048'),(8,'2019-03-01 12:32:22',2.0,'84515254073','2344****1222','MARCOS PEREIRA','MERCADO DA AVENIDA
+','2020-09-29 16:46:09.986048','2020-09-29 16:46:09.986048'),(2,'2019-03-01 14:18:08',5.0,'23270298056','7677****8778','JOSÉ COSTA   ',' MERCEARIA 3 IRMÃO','2020-09-29 16:46:09.986048','2020-09-29 16:46:09.986048'),(3,'2019-03-01 17:27:12',192.0,'84515254073','6777****1313','MARCOS PEREIRA','MERCADO DA AVENIDA
+','2020-09-29 16:46:09.986048','2020-09-29 16:46:09.986048') RETURNING "id"[0m
+Completed 200 OK in 16ms (Views: 0.2ms | ActiveRecord: 0.7ms | Allocations: 6791)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started POST "/upload" for 127.0.0.1 at 2020-09-29 16:46:10 +0000
+Processing by HomeController#upload as JSON
+  Parameters: {"file"=>#<ActionDispatch::Http::UploadedFile:0x000055ec0f693c40 @tempfile=#<Tempfile:/tmp/RackMultipart20200929-1-kzb5j2.txt>, @original_filename="CNAB_invalid.txt", @content_type="", @headers="Content-Disposition: form-data; name=\"file\"; filename=\"CNAB_invalid.txt\"\r\nContent-Type: \r\nContent-Length: 3\r\n">}
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 245)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started GET "/?format=json" for 127.0.0.1 at 2020-09-29 16:46:10 +0000
+Processing by HomeController#index as JSON
+  [1m[36mTransaction Load (0.4ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" ORDER BY "transactions"."data" DESC[0m
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.4ms | Allocations: 342)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE DATABASE "app_test" ENCODING = 'unicode'[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7624705949065083900)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(7624705949065083900)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTransactionType Load (0.3ms)[0m  [1m[34mSELECT "transaction_types".* FROM "transaction_types" ORDER BY "transaction_types"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTransactionType Create (0.4ms)[0m  [1m[32mINSERT INTO "transaction_types" ("id", "descricao", "natureza", "sinal", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["id", 1], ["descricao", "Débito"], ["natureza", "Entrada"], ["sinal", "+"], ["created_at", "2020-09-29 16:47:15.575663"], ["updated_at", "2020-09-29 16:47:15.575663"]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTransactionType Create (0.3ms)[0m  [1m[32mINSERT INTO "transaction_types" ("id", "descricao", "natureza", "sinal", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["id", 2], ["descricao", "Boleto"], ["natureza", "Saída"], ["sinal", "-"], ["created_at", "2020-09-29 16:47:15.579228"], ["updated_at", "2020-09-29 16:47:15.579228"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTransactionType Create (0.3ms)[0m  [1m[32mINSERT INTO "transaction_types" ("id", "descricao", "natureza", "sinal", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["id", 3], ["descricao", "Financiamento"], ["natureza", "Saída"], ["sinal", "-"], ["created_at", "2020-09-29 16:47:15.581357"], ["updated_at", "2020-09-29 16:47:15.581357"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTransactionType Create (0.3ms)[0m  [1m[32mINSERT INTO "transaction_types" ("id", "descricao", "natureza", "sinal", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["id", 4], ["descricao", "Crédito"], ["natureza", "Entrada"], ["sinal", "+"], ["created_at", "2020-09-29 16:47:15.583485"], ["updated_at", "2020-09-29 16:47:15.583485"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTransactionType Create (0.2ms)[0m  [1m[32mINSERT INTO "transaction_types" ("id", "descricao", "natureza", "sinal", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["id", 5], ["descricao", "Recebimento Empréstimo"], ["natureza", "Entrada"], ["sinal", "+"], ["created_at", "2020-09-29 16:47:15.585588"], ["updated_at", "2020-09-29 16:47:15.585588"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTransactionType Create (0.2ms)[0m  [1m[32mINSERT INTO "transaction_types" ("id", "descricao", "natureza", "sinal", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["id", 6], ["descricao", "Vendas"], ["natureza", "Entrada"], ["sinal", "+"], ["created_at", "2020-09-29 16:47:15.587760"], ["updated_at", "2020-09-29 16:47:15.587760"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTransactionType Create (0.2ms)[0m  [1m[32mINSERT INTO "transaction_types" ("id", "descricao", "natureza", "sinal", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["id", 7], ["descricao", "Recebimento TED"], ["natureza", "Entrada"], ["sinal", "+"], ["created_at", "2020-09-29 16:47:15.589865"], ["updated_at", "2020-09-29 16:47:15.589865"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTransactionType Create (0.2ms)[0m  [1m[32mINSERT INTO "transaction_types" ("id", "descricao", "natureza", "sinal", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["id", 8], ["descricao", "Recebimento DOC"], ["natureza", "Entrada"], ["sinal", "+"], ["created_at", "2020-09-29 16:47:15.592075"], ["updated_at", "2020-09-29 16:47:15.592075"]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTransactionType Create (0.3ms)[0m  [1m[32mINSERT INTO "transaction_types" ("id", "descricao", "natureza", "sinal", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["id", 9], ["descricao", "Aluguel"], ["natureza", "Saída"], ["sinal", "-"], ["created_at", "2020-09-29 16:47:15.593901"], ["updated_at", "2020-09-29 16:47:15.593901"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE DATABASE "app_test" ENCODING = 'unicode'[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7624705949065083900)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(7624705949065083900)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTransactionType Load (0.3ms)[0m  [1m[34mSELECT "transaction_types".* FROM "transaction_types" ORDER BY "transaction_types"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Started GET "/" for 127.0.0.1 at 2020-09-29 16:47:52 +0000
+Processing by HomeController#index as HTML
+  [1m[36mTransaction Load (0.4ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" ORDER BY "transactions"."data" DESC[0m
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 765)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 4.8ms | ActiveRecord: 1.5ms | Allocations: 5772)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTransaction Create Many Without Validations Or Callbacks (1.1ms)[0m  [1m[32mINSERT INTO "transactions" ("tipo","data","valor","cpf","cartao","dono","loja","created_at","updated_at") VALUES (3,'2019-03-01 15:34:53',142.0,'09620676017','4753****3153','JOÃO MACEDO   ','BAR DO JOÃO    ','2020-09-29 16:47:52.196715','2020-09-29 16:47:52.196715') RETURNING "id"[0m
+Started GET "/?format=json" for 127.0.0.1 at 2020-09-29 16:47:52 +0000
+Processing by HomeController#index as JSON
+  [1m[36mTransaction Load (0.4ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" ORDER BY "transactions"."data" DESC[0m
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.4ms | Allocations: 553)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Started POST "/upload" for 127.0.0.1 at 2020-09-29 16:47:52 +0000
+Processing by HomeController#upload as JSON
+  Parameters: {"file"=>#<ActionDispatch::Http::UploadedFile:0x000055bf6ae31c80 @tempfile=#<Tempfile:/tmp/RackMultipart20200929-1-uoxaxh.txt>, @original_filename="CNAB.txt", @content_type="", @headers="Content-Disposition: form-data; name=\"file\"; filename=\"CNAB.txt\"\r\nContent-Type: \r\nContent-Length: 1723\r\n">}
+  [1m[36mTransaction Create Many Without Validations Or Callbacks (0.8ms)[0m  [1m[32mINSERT INTO "transactions" ("tipo","data","valor","cpf","cartao","dono","loja","created_at","updated_at") VALUES (3,'2019-03-01 15:34:53',142.0,'09620676017','4753****3153','JOÃO MACEDO  ',' BAR DO JOÃO      ','2020-09-29 16:47:52.222829','2020-09-29 16:47:52.222829'),(5,'2019-03-01 14:56:07',132.0,'55641815063','3123****7687','MARIA JOSEFINA','LOJA DO Ó - MATRIZ','2020-09-29 16:47:52.222829','2020-09-29 16:47:52.222829'),(3,'2019-03-01 17:27:12',122.0,'84515254073','6777****1313','MARCOS PEREIRA','MERCADO DA AVENIDA
+','2020-09-29 16:47:52.222829','2020-09-29 16:47:52.222829'),(2,'2019-03-01 23:42:34',112.0,'09620676017','3648****0099','JOÃO MACEDO  ',' BAR DO JOÃO      ','2020-09-29 16:47:52.222829','2020-09-29 16:47:52.222829'),(1,'2019-03-01 23:30:00',152.0,'09620676017','1234****7890','JOÃO MACEDO  ',' BAR DO JOÃO      ','2020-09-29 16:47:52.222829','2020-09-29 16:47:52.222829'),(2,'2019-03-01 12:33:33',107.0,'84515254073','8723****9987','MARCOS PEREIRA','MERCADO DA AVENIDA
+','2020-09-29 16:47:52.222829','2020-09-29 16:47:52.222829'),(2,'2019-03-01 23:12:33',502.0,'84515254073','8473****1231','MARCOS PEREIRA','MERCADO DA AVENIDA
+','2020-09-29 16:47:52.222829','2020-09-29 16:47:52.222829'),(3,'2019-03-01 17:27:12',602.0,'23270298056','6777****1313','JOSÉ COSTA   ',' MERCEARIA 3 IRMÃO','2020-09-29 16:47:52.222829','2020-09-29 16:47:52.222829'),(1,'2019-03-01 09:00:02',200.0,'55641815063','1234****3324','MARIA JOSEFINA','LOJA DO Ó - MATRIZ','2020-09-29 16:47:52.222829','2020-09-29 16:47:52.222829'),(5,'2019-03-01 14:56:07',802.0,'84515254073','3123****7687','MARCOS PEREIRA','MERCADO DA AVENIDA
+','2020-09-29 16:47:52.222829','2020-09-29 16:47:52.222829'),(2,'2019-03-01 23:12:33',102.0,'23270298056','8473****1231','JOSÉ COSTA   ',' MERCEARIA 3 IRMÃO','2020-09-29 16:47:52.222829','2020-09-29 16:47:52.222829'),(3,'2019-03-01 17:27:12',6102.0,'23270298056','6777****1313','JOSÉ COSTA   ',' MERCEARIA 3 IRMÃO','2020-09-29 16:47:52.222829','2020-09-29 16:47:52.222829'),(4,'2019-03-01 10:00:00',152.32,'55641815063','1234****6678','MARIA JOSEFINA','LOJA DO Ó - FILIAL','2020-09-29 16:47:52.222829','2020-09-29 16:47:52.222829'),(8,'2019-03-01 12:32:22',102.03,'84515254073','2344****1222','MARCOS PEREIRA','MERCADO DA AVENIDA
+','2020-09-29 16:47:52.222829','2020-09-29 16:47:52.222829'),(3,'2019-03-01 17:27:12',103.0,'23270298056','6777****1313','JOSÉ COSTA   ',' MERCEARIA 3 IRMÃO','2020-09-29 16:47:52.222829','2020-09-29 16:47:52.222829'),(9,'2019-03-01 00:00:00',102.0,'55641815063','6228****9090','MARIA JOSEFINA','LOJA DO Ó - MATRIZ','2020-09-29 16:47:52.222829','2020-09-29 16:47:52.222829'),(4,'2019-06-01 10:00:00',506.17,'84515254073','1234****2231','MARCOS PEREIRA','MERCADO DA AVENIDA
+','2020-09-29 16:47:52.222829','2020-09-29 16:47:52.222829'),(2,'2019-03-01 12:33:33',109.0,'23270298056','8723****9987','JOSÉ COSTA   ',' MERCEARIA 3 IRMÃO','2020-09-29 16:47:52.222829','2020-09-29 16:47:52.222829'),(8,'2019-03-01 12:32:22',2.0,'84515254073','2344****1222','MARCOS PEREIRA','MERCADO DA AVENIDA
+','2020-09-29 16:47:52.222829','2020-09-29 16:47:52.222829'),(2,'2019-03-01 14:18:08',5.0,'23270298056','7677****8778','JOSÉ COSTA   ',' MERCEARIA 3 IRMÃO','2020-09-29 16:47:52.222829','2020-09-29 16:47:52.222829'),(3,'2019-03-01 17:27:12',192.0,'84515254073','6777****1313','MARCOS PEREIRA','MERCADO DA AVENIDA
+','2020-09-29 16:47:52.222829','2020-09-29 16:47:52.222829') RETURNING "id"[0m
+Completed 200 OK in 14ms (Views: 0.1ms | ActiveRecord: 0.8ms | Allocations: 6803)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started POST "/upload" for 127.0.0.1 at 2020-09-29 16:47:52 +0000
+Processing by HomeController#upload as JSON
+  Parameters: {"file"=>#<ActionDispatch::Http::UploadedFile:0x000055bf6c8e2930 @tempfile=#<Tempfile:/tmp/RackMultipart20200929-1-1ygu81k.txt>, @original_filename="CNAB.txt", @content_type="", @headers="Content-Disposition: form-data; name=\"file\"; filename=\"CNAB.txt\"\r\nContent-Type: \r\nContent-Length: 1723\r\n">}
+  [1m[36mTransaction Create Many Without Validations Or Callbacks (0.7ms)[0m  [1m[32mINSERT INTO "transactions" ("tipo","data","valor","cpf","cartao","dono","loja","created_at","updated_at") VALUES (3,'2019-03-01 15:34:53',142.0,'09620676017','4753****3153','JOÃO MACEDO  ',' BAR DO JOÃO      ','2020-09-29 16:47:52.241742','2020-09-29 16:47:52.241742'),(5,'2019-03-01 14:56:07',132.0,'55641815063','3123****7687','MARIA JOSEFINA','LOJA DO Ó - MATRIZ','2020-09-29 16:47:52.241742','2020-09-29 16:47:52.241742'),(3,'2019-03-01 17:27:12',122.0,'84515254073','6777****1313','MARCOS PEREIRA','MERCADO DA AVENIDA
+','2020-09-29 16:47:52.241742','2020-09-29 16:47:52.241742'),(2,'2019-03-01 23:42:34',112.0,'09620676017','3648****0099','JOÃO MACEDO  ',' BAR DO JOÃO      ','2020-09-29 16:47:52.241742','2020-09-29 16:47:52.241742'),(1,'2019-03-01 23:30:00',152.0,'09620676017','1234****7890','JOÃO MACEDO  ',' BAR DO JOÃO      ','2020-09-29 16:47:52.241742','2020-09-29 16:47:52.241742'),(2,'2019-03-01 12:33:33',107.0,'84515254073','8723****9987','MARCOS PEREIRA','MERCADO DA AVENIDA
+','2020-09-29 16:47:52.241742','2020-09-29 16:47:52.241742'),(2,'2019-03-01 23:12:33',502.0,'84515254073','8473****1231','MARCOS PEREIRA','MERCADO DA AVENIDA
+','2020-09-29 16:47:52.241742','2020-09-29 16:47:52.241742'),(3,'2019-03-01 17:27:12',602.0,'23270298056','6777****1313','JOSÉ COSTA   ',' MERCEARIA 3 IRMÃO','2020-09-29 16:47:52.241742','2020-09-29 16:47:52.241742'),(1,'2019-03-01 09:00:02',200.0,'55641815063','1234****3324','MARIA JOSEFINA','LOJA DO Ó - MATRIZ','2020-09-29 16:47:52.241742','2020-09-29 16:47:52.241742'),(5,'2019-03-01 14:56:07',802.0,'84515254073','3123****7687','MARCOS PEREIRA','MERCADO DA AVENIDA
+','2020-09-29 16:47:52.241742','2020-09-29 16:47:52.241742'),(2,'2019-03-01 23:12:33',102.0,'23270298056','8473****1231','JOSÉ COSTA   ',' MERCEARIA 3 IRMÃO','2020-09-29 16:47:52.241742','2020-09-29 16:47:52.241742'),(3,'2019-03-01 17:27:12',6102.0,'23270298056','6777****1313','JOSÉ COSTA   ',' MERCEARIA 3 IRMÃO','2020-09-29 16:47:52.241742','2020-09-29 16:47:52.241742'),(4,'2019-03-01 10:00:00',152.32,'55641815063','1234****6678','MARIA JOSEFINA','LOJA DO Ó - FILIAL','2020-09-29 16:47:52.241742','2020-09-29 16:47:52.241742'),(8,'2019-03-01 12:32:22',102.03,'84515254073','2344****1222','MARCOS PEREIRA','MERCADO DA AVENIDA
+','2020-09-29 16:47:52.241742','2020-09-29 16:47:52.241742'),(3,'2019-03-01 17:27:12',103.0,'23270298056','6777****1313','JOSÉ COSTA   ',' MERCEARIA 3 IRMÃO','2020-09-29 16:47:52.241742','2020-09-29 16:47:52.241742'),(9,'2019-03-01 00:00:00',102.0,'55641815063','6228****9090','MARIA JOSEFINA','LOJA DO Ó - MATRIZ','2020-09-29 16:47:52.241742','2020-09-29 16:47:52.241742'),(4,'2019-06-01 10:00:00',506.17,'84515254073','1234****2231','MARCOS PEREIRA','MERCADO DA AVENIDA
+','2020-09-29 16:47:52.241742','2020-09-29 16:47:52.241742'),(2,'2019-03-01 12:33:33',109.0,'23270298056','8723****9987','JOSÉ COSTA   ',' MERCEARIA 3 IRMÃO','2020-09-29 16:47:52.241742','2020-09-29 16:47:52.241742'),(8,'2019-03-01 12:32:22',2.0,'84515254073','2344****1222','MARCOS PEREIRA','MERCADO DA AVENIDA
+','2020-09-29 16:47:52.241742','2020-09-29 16:47:52.241742'),(2,'2019-03-01 14:18:08',5.0,'23270298056','7677****8778','JOSÉ COSTA   ',' MERCEARIA 3 IRMÃO','2020-09-29 16:47:52.241742','2020-09-29 16:47:52.241742'),(3,'2019-03-01 17:27:12',192.0,'84515254073','6777****1313','MARCOS PEREIRA','MERCADO DA AVENIDA
+','2020-09-29 16:47:52.241742','2020-09-29 16:47:52.241742') RETURNING "id"[0m
+Completed 200 OK in 14ms (Views: 0.2ms | ActiveRecord: 0.7ms | Allocations: 6791)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started POST "/upload" for 127.0.0.1 at 2020-09-29 16:47:52 +0000
+Processing by HomeController#upload as JSON
+  Parameters: {"file"=>#<ActionDispatch::Http::UploadedFile:0x000055bf6c93b300 @tempfile=#<Tempfile:/tmp/RackMultipart20200929-1-1e7ihcu.txt>, @original_filename="CNAB_invalid.txt", @content_type="", @headers="Content-Disposition: form-data; name=\"file\"; filename=\"CNAB_invalid.txt\"\r\nContent-Type: \r\nContent-Length: 3\r\n">}
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 245)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Started GET "/?format=json" for 127.0.0.1 at 2020-09-29 16:47:52 +0000
+Processing by HomeController#index as JSON
+  [1m[36mTransaction Load (1.5ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" ORDER BY "transactions"."data" DESC[0m
+Completed 200 OK in 10ms (Views: 0.5ms | ActiveRecord: 1.5ms | Allocations: 342)
+  [1m[35m (0.9ms)[0m  [1m[31mROLLBACK[0m

@@ -8,10 +8,11 @@ Project made in Ruby on Rails with the object of parsing a text file, saving it 
 3. Drocker and Docker-compose
 
 # Running instructions
-1. Create the docker container and image: ```docker-compose -f docker-compose.yml -f docker-compose.debug.yml up```
+1. Create the docker container and image: ```sudo docker-compose -f docker-compose.yml -f docker-compose.debug.yml up```
 2. navigate to http://localhost:3000
 3. Done!
 
 
 # Running tests 
-```docker-compose run -e "RAILS_ENV=test" web bundle exec rspec```
+1. run ```sudo docker-compose run -e "RAILS_ENV=test" web bundle exec rake assets:precompile``` once
+2. then ```sudo docker-compose run -e "RAILS_ENV=test" web bundle exec rspec``` to run the tests
