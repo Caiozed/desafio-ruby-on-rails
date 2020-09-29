@@ -1,4 +1,4 @@
-# Ruby On Rais - BycodersTest
+# Ruby On Rails - BycodersTest
 Project made in Ruby on Rails with the object of parsing a text file, saving it to the database and displayng the data on a webpage.
 
 # Requirements

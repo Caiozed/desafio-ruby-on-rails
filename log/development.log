@@ -44033,3 +44033,167 @@ Processing by HomeController#index as HTML
 Completed 200 OK in 21ms (Views: 12.9ms | ActiveRecord: 1.6ms | Allocations: 9998)
 
 
+  [1m[35m (150.5ms)[0m  [1m[35mCREATE DATABASE "app_development" ENCODING = 'unicode'[0m
+  [1m[35m (145.4ms)[0m  [1m[35mCREATE DATABASE "app_test" ENCODING = 'unicode'[0m
+  [1m[35m (22.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (20.3ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5277929974492897470)[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateTransactions (20200926224027)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (18.1ms)[0m  [1m[35mCREATE TABLE "transactions" ("id" bigserial primary key, "tipo" integer, "data" timestamp, "valor" float, "cpf" character varying, "cartao" character varying, "dono" character varying, "loja" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200926224027"]]
+  [1m[35m (3.6ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateTransactionTypes (20200928144529)
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (14.9ms)[0m  [1m[35mCREATE TABLE "transaction_types" ("id" bigserial primary key, "descricao" character varying, "natureza" character varying, "sinal" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200928144529"]]
+  [1m[35m (3.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-09-29 17:00:34.762820"], ["updated_at", "2020-09-29 17:00:34.762820"]]
+  [1m[35m (3.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(5277929974492897470)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTransactionType Load (0.3ms)[0m  [1m[34mSELECT "transaction_types".* FROM "transaction_types" ORDER BY "transaction_types"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTransactionType Create (0.3ms)[0m  [1m[32mINSERT INTO "transaction_types" ("id", "descricao", "natureza", "sinal", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["id", 1], ["descricao", "Débito"], ["natureza", "Entrada"], ["sinal", "+"], ["created_at", "2020-09-29 17:00:35.717724"], ["updated_at", "2020-09-29 17:00:35.717724"]]
+  [1m[35m (4.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTransactionType Create (0.3ms)[0m  [1m[32mINSERT INTO "transaction_types" ("id", "descricao", "natureza", "sinal", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["id", 2], ["descricao", "Boleto"], ["natureza", "Saída"], ["sinal", "-"], ["created_at", "2020-09-29 17:00:35.724930"], ["updated_at", "2020-09-29 17:00:35.724930"]]
+  [1m[35m (3.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTransactionType Create (0.2ms)[0m  [1m[32mINSERT INTO "transaction_types" ("id", "descricao", "natureza", "sinal", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["id", 3], ["descricao", "Financiamento"], ["natureza", "Saída"], ["sinal", "-"], ["created_at", "2020-09-29 17:00:35.730498"], ["updated_at", "2020-09-29 17:00:35.730498"]]
+  [1m[35m (3.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTransactionType Create (0.3ms)[0m  [1m[32mINSERT INTO "transaction_types" ("id", "descricao", "natureza", "sinal", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["id", 4], ["descricao", "Crédito"], ["natureza", "Entrada"], ["sinal", "+"], ["created_at", "2020-09-29 17:00:35.736032"], ["updated_at", "2020-09-29 17:00:35.736032"]]
+  [1m[35m (3.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTransactionType Create (0.8ms)[0m  [1m[32mINSERT INTO "transaction_types" ("id", "descricao", "natureza", "sinal", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["id", 5], ["descricao", "Recebimento Empréstimo"], ["natureza", "Entrada"], ["sinal", "+"], ["created_at", "2020-09-29 17:00:35.743922"], ["updated_at", "2020-09-29 17:00:35.743922"]]
+  [1m[35m (3.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTransactionType Create (0.6ms)[0m  [1m[32mINSERT INTO "transaction_types" ("id", "descricao", "natureza", "sinal", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["id", 6], ["descricao", "Vendas"], ["natureza", "Entrada"], ["sinal", "+"], ["created_at", "2020-09-29 17:00:35.757962"], ["updated_at", "2020-09-29 17:00:35.757962"]]
+  [1m[35m (3.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTransactionType Create (0.4ms)[0m  [1m[32mINSERT INTO "transaction_types" ("id", "descricao", "natureza", "sinal", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["id", 7], ["descricao", "Recebimento TED"], ["natureza", "Entrada"], ["sinal", "+"], ["created_at", "2020-09-29 17:00:35.768601"], ["updated_at", "2020-09-29 17:00:35.768601"]]
+  [1m[35m (3.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTransactionType Create (0.4ms)[0m  [1m[32mINSERT INTO "transaction_types" ("id", "descricao", "natureza", "sinal", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["id", 8], ["descricao", "Recebimento DOC"], ["natureza", "Entrada"], ["sinal", "+"], ["created_at", "2020-09-29 17:00:35.776752"], ["updated_at", "2020-09-29 17:00:35.776752"]]
+  [1m[35m (3.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTransactionType Create (0.3ms)[0m  [1m[32mINSERT INTO "transaction_types" ("id", "descricao", "natureza", "sinal", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["id", 9], ["descricao", "Aluguel"], ["natureza", "Saída"], ["sinal", "-"], ["created_at", "2020-09-29 17:00:35.784209"], ["updated_at", "2020-09-29 17:00:35.784209"]]
+  [1m[35m (3.1ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/" for 172.18.0.1 at 2020-09-29 17:01:07 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  [1m[36mTransaction Load (0.7ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" ORDER BY "transactions"."data" DESC[0m
+  ↳ app/controllers/home_controller.rb:10:in `group_by'
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.5ms | Allocations: 901)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 30ms (Views: 17.3ms | ActiveRecord: 2.4ms | Allocations: 15096)
+
+
+Started GET "/" for 172.18.0.1 at 2020-09-29 17:01:14 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#index as HTML
+  [1m[36mTransaction Load (1.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" ORDER BY "transactions"."data" DESC[0m
+  ↳ app/controllers/home_controller.rb:10:in `group_by'
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 193)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 8.6ms | ActiveRecord: 1.2ms | Allocations: 4456)
+
+
+Started POST "/upload" for 172.18.0.1 at 2020-09-29 17:01:25 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#upload as HTML
+  Parameters: {"authenticity_token"=>"vrGQc3Z+L77wu4MUf2rvm3+dYTB8+bwIWx1GGt5da1UAR9wDs90fAaow9MQlRrRKX+MZRGLq92yEZ0WOBOjCRQ==", "file"=>#<ActionDispatch::Http::UploadedFile:0x000055f07a034970 @tempfile=#<Tempfile:/tmp/RackMultipart20200929-1-1dp0st3.txt>, @original_filename="CNAB_invalid.txt", @content_type="text/plain", @headers="Content-Disposition: form-data; name=\"file\"; filename=\"CNAB_invalid.txt\"\r\nContent-Type: text/plain\r\n">, "commit"=>"Enviar"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms | Allocations: 1203)
+
+
+Started GET "/" for 172.18.0.1 at 2020-09-29 17:01:25 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#index as HTML
+  [1m[36mTransaction Load (0.4ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" ORDER BY "transactions"."data" DESC[0m
+  ↳ app/controllers/home_controller.rb:10:in `group_by'
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 192)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 31ms (Views: 27.6ms | ActiveRecord: 0.4ms | Allocations: 4443)
+
+
+Started POST "/upload" for 172.18.0.1 at 2020-09-29 17:01:31 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#upload as HTML
+  Parameters: {"authenticity_token"=>"g+9/bcnumKzjAWmv+4iMgmO7u9DD/xikYWazvQCyzQI9GTMdDE2oE7mKHn+hpNdTQ8XDpN3sU8C+HLAp2gdkEg==", "file"=>#<ActionDispatch::Http::UploadedFile:0x000055f07b0512b8 @tempfile=#<Tempfile:/tmp/RackMultipart20200929-1-3lc9lf.txt>, @original_filename="CNAB.txt", @content_type="text/plain", @headers="Content-Disposition: form-data; name=\"file\"; filename=\"CNAB.txt\"\r\nContent-Type: text/plain\r\n">, "commit"=>"Enviar"}
+  [1m[36mTransaction Create Many Without Validations Or Callbacks (3.6ms)[0m  [1m[32mINSERT INTO "transactions" ("tipo","data","valor","cpf","cartao","dono","loja","created_at","updated_at") VALUES (3,'2019-03-01 15:34:53',142.0,'09620676017','4753****3153','JOÃO MACEDO  ',' BAR DO JOÃO      ','2020-09-29 17:01:31.439474','2020-09-29 17:01:31.439474'),(5,'2019-03-01 14:56:07',132.0,'55641815063','3123****7687','MARIA JOSEFINA','LOJA DO Ó - MATRIZ','2020-09-29 17:01:31.439474','2020-09-29 17:01:31.439474'),(3,'2019-03-01 17:27:12',122.0,'84515254073','6777****1313','MARCOS PEREIRA','MERCADO DA AVENIDA
+','2020-09-29 17:01:31.439474','2020-09-29 17:01:31.439474'),(2,'2019-03-01 23:42:34',112.0,'09620676017','3648****0099','JOÃO MACEDO  ',' BAR DO JOÃO      ','2020-09-29 17:01:31.439474','2020-09-29 17:01:31.439474'),(1,'2019-03-01 23:30:00',152.0,'09620676017','1234****7890','JOÃO MACEDO  ',' BAR DO JOÃO      ','2020-09-29 17:01:31.439474','2020-09-29 17:01:31.439474'),(2,'2019-03-01 12:33:33',107.0,'84515254073','8723****9987','MARCOS PEREIRA','MERCADO DA AVENIDA
+','2020-09-29 17:01:31.439474','2020-09-29 17:01:31.439474'),(2,'2019-03-01 23:12:33',502.0,'84515254073','8473****1231','MARCOS PEREIRA','MERCADO DA AVENIDA
+','2020-09-29 17:01:31.439474','2020-09-29 17:01:31.439474'),(3,'2019-03-01 17:27:12',602.0,'23270298056','6777****1313','JOSÉ COSTA   ',' MERCEARIA 3 IRMÃO','2020-09-29 17:01:31.439474','2020-09-29 17:01:31.439474'),(1,'2019-03-01 09:00:02',200.0,'55641815063','1234****3324','MARIA JOSEFINA','LOJA DO Ó - MATRIZ','2020-09-29 17:01:31.439474','2020-09-29 17:01:31.439474'),(5,'2019-03-01 14:56:07',802.0,'84515254073','3123****7687','MARCOS PEREIRA','MERCADO DA AVENIDA
+','2020-09-29 17:01:31.439474','2020-09-29 17:01:31.439474'),(2,'2019-03-01 23:12:33',102.0,'23270298056','8473****1231','JOSÉ COSTA   ',' MERCEARIA 3 IRMÃO','2020-09-29 17:01:31.439474','2020-09-29 17:01:31.439474'),(3,'2019-03-01 17:27:12',6102.0,'23270298056','6777****1313','JOSÉ COSTA   ',' MERCEARIA 3 IRMÃO','2020-09-29 17:01:31.439474','2020-09-29 17:01:31.439474'),(4,'2019-03-01 10:00:00',152.32,'55641815063','1234****6678','MARIA JOSEFINA','LOJA DO Ó - FILIAL','2020-09-29 17:01:31.439474','2020-09-29 17:01:31.439474'),(8,'2019-03-01 12:32:22',102.03,'84515254073','2344****1222','MARCOS PEREIRA','MERCADO DA AVENIDA
+','2020-09-29 17:01:31.439474','2020-09-29 17:01:31.439474'),(3,'2019-03-01 17:27:12',103.0,'23270298056','6777****1313','JOSÉ COSTA   ',' MERCEARIA 3 IRMÃO','2020-09-29 17:01:31.439474','2020-09-29 17:01:31.439474'),(9,'2019-03-01 00:00:00',102.0,'55641815063','6228****9090','MARIA JOSEFINA','LOJA DO Ó - MATRIZ','2020-09-29 17:01:31.439474','2020-09-29 17:01:31.439474'),(4,'2019-06-01 10:00:00',506.17,'84515254073','1234****2231','MARCOS PEREIRA','MERCADO DA AVENIDA
+','2020-09-29 17:01:31.439474','2020-09-29 17:01:31.439474'),(2,'2019-03-01 12:33:33',109.0,'23270298056','8723****9987','JOSÉ COSTA   ',' MERCEARIA 3 IRMÃO','2020-09-29 17:01:31.439474','2020-09-29 17:01:31.439474'),(8,'2019-03-01 12:32:22',2.0,'84515254073','2344****1222','MARCOS PEREIRA','MERCADO DA AVENIDA
+','2020-09-29 17:01:31.439474','2020-09-29 17:01:31.439474'),(2,'2019-03-01 14:18:08',5.0,'23270298056','7677****8778','JOSÉ COSTA   ',' MERCEARIA 3 IRMÃO','2020-09-29 17:01:31.439474','2020-09-29 17:01:31.439474'),(3,'2019-03-01 17:27:12',192.0,'84515254073','6777****1313','MARCOS PEREIRA','MERCADO DA AVENIDA
+','2020-09-29 17:01:31.439474','2020-09-29 17:01:31.439474') RETURNING "id"[0m
+  ↳ app/controllers/home_controller.rb:24:in `upload'
+Redirected to http://localhost:3000/
+Completed 302 Found in 57ms (ActiveRecord: 10.6ms | Allocations: 12975)
+
+
+Started GET "/" for 172.18.0.1 at 2020-09-29 17:01:31 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#index as HTML
+  [1m[36mTransaction Load (0.5ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" ORDER BY "transactions"."data" DESC[0m
+  ↳ app/controllers/home_controller.rb:10:in `group_by'
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mTransactionType Load (1.6ms)[0m  [1m[34mSELECT "transaction_types".* FROM "transaction_types" WHERE "transaction_types"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:29
+  [1m[36mTransactionType Load (0.7ms)[0m  [1m[34mSELECT "transaction_types".* FROM "transaction_types" WHERE "transaction_types"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:29
+  [1m[36mTransactionType Load (0.3ms)[0m  [1m[34mSELECT "transaction_types".* FROM "transaction_types" WHERE "transaction_types"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:29
+  [1m[36mCACHE TransactionType Load (0.0ms)[0m  [1m[34mSELECT "transaction_types".* FROM "transaction_types" WHERE "transaction_types"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:29
+  [1m[36mTransactionType Load (0.5ms)[0m  [1m[34mSELECT "transaction_types".* FROM "transaction_types" WHERE "transaction_types"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:29
+  [1m[36mCACHE TransactionType Load (0.0ms)[0m  [1m[34mSELECT "transaction_types".* FROM "transaction_types" WHERE "transaction_types"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:29
+  [1m[36mTransactionType Load (1.4ms)[0m  [1m[34mSELECT "transaction_types".* FROM "transaction_types" WHERE "transaction_types"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:29
+  [1m[36mCACHE TransactionType Load (0.0ms)[0m  [1m[34mSELECT "transaction_types".* FROM "transaction_types" WHERE "transaction_types"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:29
+  [1m[36mCACHE TransactionType Load (0.0ms)[0m  [1m[34mSELECT "transaction_types".* FROM "transaction_types" WHERE "transaction_types"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:29
+  [1m[36mTransactionType Load (0.9ms)[0m  [1m[34mSELECT "transaction_types".* FROM "transaction_types" WHERE "transaction_types"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:29
+  [1m[36mCACHE TransactionType Load (0.1ms)[0m  [1m[34mSELECT "transaction_types".* FROM "transaction_types" WHERE "transaction_types"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:29
+  [1m[36mCACHE TransactionType Load (0.1ms)[0m  [1m[34mSELECT "transaction_types".* FROM "transaction_types" WHERE "transaction_types"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:29
+  [1m[36mCACHE TransactionType Load (0.1ms)[0m  [1m[34mSELECT "transaction_types".* FROM "transaction_types" WHERE "transaction_types"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:29
+  [1m[36mCACHE TransactionType Load (0.0ms)[0m  [1m[34mSELECT "transaction_types".* FROM "transaction_types" WHERE "transaction_types"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:29
+  [1m[36mCACHE TransactionType Load (0.0ms)[0m  [1m[34mSELECT "transaction_types".* FROM "transaction_types" WHERE "transaction_types"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:29
+  [1m[36mCACHE TransactionType Load (0.0ms)[0m  [1m[34mSELECT "transaction_types".* FROM "transaction_types" WHERE "transaction_types"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:29
+  [1m[36mCACHE TransactionType Load (0.1ms)[0m  [1m[34mSELECT "transaction_types".* FROM "transaction_types" WHERE "transaction_types"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:29
+  [1m[36mCACHE TransactionType Load (0.0ms)[0m  [1m[34mSELECT "transaction_types".* FROM "transaction_types" WHERE "transaction_types"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:29
+  [1m[36mCACHE TransactionType Load (0.0ms)[0m  [1m[34mSELECT "transaction_types".* FROM "transaction_types" WHERE "transaction_types"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:29
+  [1m[36mTransactionType Load (0.5ms)[0m  [1m[34mSELECT "transaction_types".* FROM "transaction_types" WHERE "transaction_types"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:29
+  [1m[36mCACHE TransactionType Load (0.0ms)[0m  [1m[34mSELECT "transaction_types".* FROM "transaction_types" WHERE "transaction_types"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:29
+  Rendered home/index.html.erb within layouts/application (Duration: 201.6ms | Allocations: 23872)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 218ms (Views: 201.2ms | ActiveRecord: 10.9ms | Allocations: 28402)
+
+
