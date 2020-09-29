@@ -8,7 +8,7 @@ Project made in Ruby on Rails with the object of parsing a text file, saving it 
 3. Drocker and Docker-compose
 
 # Running instructions
-1. Create the docker container and image: ```sudo docker-compose -f docker-compose.yml -f docker-compose.debug.yml up```
+1. Create the docker container and image: ```sudo docker-compose up```
 2. navigate to http://localhost:3000
 3. Done!
 

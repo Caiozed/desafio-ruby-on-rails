@@ -43892,3 +43892,144 @@ Entrypoint application = js/application-9afcbb5693aa87623e69.js js/application-9
 Completed 200 OK in 2568ms (Views: 2535.5ms | ActiveRecord: 13.5ms | Allocations: 45101)
 
 
+  [1m[35m (97.1ms)[0m  [1m[35mCREATE DATABASE "app_development" ENCODING = 'unicode'[0m
+  [1m[35m (87.5ms)[0m  [1m[35mCREATE DATABASE "app_test" ENCODING = 'unicode'[0m
+  [1m[35m (15.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (10.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5277929974492897470)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateTransactions (20200926224027)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (7.6ms)[0m  [1m[35mCREATE TABLE "transactions" ("id" bigserial primary key, "tipo" integer, "data" timestamp, "valor" float, "cpf" character varying, "cartao" character varying, "dono" character varying, "loja" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200926224027"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateTransactionTypes (20200928144529)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (7.7ms)[0m  [1m[35mCREATE TABLE "transaction_types" ("id" bigserial primary key, "descricao" character varying, "natureza" character varying, "sinal" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200928144529"]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.6ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.7ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-09-29 16:54:57.704767"], ["updated_at", "2020-09-29 16:54:57.704767"]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT pg_advisory_unlock(5277929974492897470)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTransactionType Load (0.3ms)[0m  [1m[34mSELECT "transaction_types".* FROM "transaction_types" ORDER BY "transaction_types"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTransactionType Create (0.3ms)[0m  [1m[32mINSERT INTO "transaction_types" ("id", "descricao", "natureza", "sinal", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["id", 1], ["descricao", "Débito"], ["natureza", "Entrada"], ["sinal", "+"], ["created_at", "2020-09-29 16:54:58.592192"], ["updated_at", "2020-09-29 16:54:58.592192"]]
+  [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTransactionType Create (0.2ms)[0m  [1m[32mINSERT INTO "transaction_types" ("id", "descricao", "natureza", "sinal", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["id", 2], ["descricao", "Boleto"], ["natureza", "Saída"], ["sinal", "-"], ["created_at", "2020-09-29 16:54:58.597409"], ["updated_at", "2020-09-29 16:54:58.597409"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTransactionType Create (0.2ms)[0m  [1m[32mINSERT INTO "transaction_types" ("id", "descricao", "natureza", "sinal", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["id", 3], ["descricao", "Financiamento"], ["natureza", "Saída"], ["sinal", "-"], ["created_at", "2020-09-29 16:54:58.600841"], ["updated_at", "2020-09-29 16:54:58.600841"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTransactionType Create (0.2ms)[0m  [1m[32mINSERT INTO "transaction_types" ("id", "descricao", "natureza", "sinal", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["id", 4], ["descricao", "Crédito"], ["natureza", "Entrada"], ["sinal", "+"], ["created_at", "2020-09-29 16:54:58.604193"], ["updated_at", "2020-09-29 16:54:58.604193"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTransactionType Create (0.2ms)[0m  [1m[32mINSERT INTO "transaction_types" ("id", "descricao", "natureza", "sinal", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["id", 5], ["descricao", "Recebimento Empréstimo"], ["natureza", "Entrada"], ["sinal", "+"], ["created_at", "2020-09-29 16:54:58.607708"], ["updated_at", "2020-09-29 16:54:58.607708"]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTransactionType Create (0.2ms)[0m  [1m[32mINSERT INTO "transaction_types" ("id", "descricao", "natureza", "sinal", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["id", 6], ["descricao", "Vendas"], ["natureza", "Entrada"], ["sinal", "+"], ["created_at", "2020-09-29 16:54:58.611117"], ["updated_at", "2020-09-29 16:54:58.611117"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTransactionType Create (0.2ms)[0m  [1m[32mINSERT INTO "transaction_types" ("id", "descricao", "natureza", "sinal", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["id", 7], ["descricao", "Recebimento TED"], ["natureza", "Entrada"], ["sinal", "+"], ["created_at", "2020-09-29 16:54:58.614726"], ["updated_at", "2020-09-29 16:54:58.614726"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTransactionType Create (0.5ms)[0m  [1m[32mINSERT INTO "transaction_types" ("id", "descricao", "natureza", "sinal", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["id", 8], ["descricao", "Recebimento DOC"], ["natureza", "Entrada"], ["sinal", "+"], ["created_at", "2020-09-29 16:54:58.619509"], ["updated_at", "2020-09-29 16:54:58.619509"]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTransactionType Create (0.4ms)[0m  [1m[32mINSERT INTO "transaction_types" ("id", "descricao", "natureza", "sinal", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["id", 9], ["descricao", "Aluguel"], ["natureza", "Saída"], ["sinal", "-"], ["created_at", "2020-09-29 16:54:58.627444"], ["updated_at", "2020-09-29 16:54:58.627444"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE DATABASE "app_development" ENCODING = 'unicode'[0m
+  [1m[35m (10.5ms)[0m  [1m[35mCREATE DATABASE "app_test" ENCODING = 'unicode'[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5277929974492897470)[0m
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(5277929974492897470)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTransactionType Load (0.3ms)[0m  [1m[34mSELECT "transaction_types".* FROM "transaction_types" ORDER BY "transaction_types"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+Started GET "/" for 172.18.0.1 at 2020-09-29 16:55:17 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  [1m[36mTransaction Load (0.7ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" ORDER BY "transactions"."data" DESC[0m
+  ↳ app/controllers/home_controller.rb:10:in `group_by'
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 2.1ms | Allocations: 901)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+yarn run v1.22.5
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+
+
+error Command "webpack" not found.
+
+Completed 500 Internal Server Error in 1721ms (ActiveRecord: 2.4ms | Allocations: 23005)
+
+
+  
+ActionView::Template::Error (Webpacker can't find application in /app/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+}
+):
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag "application", media: "all" %>
+     9:     <%= javascript_pack_tag "application" %>
+    10:   </head>
+    11: 
+    12:   <body>
+  
+app/views/layouts/application.html.erb:9
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE DATABASE "app_development" ENCODING = 'unicode'[0m
+  [1m[35m (10.9ms)[0m  [1m[35mCREATE DATABASE "app_test" ENCODING = 'unicode'[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5277929974492897470)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(5277929974492897470)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTransactionType Load (0.3ms)[0m  [1m[34mSELECT "transaction_types".* FROM "transaction_types" ORDER BY "transaction_types"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+Started GET "/" for 172.18.0.1 at 2020-09-29 16:57:14 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  [1m[36mTransaction Load (0.6ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" ORDER BY "transactions"."data" DESC[0m
+  ↳ app/controllers/home_controller.rb:10:in `group_by'
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 4.8ms | Allocations: 789)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 96ms (Views: 37.1ms | ActiveRecord: 2.0ms | Allocations: 12387)
+
+
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE DATABASE "app_development" ENCODING = 'unicode'[0m
+  [1m[35m (5.1ms)[0m  [1m[35mCREATE DATABASE "app_test" ENCODING = 'unicode'[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5277929974492897470)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(5277929974492897470)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTransactionType Load (0.2ms)[0m  [1m[34mSELECT "transaction_types".* FROM "transaction_types" ORDER BY "transaction_types"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+Started GET "/" for 172.18.0.1 at 2020-09-29 16:57:45 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  [1m[36mTransaction Load (0.4ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions" ORDER BY "transactions"."data" DESC[0m
+  ↳ app/controllers/home_controller.rb:10:in `group_by'
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 774)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 21ms (Views: 12.9ms | ActiveRecord: 1.6ms | Allocations: 9998)
+
+
