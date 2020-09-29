@@ -15,22 +15,26 @@ class HomeController < ApplicationController
   end
 
   def upload
-    @trasactions = []
-
+    @transactions = []
+    message = 'Arquivo importado com sucesso!'
     file = params[:file]
-    text = file.read
     begin
-      @trasactions = HomeHelper.parse_transaction(text)
+      text = file.read
+      @transactions = HomeHelper.parse_transaction(text)
       Transaction.import(
         %i[tipo data valor cpf cartao dono loja],
-        @trasactions
+        @transactions
       )
 
-      flash[:success] = 'Arquivo importado com sucesso!'
+      flash[:success] = message
     rescue StandardError => e
+      message = e.message
       flash[:danger] = e.message
     end
 
-    redirect_to action: 'index'
+    respond_to do |format|
+      format.json { render json: { message: message } }
+      format.html { redirect_to action: 'index' }
+    end
   end
 end

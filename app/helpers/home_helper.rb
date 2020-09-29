@@ -14,7 +14,7 @@ module HomeHelper
     trasactions
   end
 
-  def calulate_total(loja)
+  def self.calulate_total(loja)
     total = 0
     loja.each do |transaction|
       total = transaction.transaction_type.sinal == '+' ? total + transaction.valor : total - transaction.valor
